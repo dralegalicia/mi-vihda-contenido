@@ -1,0 +1,21 @@
+{
+  "consejos": [
+    { 
+      "id": 1, 
+      "titulo": "Hidratación", 
+      "texto": "Beber al menos 2 litros de agua al día ayuda a tus riñones a procesar mejor los medicamentos." 
+    },
+    { 
+      "id": 2, 
+      "titulo": "Proteína y VIH", 
+      "texto": "Incluir proteínas (pollo, pescado, legumbres) ayuda a mantener tu masa muscular." 
+    }
+  ],
+  "recetas": [
+    { 
+      "nombre": "Ensalada de Pollo", 
+      "url_imagen": "https://img.freepik.com/foto-gratis/ensalada-pollo-fresca_144627-25100.jpg", 
+      "descripcion": "Mezcla de espinacas, pollo a la plancha y un toque de aguacate." 
+    }
+  ]
+}
