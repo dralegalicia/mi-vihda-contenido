@@ -7,26 +7,33 @@ api_key = os.environ.get("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 def obtener_mejor_modelo():
+    print("Detectando qué modelo tienes activo en Google...")
     try:
         for m in genai.list_models():
             if 'generateContent' in m.supported_generation_methods:
-                if 'gemini-1.5-flash' in m.name: return m.name
-    except: pass
+                if 'gemini-1.5-flash' in m.name:
+                    print(f"Modelo encontrado: {m.name}")
+                    return m.name
+        for m in genai.list_models():
+            if 'generateContent' in m.supported_generation_methods:
+                return m.name
+    except:
+        pass
     return 'gemini-pro'
 
 prompt = """
 Actúa como un psicólogo y nutriólogo experto en VIH. 
-Genera contenido dinámico para una app de salud.
+Genera contenido dinámico para una app de salud en México con tono empático.
 
-REGLAS DE ORO PARA LINKS (Síguelas estrictamente):
-- Para RECETAS: Usa SOLO links de 'https://www.dietdoctor.com/es/recetas' o 'https://www.cocinafacil.com.mx/recetas'. Son los más estables.
-- Para NOTICIAS: Usa SOLO links de 'https://news.un.org/es/tags/salud' o 'https://www.mayoclinic.org/es/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524'.
-- Para OBESIDAD: Usa SOLO 'https://www.who.int/es/news-room/fact-sheets/detail/obesity-and-overweight'.
+IMPORTANTE PARA LOS ENLACES (Síguelas estrictamente):
+- Recetas: Solo usa links reales de 'https://www.dietdoctor.com/es/recetas' o 'https://www.cocinafacil.com.mx/recetas'.
+- Noticias: Solo usa links reales de 'https://news.un.org/es/tags/salud' o 'https://www.mayoclinic.org/es/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524'.
+- Obesidad: Solo usa 'https://www.who.int/es/news-room/fact-sheets/detail/obesity-and-overweight'.
 
-Genera exactamente: 2 noticias, 1 consejo, 1 receta, 1 recurso de obesidad y salud mental.
-No inventes rutas largas, si no estás seguro del link exacto, usa el link principal del sitio de salud.
+Genera exactamente: 2 noticias, 1 consejo, 1 receta, 1 recurso de obesidad y el bloque salud_mental.
+Usa fotos de stock de Unsplash (fotos de comida real).
 
-IMPORTANTE: Devuelve ÚNICAMENTE el objeto JSON puro:
+IMPORTANTE: Devuelve ÚNICAMENTE el objeto JSON sin marcas de código:
 {
   "recursos_obesidad": [{"id": 1, "titulo": "...", "descripcion": "...", "link": "..."}],
   "noticias": [{"id": 1, "titulo": "...", "resumen": "...", "url_imagen": "...", "link": "..."}],
@@ -40,15 +47,20 @@ try:
     nombre_modelo = obtener_mejor_modelo()
     model = genai.GenerativeModel(nombre_modelo)
     response = model.generate_content(prompt)
+    
     texto = response.text.strip()
+    # Limpieza de seguridad para extraer el JSON
     inicio = texto.find("{")
     fin = texto.rfind("}") + 1
     json_puro = texto[inicio:fin]
+    
     datos = json.loads(json_puro)
     
     with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
         json.dump(datos, f, ensure_ascii=False, indent=2)
-    print("Contenido con links estables generado.")
+    
+    print("¡TODO LISTO! Contenido actualizado con éxito.")
+
 except Exception as e:
-    print(f"Error: {e}")
+    print(f"Falla: {e}")
     exit(1)
