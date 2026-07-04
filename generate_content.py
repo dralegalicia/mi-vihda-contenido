@@ -3,8 +3,9 @@ import google.generativeai as genai
 import json
 
 # Configurar la IA (La clave se tomará de GitHub Secrets)
+# Usamos gemini-1.5-flash que es el modelo actual gratuito y rápido
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 prompt = """
 Actúa como un nutriólogo clínico experto en VIH y Obesidad para el CAPASITS Río Blanco, Veracruz. 
@@ -13,10 +14,10 @@ El tono debe ser cálido, empático y profesional.
 Genera exactamente:
 - 2 noticias recientes de salud relacionadas con nutrición o VIH.
 - 2 consejos prácticos de nutrición.
-- 2 recetas saludables (incluye una URL de imagen de stock de comida).
-- 2 recursos con links sobre prevención de obesidad.
+- 2 recetas saludables (incluye una URL de imagen de stock de comida real de pexels o freepik).
+- 2 recursos con links oficiales (gob.mx o instituciones de salud) sobre prevención de obesidad.
 
-IMPORTANTE: Devuelve ÚNICAMENTE un objeto JSON con esta estructura exacta:
+IMPORTANTE: Devuelve ÚNICAMENTE un objeto JSON con esta estructura exacta, sin texto adicional antes o después:
 {
   "recursos_obesidad": [{"id": 1, "titulo": "...", "descripcion": "...", "link": "..."}],
   "noticias": [{"id": 1, "titulo": "...", "resumen": "...", "url_imagen": "...", "link": "..."}],
@@ -27,19 +28,20 @@ IMPORTANTE: Devuelve ÚNICAMENTE un objeto JSON con esta estructura exacta:
 
 try:
     response = model.generate_content(prompt)
-    # Limpieza de la respuesta para obtener solo el JSON
     content = response.text.strip()
-    if "```json" in content:
-        content = content.split("```json")[1].split("```")[0].strip()
-    elif "```" in content:
-        content = content.split("```")[1].split("```")[0].strip()
+    
+    # Limpieza robusta del JSON por si la IA pone marcas de código
+    if "{" in content:
+        content = content[content.find("{"):content.rfind("}")+1]
 
     # Validar que sea un JSON válido antes de guardar
-    json.loads(content)
+    parsed_json = json.loads(content)
 
+    # Guardar con formato para que sea legible
     with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
-        f.write(content)
-    print("Archivo actualizado con éxito.")
+        json.dump(parsed_json, f, ensure_ascii=False, indent=2)
+        
+    print("¡Contenido generado y archivo actualizado con éxito!")
 except Exception as e:
-    print(f"Error al generar contenido: {e}")
+    print(f"Error crítico al generar contenido: {e}")
     exit(1)
