@@ -1,0 +1,31 @@
+name: Actualizador con IA
+on:
+  schedule:
+    - cron: '0 8 * * 1' # Se ejecuta cada lunes a las 8 AM
+  workflow_dispatch: # Botón para ejecutarlo manualmente cuando quieras
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configurar Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Instalar dependencias
+        run: pip install google-generativeai
+      - name: Generar Contenido con IA
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python generate_content.py
+      - name: Guardar cambios
+        run: |
+          git config --global user.name 'IA Editor'
+          git config --global user.email 'ia@editor.com'
+          git add contenido_nutri.json
+          git commit -m "Actualización semanal con IA" || echo "Sin cambios"
+          git push
