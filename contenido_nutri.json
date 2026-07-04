@@ -2,34 +2,59 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Guía: Alimentación y Salud",
-      "descripcion": "Consejos prácticos para mantener un peso saludable y mejorar tu calidad de vida.",
-      "link": "https://www.gob.mx/salud/articulos/obesidad-un-problema-de-salud-publica-en-mexico"
+      "titulo": "Guía para un Peso Saludable: Programa IMSS",
+      "descripcion": "Descubre las recomendaciones y herramientas oficiales del Instituto Mexicano del Seguro Social para mantener un peso adecuado, prevenir enfermedades crónicas y mejorar tu calidad de vida.",
+      "link": "https://www.imss.gob.mx/salud-en-linea/peso-saludable"
+    },
+    {
+      "id": 2,
+      "titulo": "Mitos y Realidades de la Obesidad: Información de la OMS",
+      "descripcion": "Despeja tus dudas y obtén información precisa y basada en evidencia científica sobre la obesidad, sus causas y sus consecuencias, directamente de la Organización Mundial de la Salud.",
+      "link": "https://www.who.int/es/news-room/fact-sheets/detail/obesity-and-overweight"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Próxima Jornada de Salud",
-      "resumen": "Te esperamos este mes para tus estudios de seguimiento en CAPASITS.",
-      "url_imagen": "https://raw.githubusercontent.com/dralegalicia/mi-vihda-contenido/refs/heads/main/logo_capasits.jpg",
-      "link": "https://www.facebook.com/SSaludVeracruz"
+      "titulo": "Nutrición y VIH: La Importancia de una Dieta Balanceada para tu Sistema Inmune",
+      "resumen": "Investigaciones recientes subrayan cómo una alimentación adecuada fortalece el sistema inmunológico y mejora la calidad de vida en personas viviendo con VIH, ayudando también a controlar el peso.",
+      "url_imagen": "https://images.pexels.com/photos/6280058/pexels-photo-6280058.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "link": "https://www.cdc.gov/hiv/spanish/basics/livingwithhiv/healthy-living.html"
+    },
+    {
+      "id": 2,
+      "titulo": "Río Blanco se Une: Campaña Nacional contra Sobrepeso y Obesidad 2024",
+      "resumen": "La Secretaría de Salud de Veracruz y municipios como Río Blanco refuerzan acciones para combatir el sobrepeso y la obesidad, ofreciendo programas de activación física y orientación nutricional. ¡Participa!",
+      "url_imagen": "https://images.pexels.com/photos/4047021/pexels-photo-4047021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "link": "https://www.gob.mx/salud/acciones-y-programas/estrategia-nacional-para-la-prevencion-y-el-control-del-sobrepeso-la-obesidad-y-la-diabetes"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Hidratación",
-      "texto": "Recuerda que beber agua ayuda a tus riñones a procesar mejor el tratamiento."
+      "titulo": "Hidratación: Tu Aliado Clave para el Control de Peso",
+      "texto": "Beber suficiente agua pura a lo largo del día es fundamental. Te ayuda a mantener un metabolismo activo, evita la confusión entre sed y hambre, y es vital para la salud renal, especialmente si vives con VIH. ¡Prioriza el agua simple!"
+    },
+    {
+      "id": 2,
+      "titulo": "Prioriza Proteínas Magras y Fibra en Cada Comida",
+      "texto": "Incluir fuentes magras de proteína (pollo, pescado, legumbres) y alimentos ricos en fibra (verduras, frutas, granos enteros) en tus platillos te mantendrá saciado por más tiempo, controlará tus niveles de glucosa y apoyará tu digestión, facilitando el control de peso."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada Nutritiva",
-      "url_imagen": "https://img.freepik.com/foto-gratis/ensalada-quinoa-tazon_23-2148281640.jpg",
-      "descripcion": "Una opción fresca y alta en fibra.",
-      "link_externo": "https://www.dietdoctor.com/es/recetas/ensalada-de-pollo"
+      "nombre": "Pescado al Mojo de Ajo con Ensalada Fresca",
+      "url_imagen": "https://images.pexels.com/photos/3789885/pexels-photo-3789885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "descripcion": "Una receta ligera y llena de sabor, ideal para la costa veracruzana. Rica en omega-3 y proteínas, perfecta para cuidar tu corazón y tu peso. Acompáñalo con una ensalada de temporada.",
+      "link_externo": "https://www.gob.mx/issste/articulos/receta-de-la-semana-pescado-al-mojo-de-ajo-con-verduras"
+    },
+    {
+      "id": 2,
+      "nombre": "Ensalada de Nopal con Atún y Aguacate",
+      "url_imagen": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "descripcion": "Aprovecha los beneficios del nopal en esta ensalada nutritiva y refrescante. Con atún para una excelente fuente de proteína y aguacate para grasas saludables, es una opción rápida y completa.",
+      "link_externo": "https://www.gob.mx/imss/articulos/receta-de-ensalada-de-nopal-y-atun-imss-bienestar"
     }
   ]
 }
