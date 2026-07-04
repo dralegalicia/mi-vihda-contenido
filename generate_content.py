@@ -1,9 +1,12 @@
 import os
+import google.generativeai as genai
 import json
-from google import genai
 
-# Usar el nuevo cliente oficial de Google
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+# Configurar la llave
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+
+# Usamos el nombre técnico del modelo que es más compatible
+model = genai.GenerativeModel('models/gemini-1.5-flash')
 
 prompt = """
 Actúa como un nutriólogo clínico experto en VIH y Obesidad para el CAPASITS Río Blanco, Veracruz. 
@@ -11,7 +14,7 @@ Genera contenido dinámico para una app de salud. El tono debe ser cálido, emp�
 Genera exactamente:
 - 2 noticias recientes de salud.
 - 2 consejos prácticos de nutrición.
-- 2 recetas saludables (usa URLs de imágenes de stock de comida de pexels o freepik).
+- 2 recetas saludables (usa URLs de imágenes de comida de pexels o freepik).
 - 2 recursos con links oficiales sobre prevención de obesidad.
 
 IMPORTANTE: Devuelve ÚNICAMENTE un objeto JSON con esta estructura exacta, sin marcas de código:
@@ -24,26 +27,32 @@ IMPORTANTE: Devuelve ÚNICAMENTE un objeto JSON con esta estructura exacta, sin 
 """
 
 try:
-    # Llamar al modelo flash (el más rápido y estable)
-    response = client.models.generate_content(
-        model="gemini-1.5-flash",
-        contents=prompt
-    )
-    
+    # Generar contenido
+    response = model.generate_content(prompt)
     content = response.text.strip()
     
-    # Limpieza de seguridad por si la IA agrega texto extra
+    # Limpieza extrema del JSON
     if "{" in content:
         content = content[content.find("{"):content.rfind("}")+1]
 
+    # Validar JSON
     parsed_json = json.loads(content)
 
-    # Guardar el archivo JSON
     with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
         json.dump(parsed_json, f, ensure_ascii=False, indent=2)
         
-    print("Contenido generado exitosamente con la nueva librería.")
+    print("¡Éxito! Contenido generado.")
 
 except Exception as e:
-    print(f"Error detectado: {e}")
-    exit(1)
+    print(f"Error: {e}")
+    # Si falla, intentamos con el modelo alternativo
+    try:
+        model_alt = genai.GenerativeModel('gemini-pro')
+        response = model_alt.generate_content(prompt)
+        # (Lógica de guardado simplificada)
+        content = response.text.strip()
+        if "{" in content: content = content[content.find("{"):content.rfind("}")+1]
+        with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
+            f.write(content)
+    except:
+        exit(1)
