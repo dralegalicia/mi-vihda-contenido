@@ -1,8 +1,8 @@
 name: Actualizador con IA
 on:
   schedule:
-    - cron: '0 8 * * 1' # Se ejecuta cada lunes a las 8 AM
-  workflow_dispatch: # Botón para ejecutarlo manualmente cuando quieras
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.x'
       - name: Instalar dependencias
-        run: pip install google-generativeai
+        run: pip install -U google-generativeai
       - name: Generar Contenido con IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
