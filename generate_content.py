@@ -1,66 +1,64 @@
 import os
+import google.generativeai as genai
 import json
-import requests
 
-def generar_con_gemini():
-    api_key = os.environ.get("GEMINI_API_KEY")
-    
-    # Probaremos con la URL de producción más estable que existe
-    url = f"https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key={api_key}"
-    
-    headers = {'Content-Type': 'application/json'}
-    
-    prompt = """
-    Actúa como un nutriólogo experto en VIH. Genera contenido para una app de salud en México.
-    IMPORTANTE: Usa links REALES que funcionen de: kiwilimon.com o mayoclinic.org.
-    Genera exactamente: 2 noticias, 2 consejos, 2 recetas y 2 recursos de obesidad.
-    Usa fotos reales de Unsplash.
-    
-    Devuelve ÚNICAMENTE un objeto JSON sin marcas de código ni texto extra:
-    {
-      "recursos_obesidad": [{"id": 1, "titulo": "...", "descripcion": "...", "link": "..."}],
-      "noticias": [{"id": 1, "titulo": "...", "resumen": "...", "url_imagen": "...", "link": "..."}],
-      "consejos": [{"id": 1, "titulo": "...", "texto": "..."}],
-      "recetas": [{"id": 1, "nombre": "...", "url_imagen": "...", "descripcion": "...", "link_externo": "..."}]
-    }
-    """
+# 1. Configuración de la llave
+api_key = os.environ.get("GEMINI_API_KEY")
+genai.configure(api_key=api_key)
 
-    payload = {
-        "contents": [{
-            "parts": [{"text": prompt}]
-        }]
-    }
-
+def obtener_mejor_modelo():
+    print("Buscando modelos disponibles en tu cuenta...")
     try:
-        print("Conectando con el servidor estable de Google...")
-        response = requests.post(url, headers=headers, json=payload)
-        
-        if response.status_code != 200:
-            print(f"La versión v1 falló, intentando v1beta como plan B...")
-            url_alt = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={api_key}"
-            response = requests.post(url_alt, headers=headers, json=payload)
-
-        response.raise_for_status()
-        res_json = response.json()
-        
-        texto = res_json['candidates'][0]['content']['parts'][0]['text']
-        
-        # Limpiar el texto para obtener solo el JSON
-        inicio = texto.find("{")
-        fin = texto.rfind("}") + 1
-        json_final = texto[inicio:fin]
-        
-        datos = json.loads(json_final)
-        
-        with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
-            json.dump(datos, f, ensure_ascii=False, indent=2)
-            
-        print("¡POR FIN! Contenido generado y guardado.")
-        return True
+        # Buscamos en la lista de modelos de Google cual tienes activado en tu cuenta
+        for m in genai.list_models():
+            if 'generateContent' in m.supported_generation_methods:
+                if 'gemini-1.5-flash' in m.name:
+                    print(f"Usando modelo preferido: {m.name}")
+                    return m.name
+        for m in genai.list_models():
+            if 'generateContent' in m.supported_generation_methods:
+                print(f"Usando modelo alternativo: {m.name}")
+                return m.name
     except Exception as e:
-        print(f"Error persistente: {e}")
-        return False
+        print(f"Error al listar modelos: {e}")
+    return 'gemini-pro' # Fallback final
 
-if __name__ == "__main__":
-    if not generar_con_gemini():
-        exit(1)
+prompt = """
+Actúa como un nutriólogo clínico experto en VIH. Genera contenido para una app de salud en México.
+IMPORTANTE PARA LOS ENLACES (LINKS):
+- Recetas: Solo usa links reales de kiwilimon.com o cookpad.com.
+- Información: Solo usa links reales de mayoclinic.org o medlineplus.gov.
+Genera exactamente: 2 noticias, 2 consejos, 2 recetas y 2 recursos de obesidad.
+Usa fotos de stock de Unsplash o Pexels.
+
+Devuelve ÚNICAMENTE el objeto JSON sin marcas de código:
+{
+  "recursos_obesidad": [{"id": 1, "titulo": "...", "descripcion": "...", "link": "..."}],
+  "noticias": [{"id": 1, "titulo": "...", "resumen": "...", "url_imagen": "...", "link": "..."}],
+  "consejos": [{"id": 1, "titulo": "...", "texto": "..."}],
+  "recetas": [{"id": 1, "nombre": "...", "url_imagen": "...", "descripcion": "...", "link_externo": "..."}]
+}
+"""
+
+try:
+    nombre_modelo = obtener_mejor_modelo()
+    model = genai.GenerativeModel(nombre_modelo)
+    response = model.generate_content(prompt)
+    
+    texto = response.text.strip()
+    # Extraer el JSON puro entre las llaves { }
+    inicio = texto.find("{")
+    fin = texto.rfind("}") + 1
+    json_puro = texto[inicio:fin]
+    
+    # Validar que es un JSON correcto
+    datos = json.loads(json_puro)
+    
+    with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
+        json.dump(datos, f, ensure_ascii=False, indent=2)
+    
+    print("¡PROCESO COMPLETADO CON ÉXITO!")
+
+except Exception as e:
+    print(f"Error final: {e}")
+    exit(1)
