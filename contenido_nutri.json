@@ -2,47 +2,47 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Comprende la Obesidad y Transforma Tu Salud",
-      "descripcion": "Información clave sobre qué es la obesidad, sus causas y cómo puedes gestionarla para vivir una vida plena y saludable.",
+      "titulo": "¿Qué es la obesidad y cómo impacta nuestra salud?",
+      "descripcion": "La obesidad es una enfermedad compleja que se ha convertido en un desafío de salud global. Entenderla es el primer paso para prevenirla y gestionarla. Aquí encontrarás información esencial sobre sus causas, consecuencias y cómo podemos abordar este tema crucial para tu bienestar.",
       "link": "https://www.who.int/es/news-room/fact-sheets/detail/obesity-and-overweight"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "IMSS atiende a más de 13 mil personas con VIH: ¡Acceso a Tratamiento es Clave!",
-      "resumen": "El IMSS reporta avances significativos en la atención a personas con VIH en México, enfatizando la importancia de un diagnóstico temprano y el acceso a terapias antirretrovirales para una mejor calidad de vida.",
-      "url_imagen": "https://images.unsplash.com/photo-1607611086052-16ee1b17e4f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-      "link": "https://www.imss.gob.mx/prensa/archivo/202307/400"
+      "titulo": "La importancia de la detección temprana y el tratamiento del VIH",
+      "resumen": "Es fundamental conocer el propio estado serológico para acceder a tiempo a los tratamientos antirretrovirales, que no solo mejoran la calidad de vida de las personas con VIH, sino que también son clave para la prevención. Un diagnóstico a tiempo puede marcar una gran diferencia.",
+      "url_imagen": "https://images.unsplash.com/photo-1588702319914-f58444a1e9c5?fit=crop&w=800&q=80",
+      "link": "https://www.mayoclinic.org/es/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524"
     },
     {
       "id": 2,
-      "titulo": "Protege Tu Corazón: Consejos Esenciales para Prevenir Enfermedades Cardíacas",
-      "resumen": "Conoce cómo pequeños cambios en tu estilo de vida, como una dieta balanceada y actividad física regular, pueden hacer una gran diferencia en la salud de tu corazón y tu bienestar general.",
-      "url_imagen": "https://images.unsplash.com/photo-1549476478-f73c6b7e28a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-      "link": "https://www.gob.mx/salud/articulos/consejos-para-prevenir-enfermedades-cardiovasculares"
+      "titulo": "Promoviendo la salud y el bienestar en comunidades vulnerables",
+      "resumen": "La salud es un derecho humano. Conoce las iniciativas globales que buscan garantizar el acceso a servicios de salud de calidad, incluyendo la prevención y tratamiento de enfermedades infecciosas, para todas las personas, sin importar su contexto social o económico.",
+      "url_imagen": "https://images.unsplash.com/photo-1576092762744-afaa65f7c87c?fit=crop&w=800&q=80",
+      "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "¡Hidratación Consciente: Tu Aliado Fundamental!",
-      "texto": "En Río Blanco, con nuestro clima, mantenerse hidratado es clave. Opta por agua natural en lugar de bebidas azucaradas. Si vives con VIH, una buena hidratación apoya la función renal y ayuda a metabolizar mejor tus medicamentos. ¡Lleva siempre una botella contigo!"
+      "titulo": "Hidratación: Tu aliada secreta para el bienestar",
+      "texto": "Querido/a amigo/a, no subestimes el poder del agua. Una buena hidratación es esencial para que tu cuerpo funcione óptimamente, desde el sistema inmunológico hasta la digestión y la energía diaria. ¡Lleva siempre contigo una botella de agua y bebe regularmente, incluso si no sientes sed intensa!"
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Pescado Empapelado con Verduras al Estilo Veracruzano",
-      "url_imagen": "https://images.unsplash.com/photo-1621211756200-d8510f27c3f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-      "descripcion": "Una opción deliciosa, ligera y llena de nutrientes, perfecta para cuidar tu corazón y tu peso. ¡Fácil de preparar y con el toque fresco de los sabores de Veracruz!",
-      "link_externo": "https://www.kiwilimon.com/receta/platillos-fuertes/pescado-empapelado-con-verduras"
+      "nombre": "Ensalada de Quinoa con Vegetales Frescos y Pollo a la Plancha",
+      "url_imagen": "https://images.unsplash.com/photo-1551248039-4d6d3d9d30c5?fit=crop&w=800&q=80",
+      "descripcion": "Una opción nutritiva, llena de proteínas, fibra y vitaminas. Perfecta para mantener tu energía y reforzar tu sistema inmune. Fresca, ligera y deliciosa.",
+      "link_externo": "https://www.dietdoctor.com/es/recetas/ensalada-de-quinoa-con-pollo-y-verduras"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "¿Cómo te sientes hoy? Reconocer tus emociones es el primer paso para cuidarte.",
-    "desafio": "Tómate 5 minutos para respirar profundamente, enfocándote en una gratitud sincera.",
-    "afirmacion_positiva": "Mi bienestar es mi prioridad. Con cada paso, cuido mi cuerpo y mi mente con amor y respeto.",
+    "emocion_del_dia": "Resiliencia",
+    "desafio": "¿Cómo manejas el estrés en tu vida diaria? Dedica unos minutos hoy a identificar una estrategia saludable que te ayude a relajarte y recargar energías.",
+    "afirmacion_positiva": "Soy fuerte, capaz y tengo el poder de afrontar cualquier desafío con una mente tranquila y un corazón abierto.",
     "puntos_ganados": 50
   }
 }
