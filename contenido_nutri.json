@@ -2,59 +2,59 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Guía para un Peso Saludable: Programa IMSS",
-      "descripcion": "Descubre las recomendaciones y herramientas oficiales del Instituto Mexicano del Seguro Social para mantener un peso adecuado, prevenir enfermedades crónicas y mejorar tu calidad de vida.",
-      "link": "https://www.imss.gob.mx/salud-en-linea/peso-saludable"
+      "titulo": "Obesidad: Un Factor de Riesgo para tu Salud",
+      "descripcion": "Descubre qué es la obesidad, sus causas, consecuencias y cómo afecta a tu salud general. Es vital para personas que viven con VIH entender cómo esta condición puede influir en su bienestar y el manejo de su tratamiento.",
+      "link": "https://www.mayoclinic.org/es/diseases-conditions/obesity/symptoms-causes/syc-20371483"
     },
     {
       "id": 2,
-      "titulo": "Mitos y Realidades de la Obesidad: Información de la OMS",
-      "descripcion": "Despeja tus dudas y obtén información precisa y basada en evidencia científica sobre la obesidad, sus causas y sus consecuencias, directamente de la Organización Mundial de la Salud.",
-      "link": "https://www.who.int/es/news-room/fact-sheets/detail/obesity-and-overweight"
+      "titulo": "Manejo de la Obesidad: Dieta y Ejercicio",
+      "descripcion": "Aprende sobre estrategias efectivas de alimentación saludable y actividad física para prevenir y manejar la obesidad. Incorporar estos hábitos puede optimizar tu bienestar general, fortalecer tu sistema inmune y mejorar el manejo de tu condición.",
+      "link": "https://www.mayoclinic.org/es/diseases-conditions/obesity/diagnosis-treatment/drc-20371488"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Nutrición y VIH: La Importancia de una Dieta Balanceada para tu Sistema Inmune",
-      "resumen": "Investigaciones recientes subrayan cómo una alimentación adecuada fortalece el sistema inmunológico y mejora la calidad de vida en personas viviendo con VIH, ayudando también a controlar el peso.",
-      "url_imagen": "https://images.pexels.com/photos/6280058/pexels-photo-6280058.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "link": "https://www.cdc.gov/hiv/spanish/basics/livingwithhiv/healthy-living.html"
+      "titulo": "Nuevas Perspectivas en Nutrición para Personas con VIH",
+      "resumen": "Expertos en nutrición han actualizado las recomendaciones dietéticas para optimizar la salud y el manejo del VIH, enfocándose en la prevención de comorbilidades y el fortalecimiento del sistema inmune a través de una alimentación balanceada.",
+      "url_imagen": "https://images.unsplash.com/photo-1542844855-edb0e127339d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTc2Mjl8MHwxfHNlYXJjaHwyMHx8bnV0cml0aW9uJTIwdmloJTIwZ2V0dGluZyUyMHdhc3RlZHxlbnwwfHx8fDE3MTgxOTYwMDF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "link": "https://www.mayoclinic.org/es/diseases-conditions/hiv-aids/in-depth/hiv-aids-nutrition/art-20045479"
     },
     {
       "id": 2,
-      "titulo": "Río Blanco se Une: Campaña Nacional contra Sobrepeso y Obesidad 2024",
-      "resumen": "La Secretaría de Salud de Veracruz y municipios como Río Blanco refuerzan acciones para combatir el sobrepeso y la obesidad, ofreciendo programas de activación física y orientación nutricional. ¡Participa!",
-      "url_imagen": "https://images.pexels.com/photos/4047021/pexels-photo-4047021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "link": "https://www.gob.mx/salud/acciones-y-programas/estrategia-nacional-para-la-prevencion-y-el-control-del-sobrepeso-la-obesidad-y-la-diabetes"
+      "titulo": "El Vínculo entre la Salud Mental, la Nutrición y el VIH",
+      "resumen": "Exploramos cómo una dieta equilibrada puede influir positivamente en el bienestar mental, un aspecto crucial para las personas que viven con VIH, ayudando a manejar el estrés, la depresión y mejorar la calidad de vida general.",
+      "url_imagen": "https://www.pexels.com/photo/woman-eating-healthy-food-6802046/",
+      "link": "https://www.mayoclinic.org/es/diseases-conditions/mental-illness/in-depth/mental-health-nutrition/art-20048198"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Hidratación: Tu Aliado Clave para el Control de Peso",
-      "texto": "Beber suficiente agua pura a lo largo del día es fundamental. Te ayuda a mantener un metabolismo activo, evita la confusión entre sed y hambre, y es vital para la salud renal, especialmente si vives con VIH. ¡Prioriza el agua simple!"
+      "titulo": "Hidratación Esencial para tu Bienestar",
+      "texto": "Mantenerse bien hidratado es fundamental para todas las funciones corporales, especialmente cuando se vive con VIH. Bebe al menos 8 vasos de agua al día, y considera infusiones o agua de sabor natural sin azúcar para variar. Una buena hidratación ayuda a la digestión, la absorción de nutrientes y la eliminación de toxinas, apoyando tu energía y salud renal."
     },
     {
       "id": 2,
-      "titulo": "Prioriza Proteínas Magras y Fibra en Cada Comida",
-      "texto": "Incluir fuentes magras de proteína (pollo, pescado, legumbres) y alimentos ricos en fibra (verduras, frutas, granos enteros) en tus platillos te mantendrá saciado por más tiempo, controlará tus niveles de glucosa y apoyará tu digestión, facilitando el control de peso."
+      "titulo": "Proteínas: Aliadas de tu Sistema Inmune",
+      "texto": "Las proteínas son cruciales para construir y reparar tejidos, y para mantener un sistema inmune fuerte y funcional. Incluye fuentes magras de proteína en cada comida, como pollo, pescado, legumbres, huevos y lácteos bajos en grasa, para apoyar tu salud muscular, la producción de anticuerpos y una mejor respuesta inmunológica. Si tienes pérdida de peso, consulta a tu nutriólogo."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Pescado al Mojo de Ajo con Ensalada Fresca",
-      "url_imagen": "https://images.pexels.com/photos/3789885/pexels-photo-3789885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "descripcion": "Una receta ligera y llena de sabor, ideal para la costa veracruzana. Rica en omega-3 y proteínas, perfecta para cuidar tu corazón y tu peso. Acompáñalo con una ensalada de temporada.",
-      "link_externo": "https://www.gob.mx/issste/articulos/receta-de-la-semana-pescado-al-mojo-de-ajo-con-verduras"
+      "nombre": "Tacos de Pescado al Pastor con Pico de Gallo",
+      "url_imagen": "https://www.kiwilimon.com/receta/pescados-y-mariscos/tacos-de-pescado-al-pastor-con-pico-de-gallo",
+      "descripcion": "Una opción fresca y saludable, estos tacos combinan pescado magro marinado con especias al pastor, servido con una vibrante salsa pico de gallo. Son ideales para una comida ligera, rica en proteínas y vitaminas, perfectos para mantener una dieta equilibrada.",
+      "link_externo": "https://www.kiwilimon.com/receta/pescados-y-mariscos/tacos-de-pescado-al-pastor-con-pico-de-gallo"
     },
     {
       "id": 2,
-      "nombre": "Ensalada de Nopal con Atún y Aguacate",
-      "url_imagen": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "descripcion": "Aprovecha los beneficios del nopal en esta ensalada nutritiva y refrescante. Con atún para una excelente fuente de proteína y aguacate para grasas saludables, es una opción rápida y completa.",
-      "link_externo": "https://www.gob.mx/imss/articulos/receta-de-ensalada-de-nopal-y-atun-imss-bienestar"
+      "nombre": "Sopa de Lentejas con Verduras Estilo Mexicano",
+      "url_imagen": "https://cookpad.com/mx/recetas/14602693-sopa-de-lentejas-mexicana",
+      "descripcion": "Esta reconfortante sopa de lentejas es una excelente fuente de proteína vegetal, fibra y vitaminas. Cargada de verduras frescas como zanahoria y calabacita, y sazonada con un toque mexicano, es perfecta para mantener la energía, la salud digestiva y apoyar tu sistema inmune.",
+      "link_externo": "https://cookpad.com/mx/recetas/14602693-sopa-de-lentejas-mexicana"
     }
   ]
 }
