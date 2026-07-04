@@ -3,94 +3,52 @@ import google.generativeai as genai
 import json
 
 # 1. Configuración de la llave
-# GitHub tomará automáticamente la clave de tus "Secrets"
 api_key = os.environ.get("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 def obtener_mejor_modelo():
-    """Busca automáticamente el modelo disponible en tu cuenta"""
     try:
         for m in genai.list_models():
             if 'generateContent' in m.supported_generation_methods:
-                if 'gemini-1.5-flash' in m.name:
-                    return m.name
-        for m in genai.list_models():
-            if 'generateContent' in m.supported_generation_methods:
-                return m.name
-    except:
-        pass
+                if 'gemini-1.5-flash' in m.name: return m.name
+    except: pass
     return 'gemini-pro'
 
 prompt = """
-Actúa como un psicólogo clínico y nutriólogo experto en VIH y Obesidad. 
-Genera contenido dinámico para una app de salud en Río Blanco, Veracruz, con tono empático y libre de estigma.
-Genera exactamente: 2 noticias, 1 consejo de nutrición, 1 receta saludable, 1 recurso de obesidad y el bloque de SALUD MENTAL.
+Actúa como un psicólogo y nutriólogo experto en VIH. 
+Genera contenido dinámico para una app de salud.
 
-IMPORTANTE: Devuelve ÚNICAMENTE un objeto JSON con esta estructura exacta, sin marcas de código (no uses ```json):
+REGLAS DE ORO PARA LINKS (Síguelas estrictamente):
+- Para RECETAS: Usa SOLO links de 'https://www.dietdoctor.com/es/recetas' o 'https://www.cocinafacil.com.mx/recetas'. Son los más estables.
+- Para NOTICIAS: Usa SOLO links de 'https://news.un.org/es/tags/salud' o 'https://www.mayoclinic.org/es/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524'.
+- Para OBESIDAD: Usa SOLO 'https://www.who.int/es/news-room/fact-sheets/detail/obesity-and-overweight'.
+
+Genera exactamente: 2 noticias, 1 consejo, 1 receta, 1 recurso de obesidad y salud mental.
+No inventes rutas largas, si no estás seguro del link exacto, usa el link principal del sitio de salud.
+
+IMPORTANTE: Devuelve ÚNICAMENTE el objeto JSON puro:
 {
-  "recursos_obesidad": [
-    {
-      "id": 1, 
-      "titulo": "Título del recurso", 
-      "descripcion": "Descripción breve", 
-      "link": "Link real de salud (ej. gob.mx o mayoclinic)"
-    }
-  ],
-  "noticias": [
-    {
-      "id": 1, 
-      "titulo": "Título noticia", 
-      "resumen": "Resumen breve", 
-      "url_imagen": "URL de imagen real de Unsplash", 
-      "link": "Link a noticia real"
-    }
-  ],
-  "consejos": [
-    {
-      "id": 1, 
-      "titulo": "Título consejo", 
-      "texto": "Texto del consejo"
-    }
-  ],
-  "recetas": [
-    {
-      "id": 1, 
-      "nombre": "Nombre receta", 
-      "url_imagen": "URL de imagen de comida de Unsplash", 
-      "descripcion": "Breve descripción", 
-      "link_externo": "Link a kiwilimon o similar"
-    }
-  ],
-  "salud_mental": {
-      "emocion_del_dia": "Frase breve para reflexionar sobre el ánimo hoy.",
-      "desafio": "Acción sencilla de autocuidado (ej. respirar, caminar, agradecer).",
-      "afirmacion_positiva": "Afirmación potente para reducir estrés del tratamiento.",
-      "puntos_ganados": 50
-  }
+  "recursos_obesidad": [{"id": 1, "titulo": "...", "descripcion": "...", "link": "..."}],
+  "noticias": [{"id": 1, "titulo": "...", "resumen": "...", "url_imagen": "...", "link": "..."}],
+  "consejos": [{"id": 1, "titulo": "...", "texto": "..."}],
+  "recetas": [{"id": 1, "nombre": "...", "url_imagen": "...", "descripcion": "...", "link_externo": "..."}],
+  "salud_mental": {"emocion_del_dia": "...", "desafio": "...", "afirmacion_positiva": "...", "puntos_ganados": 50}
 }
 """
 
 try:
     nombre_modelo = obtener_mejor_modelo()
-    print(f"Usando modelo: {nombre_modelo}")
     model = genai.GenerativeModel(nombre_modelo)
     response = model.generate_content(prompt)
-    
     texto = response.text.strip()
-    # Limpieza de seguridad para extraer el JSON puro
     inicio = texto.find("{")
     fin = texto.rfind("}") + 1
     json_puro = texto[inicio:fin]
-    
-    # Validar que es un JSON correcto antes de guardar
     datos = json.loads(json_puro)
     
-    # Guardar el archivo final
     with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
         json.dump(datos, f, ensure_ascii=False, indent=2)
-    
-    print("¡Éxito! Contenido integral (Nutrición + Salud Mental) actualizado.")
-
+    print("Contenido con links estables generado.")
 except Exception as e:
-    print(f"Error al generar contenido: {e}")
+    print(f"Error: {e}")
     exit(1)
