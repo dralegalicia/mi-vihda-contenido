@@ -1,21 +1,35 @@
 {
+  "recursos_obesidad": [
+    {
+      "id": 1,
+      "titulo": "Guía: Alimentación y Salud",
+      "descripcion": "Consejos prácticos para mantener un peso saludable y mejorar tu calidad de vida.",
+      "link": "https://www.gob.mx/salud/articulos/obesidad-un-problema-de-salud-publica-en-mexico"
+    }
+  ],
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Próxima Jornada de Salud",
+      "resumen": "Te esperamos este mes para tus estudios de seguimiento en CAPASITS.",
+      "url_imagen": "https://raw.githubusercontent.com/dralegalicia/mi-vihda-contenido/refs/heads/main/logo_capasits.jpg",
+      "link": "https://www.facebook.com/SSaludVeracruz"
+    }
+  ],
   "consejos": [
-    { 
-      "id": 1, 
-      "titulo": "Hidratación", 
-      "texto": "Beber al menos 2 litros de agua al día ayuda a tus riñones a procesar mejor los medicamentos." 
-    },
-    { 
-      "id": 2, 
-      "titulo": "Proteína y VIH", 
-      "texto": "Incluir proteínas (pollo, pescado, legumbres) ayuda a mantener tu masa muscular." 
+    {
+      "id": 1,
+      "titulo": "Hidratación",
+      "texto": "Recuerda que beber agua ayuda a tus riñones a procesar mejor el tratamiento."
     }
   ],
   "recetas": [
-    { 
-      "nombre": "Ensalada de Pollo", 
-      "url_imagen": "https://img.freepik.com/foto-gratis/ensalada-pollo-fresca_144627-25100.jpg", 
-      "descripcion": "Mezcla de espinacas, pollo a la plancha y un toque de aguacate." 
+    {
+      "id": 1,
+      "nombre": "Ensalada Nutritiva",
+      "url_imagen": "https://img.freepik.com/foto-gratis/ensalada-quinoa-tazon_23-2148281640.jpg",
+      "descripcion": "Una opción fresca y alta en fibra.",
+      "link_externo": "https://www.dietdoctor.com/es/recetas/ensalada-de-pollo"
     }
   ]
 }
