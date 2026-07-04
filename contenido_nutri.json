@@ -2,59 +2,47 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Obesidad: Un Factor de Riesgo para tu Salud",
-      "descripcion": "Descubre qué es la obesidad, sus causas, consecuencias y cómo afecta a tu salud general. Es vital para personas que viven con VIH entender cómo esta condición puede influir en su bienestar y el manejo de su tratamiento.",
-      "link": "https://www.mayoclinic.org/es/diseases-conditions/obesity/symptoms-causes/syc-20371483"
-    },
-    {
-      "id": 2,
-      "titulo": "Manejo de la Obesidad: Dieta y Ejercicio",
-      "descripcion": "Aprende sobre estrategias efectivas de alimentación saludable y actividad física para prevenir y manejar la obesidad. Incorporar estos hábitos puede optimizar tu bienestar general, fortalecer tu sistema inmune y mejorar el manejo de tu condición.",
-      "link": "https://www.mayoclinic.org/es/diseases-conditions/obesity/diagnosis-treatment/drc-20371488"
+      "titulo": "Comprende la Obesidad y Transforma Tu Salud",
+      "descripcion": "Información clave sobre qué es la obesidad, sus causas y cómo puedes gestionarla para vivir una vida plena y saludable.",
+      "link": "https://www.who.int/es/news-room/fact-sheets/detail/obesity-and-overweight"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Nuevas Perspectivas en Nutrición para Personas con VIH",
-      "resumen": "Expertos en nutrición han actualizado las recomendaciones dietéticas para optimizar la salud y el manejo del VIH, enfocándose en la prevención de comorbilidades y el fortalecimiento del sistema inmune a través de una alimentación balanceada.",
-      "url_imagen": "https://images.unsplash.com/photo-1542844855-edb0e127339d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTc2Mjl8MHwxfHNlYXJjaHwyMHx8bnV0cml0aW9uJTIwdmloJTIwZ2V0dGluZyUyMHdhc3RlZHxlbnwwfHx8fDE3MTgxOTYwMDF8MA&ixlib=rb-4.0.3&q=80&w=1080",
-      "link": "https://www.mayoclinic.org/es/diseases-conditions/hiv-aids/in-depth/hiv-aids-nutrition/art-20045479"
+      "titulo": "IMSS atiende a más de 13 mil personas con VIH: ¡Acceso a Tratamiento es Clave!",
+      "resumen": "El IMSS reporta avances significativos en la atención a personas con VIH en México, enfatizando la importancia de un diagnóstico temprano y el acceso a terapias antirretrovirales para una mejor calidad de vida.",
+      "url_imagen": "https://images.unsplash.com/photo-1607611086052-16ee1b17e4f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+      "link": "https://www.imss.gob.mx/prensa/archivo/202307/400"
     },
     {
       "id": 2,
-      "titulo": "El Vínculo entre la Salud Mental, la Nutrición y el VIH",
-      "resumen": "Exploramos cómo una dieta equilibrada puede influir positivamente en el bienestar mental, un aspecto crucial para las personas que viven con VIH, ayudando a manejar el estrés, la depresión y mejorar la calidad de vida general.",
-      "url_imagen": "https://www.pexels.com/photo/woman-eating-healthy-food-6802046/",
-      "link": "https://www.mayoclinic.org/es/diseases-conditions/mental-illness/in-depth/mental-health-nutrition/art-20048198"
+      "titulo": "Protege Tu Corazón: Consejos Esenciales para Prevenir Enfermedades Cardíacas",
+      "resumen": "Conoce cómo pequeños cambios en tu estilo de vida, como una dieta balanceada y actividad física regular, pueden hacer una gran diferencia en la salud de tu corazón y tu bienestar general.",
+      "url_imagen": "https://images.unsplash.com/photo-1549476478-f73c6b7e28a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+      "link": "https://www.gob.mx/salud/articulos/consejos-para-prevenir-enfermedades-cardiovasculares"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Hidratación Esencial para tu Bienestar",
-      "texto": "Mantenerse bien hidratado es fundamental para todas las funciones corporales, especialmente cuando se vive con VIH. Bebe al menos 8 vasos de agua al día, y considera infusiones o agua de sabor natural sin azúcar para variar. Una buena hidratación ayuda a la digestión, la absorción de nutrientes y la eliminación de toxinas, apoyando tu energía y salud renal."
-    },
-    {
-      "id": 2,
-      "titulo": "Proteínas: Aliadas de tu Sistema Inmune",
-      "texto": "Las proteínas son cruciales para construir y reparar tejidos, y para mantener un sistema inmune fuerte y funcional. Incluye fuentes magras de proteína en cada comida, como pollo, pescado, legumbres, huevos y lácteos bajos en grasa, para apoyar tu salud muscular, la producción de anticuerpos y una mejor respuesta inmunológica. Si tienes pérdida de peso, consulta a tu nutriólogo."
+      "titulo": "¡Hidratación Consciente: Tu Aliado Fundamental!",
+      "texto": "En Río Blanco, con nuestro clima, mantenerse hidratado es clave. Opta por agua natural en lugar de bebidas azucaradas. Si vives con VIH, una buena hidratación apoya la función renal y ayuda a metabolizar mejor tus medicamentos. ¡Lleva siempre una botella contigo!"
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Tacos de Pescado al Pastor con Pico de Gallo",
-      "url_imagen": "https://www.kiwilimon.com/receta/pescados-y-mariscos/tacos-de-pescado-al-pastor-con-pico-de-gallo",
-      "descripcion": "Una opción fresca y saludable, estos tacos combinan pescado magro marinado con especias al pastor, servido con una vibrante salsa pico de gallo. Son ideales para una comida ligera, rica en proteínas y vitaminas, perfectos para mantener una dieta equilibrada.",
-      "link_externo": "https://www.kiwilimon.com/receta/pescados-y-mariscos/tacos-de-pescado-al-pastor-con-pico-de-gallo"
-    },
-    {
-      "id": 2,
-      "nombre": "Sopa de Lentejas con Verduras Estilo Mexicano",
-      "url_imagen": "https://cookpad.com/mx/recetas/14602693-sopa-de-lentejas-mexicana",
-      "descripcion": "Esta reconfortante sopa de lentejas es una excelente fuente de proteína vegetal, fibra y vitaminas. Cargada de verduras frescas como zanahoria y calabacita, y sazonada con un toque mexicano, es perfecta para mantener la energía, la salud digestiva y apoyar tu sistema inmune.",
-      "link_externo": "https://cookpad.com/mx/recetas/14602693-sopa-de-lentejas-mexicana"
+      "nombre": "Pescado Empapelado con Verduras al Estilo Veracruzano",
+      "url_imagen": "https://images.unsplash.com/photo-1621211756200-d8510f27c3f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+      "descripcion": "Una opción deliciosa, ligera y llena de nutrientes, perfecta para cuidar tu corazón y tu peso. ¡Fácil de preparar y con el toque fresco de los sabores de Veracruz!",
+      "link_externo": "https://www.kiwilimon.com/receta/platillos-fuertes/pescado-empapelado-con-verduras"
     }
-  ]
+  ],
+  "salud_mental": {
+    "emocion_del_dia": "¿Cómo te sientes hoy? Reconocer tus emociones es el primer paso para cuidarte.",
+    "desafio": "Tómate 5 minutos para respirar profundamente, enfocándote en una gratitud sincera.",
+    "afirmacion_positiva": "Mi bienestar es mi prioridad. Con cada paso, cuido mi cuerpo y mi mente con amor y respeto.",
+    "puntos_ganados": 50
+  }
 }
