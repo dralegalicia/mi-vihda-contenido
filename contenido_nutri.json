@@ -2,47 +2,47 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "¿Qué es la obesidad y cómo impacta nuestra salud?",
-      "descripcion": "La obesidad es una enfermedad compleja que se ha convertido en un desafío de salud global. Entenderla es el primer paso para prevenirla y gestionarla. Aquí encontrarás información esencial sobre sus causas, consecuencias y cómo podemos abordar este tema crucial para tu bienestar.",
+      "titulo": "Manejo del Peso y VIH: Una Alianza Crucial para tu Bienestar",
+      "descripcion": "Mantener un peso saludable es fundamental para las personas que viven con VIH. La obesidad puede aumentar el riesgo de enfermedades cardiovasculares, diabetes y complicaciones metabólicas, afectando la eficacia del tratamiento antirretroviral y tu calidad de vida. Aprende más sobre la importancia de un peso adecuado y cómo la OMS aborda esta problemática global.",
       "link": "https://www.who.int/es/news-room/fact-sheets/detail/obesity-and-overweight"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "La importancia de la detección temprana y el tratamiento del VIH",
-      "resumen": "Es fundamental conocer el propio estado serológico para acceder a tiempo a los tratamientos antirretrovirales, que no solo mejoran la calidad de vida de las personas con VIH, sino que también son clave para la prevención. Un diagnóstico a tiempo puede marcar una gran diferencia.",
-      "url_imagen": "https://images.unsplash.com/photo-1588702319914-f58444a1e9c5?fit=crop&w=800&q=80",
-      "link": "https://www.mayoclinic.org/es/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524"
+      "titulo": "Avances en la Lucha contra el VIH/SIDA: Nuevas Estrategias y Esperanzas",
+      "resumen": "La investigación continúa brindando nuevas perspectivas y herramientas en la prevención y tratamiento del VIH. Conoce los últimos hallazgos y cómo las organizaciones globales están trabajando para poner fin a la epidemia.",
+      "url_imagen": "https://images.unsplash.com/photo-1579684385135-ad52e391b113?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxhZHZhbmNlcyUyMG1lZGljb2xlcyUyMEhJViUyMGFpZHMlMjByZXNlYXJjaHxlbnwwfHx8fDE3MTgzODg5MjF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "link": "https://www.who.int/es/news-room/fact-sheets/detail/hiv-aids"
     },
     {
       "id": 2,
-      "titulo": "Promoviendo la salud y el bienestar en comunidades vulnerables",
-      "resumen": "La salud es un derecho humano. Conoce las iniciativas globales que buscan garantizar el acceso a servicios de salud de calidad, incluyendo la prevención y tratamiento de enfermedades infecciosas, para todas las personas, sin importar su contexto social o económico.",
-      "url_imagen": "https://images.unsplash.com/photo-1576092762744-afaa65f7c87c?fit=crop&w=800&q=80",
+      "titulo": "Impacto de la Salud Pública en México: Estrategias para el Bienestar Comunitario",
+      "resumen": "Explora cómo las iniciativas de salud pública están fortaleciendo la atención y el acceso a servicios esenciales en México, mejorando la calidad de vida y fomentando comunidades más saludables frente a diversos desafíos.",
+      "url_imagen": "https://images.unsplash.com/photo-1505751172876-fa1923c58567?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjBwdWJsaWMlMjBNZXhpY28lMjBjb21tdW5pdHklMjBoZWFsdGh8ZW58MHx8fHwxNzE4Mzg5MDgyfDA&ixlib=rb-4.0.3&q=80&w=1080",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Hidratación: Tu aliada secreta para el bienestar",
-      "texto": "Querido/a amigo/a, no subestimes el poder del agua. Una buena hidratación es esencial para que tu cuerpo funcione óptimamente, desde el sistema inmunológico hasta la digestión y la energía diaria. ¡Lleva siempre contigo una botella de agua y bebe regularmente, incluso si no sientes sed intensa!"
+      "titulo": "La Importancia de la Adherencia al Tratamiento del VIH",
+      "texto": "Mantener la adherencia a tu tratamiento antirretroviral es el pilar fundamental para controlar el VIH. Esto significa tomar tus medicamentos exactamente como te los prescribió tu médico, a la hora indicada y sin saltarte dosis. Una buena adherencia no solo te ayuda a mantener una carga viral indetectable y un sistema inmunitario fuerte, sino que también previene el desarrollo de resistencias a los fármacos. Si tienes dificultades, habla con tu equipo de salud; existen muchas estrategias para apoyarte. ¡Tu bienestar es nuestra prioridad!"
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada de Quinoa con Vegetales Frescos y Pollo a la Plancha",
-      "url_imagen": "https://images.unsplash.com/photo-1551248039-4d6d3d9d30c5?fit=crop&w=800&q=80",
-      "descripcion": "Una opción nutritiva, llena de proteínas, fibra y vitaminas. Perfecta para mantener tu energía y reforzar tu sistema inmune. Fresca, ligera y deliciosa.",
-      "link_externo": "https://www.dietdoctor.com/es/recetas/ensalada-de-quinoa-con-pollo-y-verduras"
+      "nombre": "Cena Ligera y Nutritiva: Bowl de Quinoa con Vegetales Asados y Pollo",
+      "url_imagen": "https://images.unsplash.com/photo-1505253716361-9f5a709d73e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwYm93bCUyMHF1aW5vYSUyMHZlZ2V0YWJsZXMlMjBjaGlja2VufGVufDB8fHx8MTcxODM4OTE3NHww&ixlib=rb-4.0.3&q=80&w=1080",
+      "descripcion": "Una cena completa, rica en proteínas, fibra y vitaminas esenciales para tu energía. Este bowl es fácil de preparar y perfecto para mantener un peso saludable y fortalecer tu sistema inmunitario.",
+      "link_externo": "https://www.kiwilimon.com/recetas/saludables/cenas-saludables"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "Resiliencia",
-    "desafio": "¿Cómo manejas el estrés en tu vida diaria? Dedica unos minutos hoy a identificar una estrategia saludable que te ayude a relajarte y recargar energías.",
-    "afirmacion_positiva": "Soy fuerte, capaz y tengo el poder de afrontar cualquier desafío con una mente tranquila y un corazón abierto.",
+    "emocion_del_dia": "Sentir ansiedad es normal, pero tienes la capacidad de gestionarla.",
+    "desafio": "Dedica 5 minutos hoy a una respiración consciente. Inhala profundamente, siente tu abdomen expandirse y exhala lentamente. Repite varias veces.",
+    "afirmacion_positiva": "Soy fuerte, resiliente y tengo el control de mis emociones.",
     "puntos_ganados": 50
   }
 }
