@@ -1,57 +1,60 @@
 import os
-import google.generativeai as genai
 import json
+import requests
 
-# 1. Configuración de la llave
-api_key = os.environ.get("GEMINI_API_KEY")
-genai.configure(api_key=api_key)
+def generar_con_gemini():
+    api_key = os.environ.get("GEMINI_API_KEY")
+    # URL directa del servidor de Google (Versión estable 1.5 Flash)
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+    
+    headers = {'Content-Type': 'application/json'}
+    
+    prompt = """
+    Actúa como un nutriólogo experto en VIH. Genera contenido para una app en México.
+    IMPORTANTE: Usa links REALES de kiwilimon.com, cookpad.com o mayoclinic.org.
+    Genera exactamente: 2 noticias, 2 consejos, 2 recetas y 2 recursos de obesidad.
+    Usa fotos reales de Unsplash o Pexels.
+    
+    Devuelve ÚNICAMENTE el objeto JSON sin marcas de código:
+    {
+      "recursos_obesidad": [{"id": 1, "titulo": "...", "descripcion": "...", "link": "..."}],
+      "noticias": [{"id": 1, "titulo": "...", "resumen": "...", "url_imagen": "...", "link": "..."}],
+      "consejos": [{"id": 1, "titulo": "...", "texto": "..."}],
+      "recetas": [{"id": 1, "nombre": "...", "url_imagen": "...", "descripcion": "...", "link_externo": "..."}]
+    }
+    """
 
-def obtener_mejor_modelo():
+    payload = {
+        "contents": [{
+            "parts": [{"text": prompt}]
+        }]
+    }
+
     try:
-        for m in genai.list_models():
-            if 'generateContent' in m.supported_generation_methods:
-                if 'gemini-1.5-flash' in m.name:
-                    return m.name
-    except:
-        pass
-    return 'gemini-pro'
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+        res_json = response.json()
+        
+        # Extraer el texto de la respuesta de Google
+        texto = res_json['candidates'][0]['content']['parts'][0]['text']
+        
+        # Limpiar el texto para obtener solo el JSON
+        inicio = texto.find("{")
+        fin = texto.rfind("}") + 1
+        json_final = texto[inicio:fin]
+        
+        # Validar que es un JSON correcto
+        datos = json.loads(json_final)
+        
+        with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
+            json.dump(datos, f, ensure_ascii=False, indent=2)
+            
+        print("¡LOGRADO! Archivo actualizado correctamente.")
+        return True
+    except Exception as e:
+        print(f"Error en la conexión directa: {e}")
+        return False
 
-prompt = """
-Actúa como un nutriólogo clínico experto en VIH. 
-Genera contenido dinámico para una app de salud en México.
-IMPORTANTE: Para los enlaces (links), utiliza ÚNICAMENTE estos sitios web reales y seguros:
-- Recetas: kiwilimon.com, cookpad.com, o dietdoctor.com/es/recetas
-- Noticias/Recursos: mayoclinic.org, medlineplus.gov/spanish, o gob.mx/salud
-
-Genera exactamente: 2 noticias, 2 consejos, 2 recetas y 2 recursos de obesidad.
-Para las imágenes (url_imagen), usa URLs reales de Unsplash o Pexels que terminen en .jpg o .png.
-
-Devuelve ÚNICAMENTE el objeto JSON sin texto extra:
-{
-  "recursos_obesidad": [{"id": 1, "titulo": "...", "descripcion": "...", "link": "..."}],
-  "noticias": [{"id": 1, "titulo": "...", "resumen": "...", "url_imagen": "...", "link": "..."}],
-  "consejos": [{"id": 1, "titulo": "...", "texto": "..."}],
-  "recetas": [{"id": 1, "nombre": "...", "url_imagen": "...", "descripcion": "...", "link_externo": "..."}]
-}
-"""
-
-try:
-    nombre_modelo = obtener_mejor_modelo()
-    model = genai.GenerativeModel(nombre_modelo)
-    response = model.generate_content(prompt)
-    
-    texto = response.text.strip()
-    inicio = texto.find("{")
-    fin = texto.rfind("}") + 1
-    json_puro = texto[inicio:fin]
-    
-    datos = json.loads(json_puro)
-    
-    with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
-        json.dump(datos, f, ensure_ascii=False, indent=2)
-    
-    print("¡Contenido actualizado con links reales!")
-
-except Exception as e:
-    print(f"Error: {e}")
-    exit(1)
+if __name__ == "__main__":
+    if not generar_con_gemini():
+        exit(1)
