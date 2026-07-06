@@ -2,40 +2,40 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Manejo del Peso y Bienestar en la Vida con VIH",
-      "descripcion": "Descubre cómo mantener un peso saludable es clave para tu bienestar general y tu tratamiento. Este video te ofrece herramientas y consejos prácticos para integrar hábitos saludables en tu día a día.",
+      "titulo": "Entendiendo la Obesidad: Más Allá del Peso",
+      "descripcion": "La obesidad es una condición compleja que puede impactar significativamente tu salud general, especialmente cuando vives con VIH. Este recurso te ayudará a comprender mejor sus causas, riesgos y cómo un enfoque integral puede mejorar tu bienestar. Recuerda, no estás solo/a en este camino.",
       "link": "https://www.youtube.com/watch?v=Z_a7zNOnf5s"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Avances en la Salud Mundial: Noticias que Inspiran Esperanza",
-      "resumen": "Mantente al tanto de las últimas novedades y progresos en salud a nivel global. Conocer los avances nos empodera y nos da esperanza para un futuro más saludable y equitativo para todos. ¡La información es poder!",
-      "url_imagen": "https://images.unsplash.com/photo-1533220455071-863a1f81df2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "titulo": "Avances Globales en Salud: Un Resumen Vital",
+      "resumen": "Mantente informado/a sobre las últimas noticias y avances en salud a nivel mundial. Desde nuevas investigaciones hasta políticas públicas, estar al día es clave para entender el panorama de la salud y cómo puede influir en tu vida y en la de tu comunidad. La información es poder para tu bienestar.",
+      "url_imagen": "https://images.unsplash.com/photo-1505751172876-cd46a47a78ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5NDF8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjBuZXdzfGVufDB8fHx8MTY4NTcwOTU0OA&ixlib=rb-4.0.3&q=80&w=1080",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Escucha tu Cuerpo y tu Mente: Autocuidado Integral",
-      "texto": "Recuerda que tu bienestar es una prioridad. Tómate un momento cada día para respirar, reflexionar y nutrirte. Pequeños actos de autocuidado, como una caminata corta o una comida consciente, hacen una gran diferencia en tu energía y tu estado de ánimo. ¡Tu salud física y emocional van de la mano, y tú eres importante!"
+      "titulo": "Escucha a tu Cuerpo: La Sabiduría Interna",
+      "texto": "Tu cuerpo es increíblemente sabio. Tómate un momento cada día para escucharlo. ¿Qué necesita? ¿Descanso, movimiento, un alimento nutritivo o quizás un momento de calma? Prestar atención a estas señales es fundamental para tu bienestar físico y emocional, especialmente cuando manejas tu salud con VIH. Confía en ti."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Bowl Energético de Quinoa con Verduras Asadas y Pollo",
-      "url_imagen": "https://images.unsplash.com/photo-1512621776951-a573985799a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "descripcion": "Una opción deliciosa y nutritiva, perfecta para mantener tu energía a tope. Rico en proteínas magras, fibra y vitaminas esenciales para fortalecer tu sistema inmune. ¡Prepara algo rico, cuídate y disfruta de cada bocado!",
+      "nombre": "Ensalada Energética de Quinoa con Verduras Frescas",
+      "url_imagen": "https://images.unsplash.com/photo-1546069901-b5413ad7a840?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5NDF8MHwxfHNlYXJjaHw1fHxxdWlub2ElMjBzYWxhZHxlbnwwfHx8fDE2ODU3MDk1MDc&ixlib=rb-4.0.3&q=80&w=1080",
+      "descripcion": "Prepara esta deliciosa y nutritiva ensalada de quinoa, cargada de proteínas, fibra y vitaminas esenciales para tu sistema inmune. Es ligera, fácil de hacer y perfecta para cualquier comida del día, brindándote la energía que necesitas para seguir adelante. ¡Un festín de color y sabor!",
       "link_externo": "https://www.youtube.com/watch?v=DOfV8E7T3yE"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "Gratitud",
-    "desafio": "Identifica 3 cosas, grandes o pequeñas, por las que te sientes agradecido hoy. Escríbelas o simplemente piénsalas. Reconocer lo positivo fortalece tu espíritu.",
-    "afirmacion_positiva": "Soy fuerte, resiliente y capaz de afrontar cualquier desafío con una actitud positiva y el apoyo de mi comunidad.",
+    "emocion_del_dia": "Serenidad",
+    "desafio": "Dedica 10 minutos a la respiración consciente. Observa tu inhalación y exhalación sin juzgar. Permite que la calma te envuelva. Pequeños momentos de paz hacen una gran diferencia.",
+    "afirmacion_positiva": "Mi bienestar es mi prioridad, y tengo la fuerza para cultivarlo cada día. Me doy permiso para sentir y crecer.",
     "puntos_ganados": 50
   }
 }
