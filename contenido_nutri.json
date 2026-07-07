@@ -2,40 +2,40 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Manejando el Peso con VIH: Un Equilibrio Saludable",
-      "descripcion": "Mantener un peso saludable es clave para tu bienestar general, especialmente viviendo con VIH. Este recurso te ofrece herramientas y perspectivas para entender mejor cómo la nutrición y el ejercicio impactan tu salud metabólica, y cómo podemos trabajar juntos para alcanzar tus metas de peso de manera sostenible y amorosa.",
+      "titulo": "Entendiendo la Obesidad: Más Allá del Peso",
+      "descripcion": "La obesidad es compleja y multifactorial. Explora este recurso para comprenderla mejor y encontrar caminos hacia un bienestar integral, sin culpas y con empatía.",
       "link": "https://www.youtube.com/watch?v=Z_a7zNOnf5s"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Avances en la Lucha contra el VIH: Un Panorama Global de Esperanza",
-      "resumen": "La comunidad científica y médica sigue logrando hitos importantes en la prevención y tratamiento del VIH, abriendo nuevas puertas hacia una mejor calidad de vida y un futuro más saludable para millones de personas. Mantente informado sobre las últimas investigaciones y estrategias globales.",
-      "url_imagen": "https://images.unsplash.com/photo-1587353986289-4054a36f69c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+      "titulo": "La importancia del acceso equitativo a la salud para todos",
+      "resumen": "Las noticias mundiales resaltan continuamente la necesidad de sistemas de salud que garanticen el acceso a servicios esenciales, medicamentos y vacunas para cada persona, sin importar su condición o ubicación. Mantente informado sobre los esfuerzos globales para construir un futuro más saludable y equitativo.",
+      "url_imagen": "https://images.unsplash.com/photo-1505751172876-cd46777cd896?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Escucha tu Cuerpo: El Poder del Descanso y la Hidratación",
-      "texto": "Tu cuerpo es sabio y te envía señales constantemente. Vivir con VIH puede requerir un extra de energía, por lo que el descanso adecuado y una hidratación óptima no son un lujo, sino una necesidad vital. Permítete pausas, duerme lo suficiente y bebe agua a lo largo del día para mantener tu vitalidad y apoyar tu sistema inmunológico."
+      "titulo": "Tu Ritmo de Sueño: Un Pilar de Bienestar",
+      "texto": "Un descanso adecuado es fundamental para tu energía, tu sistema inmune y tu estado de ánimo. Intenta establecer una rutina de sueño regular, incluso los fines de semana. Crea un ambiente oscuro y tranquilo, y evita pantallas antes de acostarte. Escuchar a tu cuerpo te ayudará a encontrar el equilibrio perfecto."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada Energética de Lentejas y Verduras Frescas",
-      "url_imagen": "https://images.unsplash.com/photo-1551248083-d92e592652b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-      "descripcion": "Una explosión de sabor y nutrientes para mantener tu energía a tope. Las lentejas son una excelente fuente de proteína vegetal y fibra, perfectas para una digestión saludable, combinadas con verduras frescas que aportan vitaminas y minerales esenciales. ¡Fácil de preparar y deliciosa!",
-      "link_externo": "https://www.youtube.com/watch?v=NnF_6zE5mYo"
+      "nombre": "Ensalada Fresca de Nopales con Panela",
+      "url_imagen": "https://images.unsplash.com/photo-1546069901-dcd10b7f6c27?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "descripcion": "Una ensalada vibrante y llena de sabor, perfecta para nutrir tu cuerpo con fibra y proteínas. Los nopales son un superalimento mexicano, y la panela le da un toque suave y delicioso. ¡Ideal para cualquier día!",
+      "link_externo": "https://www.youtube.com/watch?v=DOfV8E7T3yE"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "Calma",
-    "desafio": "Hoy te invito a encontrar un momento de paz. Respira profundamente y reconoce una emoción que te acompañe sin juzgarla. Date permiso para sentirla y luego, déjala ir suavemente.",
-    "afirmacion_positiva": "Soy digno/a de amor y bienestar. Mi salud mental es una prioridad y tengo las herramientas para nutrirla cada día.",
+    "emocion_del_dia": "Serenidad",
+    "desafio": "¿Qué pequeña acción puedes hacer hoy para cuidar de ti? Podría ser beber un vaso de agua, dar un breve paseo o escuchar tu canción favorita. ¡Date permiso para disfrutarlo!",
+    "afirmacion_positiva": "Mi bienestar es una prioridad y merezco cuidarme con amor y compasión.",
     "puntos_ganados": 50
   }
 }
