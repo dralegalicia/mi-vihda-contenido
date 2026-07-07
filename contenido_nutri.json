@@ -1,46 +1,41 @@
 {
-  "aviso_urgente": {
-    "titulo": "¡AVISO IMPORTANTE!",
-    "mensaje": "Mañana el CAPASITS permanecerá cerrado por día festivo. Favor de reprogramar sus citas. Atentamente: La Dirección.",
-    "activo": true
-  },
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Entendiendo la Obesidad: Más Allá del Peso",
-      "descripcion": "La obesidad es una condición compleja que puede impactar significativamente tu salud general, especialmente cuando vives con VIH. Este recurso te ayudará a comprender mejor sus causas, riesgos y cómo un enfoque integral puede mejorar tu bienestar. Recuerda, no estás solo/a en este camino.",
+      "titulo": "Manejando el Peso con VIH: Un Equilibrio Saludable",
+      "descripcion": "Mantener un peso saludable es clave para tu bienestar general, especialmente viviendo con VIH. Este recurso te ofrece herramientas y perspectivas para entender mejor cómo la nutrición y el ejercicio impactan tu salud metabólica, y cómo podemos trabajar juntos para alcanzar tus metas de peso de manera sostenible y amorosa.",
       "link": "https://www.youtube.com/watch?v=Z_a7zNOnf5s"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Avances Globales en Salud: Un Resumen Vital",
-      "resumen": "Mantente informado/a sobre las últimas noticias y avances en salud a nivel mundial. Desde nuevas investigaciones hasta políticas públicas, estar al día es clave para entender el panorama de la salud y cómo puede influir en tu vida y en la de tu comunidad. La información es poder para tu bienestar.",
-      "url_imagen": "https://images.unsplash.com/photo-1505751172876-cd46a47a78ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5NDF8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjBuZXdzfGVufDB8fHx8MTY4NTcwOTU0OA&ixlib=rb-4.0.3&q=80&w=1080",
+      "titulo": "Avances en la Lucha contra el VIH: Un Panorama Global de Esperanza",
+      "resumen": "La comunidad científica y médica sigue logrando hitos importantes en la prevención y tratamiento del VIH, abriendo nuevas puertas hacia una mejor calidad de vida y un futuro más saludable para millones de personas. Mantente informado sobre las últimas investigaciones y estrategias globales.",
+      "url_imagen": "https://images.unsplash.com/photo-1587353986289-4054a36f69c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Escucha a tu Cuerpo: La Sabiduría Interna",
-      "texto": "Tu cuerpo es increíblemente sabio. Tómate un momento cada día para escucharlo. ¿Qué necesita? ¿Descanso, movimiento, un alimento nutritivo o quizás un momento de calma? Prestar atención a estas señales es fundamental para tu bienestar físico y emocional, especialmente cuando manejas tu salud con VIH. Confía en ti."
+      "titulo": "Escucha tu Cuerpo: El Poder del Descanso y la Hidratación",
+      "texto": "Tu cuerpo es sabio y te envía señales constantemente. Vivir con VIH puede requerir un extra de energía, por lo que el descanso adecuado y una hidratación óptima no son un lujo, sino una necesidad vital. Permítete pausas, duerme lo suficiente y bebe agua a lo largo del día para mantener tu vitalidad y apoyar tu sistema inmunológico."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada Energética de Lentejas con Verduras Frescas",
-      "url_imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
-      "descripcion": "Disfruta de esta ensalada de lentejas rica en hierro y proteína vegetal. Es perfecta para fortalecer tu sistema inmune y mantener niveles de energía estables durante el día. ¡Sencilla, fresca y deliciosa!",
-      "link_externo": "https://www.youtube.com/watch?v=kYI9C5G_bH0"
+      "nombre": "Ensalada Energética de Lentejas y Verduras Frescas",
+      "url_imagen": "https://images.unsplash.com/photo-1551248083-d92e592652b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+      "descripcion": "Una explosión de sabor y nutrientes para mantener tu energía a tope. Las lentejas son una excelente fuente de proteína vegetal y fibra, perfectas para una digestión saludable, combinadas con verduras frescas que aportan vitaminas y minerales esenciales. ¡Fácil de preparar y deliciosa!",
+      "link_externo": "https://www.youtube.com/watch?v=NnF_6zE5mYo"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "Serenidad",
-    "desafio": "Dedica 10 minutos a la respiración consciente. Observa tu inhalación y exhalación sin juzgar. Permite que la calma te envuelva. Pequeños momentos de paz hacen una gran diferencia.",
-    "afirmacion_positiva": "Mi bienestar es mi prioridad, y tengo la fuerza para cultivarlo cada día. Me doy permiso para sentir y crecer.",
+    "emocion_del_dia": "Calma",
+    "desafio": "Hoy te invito a encontrar un momento de paz. Respira profundamente y reconoce una emoción que te acompañe sin juzgarla. Date permiso para sentirla y luego, déjala ir suavemente.",
+    "afirmacion_positiva": "Soy digno/a de amor y bienestar. Mi salud mental es una prioridad y tengo las herramientas para nutrirla cada día.",
     "puntos_ganados": 50
   }
 }
