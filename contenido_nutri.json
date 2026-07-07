@@ -39,3 +39,49 @@
     "puntos_ganados": 50
   }
 }
+{
+  "aviso_urgente": {
+    "titulo": "¡AVISO IMPORTANTE!",
+    "mensaje": "Mañana el CAPASITS permanecerá cerrado por día festivo. Favor de reprogramar sus citas. Atentamente: La Dirección.",
+    "activo": true
+  },
+  "recursos_obesidad": [
+    {
+      "id": 1,
+      "titulo": "Entendiendo la Obesidad: Más Allá del Peso",
+      "descripcion": "La obesidad es una condición compleja que puede impactar significativamente tu salud general, especialmente cuando vives con VIH. Este recurso te ayudará a comprender mejor sus causas, riesgos y cómo un enfoque integral puede mejorar tu bienestar. Recuerda, no estás solo/a en este camino.",
+      "link": "https://www.youtube.com/watch?v=Z_a7zNOnf5s"
+    }
+  ],
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Avances Globales en Salud: Un Resumen Vital",
+      "resumen": "Mantente informado/a sobre las últimas noticias y avances en salud a nivel mundial. Desde nuevas investigaciones hasta políticas públicas, estar al día es clave para entender el panorama de la salud y cómo puede influir en tu vida y en la de tu comunidad. La información es poder para tu bienestar.",
+      "url_imagen": "https://images.unsplash.com/photo-1505751172876-cd46a47a78ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5NDF8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjBuZXdzfGVufDB8fHx8MTY4NTcwOTU0OA&ixlib=rb-4.0.3&q=80&w=1080",
+      "link": "https://news.un.org/es/tags/salud"
+    }
+  ],
+  "consejos": [
+    {
+      "id": 1,
+      "titulo": "Escucha a tu Cuerpo: La Sabiduría Interna",
+      "texto": "Tu cuerpo es increíblemente sabio. Tómate un momento cada día para escucharlo. ¿Qué necesita? ¿Descanso, movimiento, un alimento nutritivo o quizás un momento de calma? Prestar atención a estas señales es fundamental para tu bienestar físico y emocional, especialmente cuando manejas tu salud con VIH. Confía en ti."
+    }
+  ],
+  "recetas": [
+    {
+      "id": 1,
+      "nombre": "Ensalada Energética de Quinoa con Verduras Frescas",
+      "url_imagen": "https://images.unsplash.com/photo-1546069901-b5413ad7a840?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5NDF8MHwxfHNlYXJjaHw1fHxxdWlub2ElMjBzYWxhZHxlbnwwfHx8fDE2ODU3MDk1MDc&ixlib=rb-4.0.3&q=80&w=1080",
+      "descripcion": "Prepara esta deliciosa y nutritiva ensalada de quinoa, cargada de proteínas, fibra y vitaminas esenciales para tu sistema inmune. Es ligera, fácil de hacer y perfecta para cualquier comida del día, brindándote la energía que necesitas para seguir adelante. ¡Un festín de color y sabor!",
+      "link_externo": "https://www.youtube.com/watch?v=DOfV8E7T3yE"
+    }
+  ],
+  "salud_mental": {
+    "emocion_del_dia": "Serenidad",
+    "desafio": "Dedica 10 minutos a la respiración consciente. Observa tu inhalación y exhalación sin juzgar. Permite que la calma te envuelva. Pequeños momentos de paz hacen una gran diferencia.",
+    "afirmacion_positiva": "Mi bienestar es mi prioridad, y tengo la fuerza para cultivarlo cada día. Me doy permiso para sentir y crecer.",
+    "puntos_ganados": 50
+  }
+}
