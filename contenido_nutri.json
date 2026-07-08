@@ -2,40 +2,40 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Manejando el Peso con VIH: Un Reto y Una Oportunidad",
-      "descripcion": "Vivir con VIH a veces puede traer cambios en el metabolismo y el peso. Aprender a manejarlo no solo mejora tu salud física, sino también tu bienestar general. Descubre cómo mantener un peso saludable y sentirte mejor.",
-      "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
+      "titulo": "Entendiendo la Obesidad: Más Allá del Peso",
+      "descripcion": "La obesidad es un tema complejo que va más allá de solo lo que comemos o cuánto nos movemos. Acompáñanos en este recurso para comprenderla mejor y cómo podemos abordarla de una manera saludable y compasiva. Recuerda, tu bienestar integral es lo más importante.",
+      "link": "https://www.youtube.com/watch?v=CndXAtXPfhw"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Avances Globales en la Lucha contra el VIH/SIDA: Un Futuro Más Brillante",
-      "resumen": "Las noticias más recientes de la ONU destacan los progresos significativos en la prevención y tratamiento del VIH, ofreciendo esperanza y nuevas perspectivas para las comunidades afectadas en todo el mundo. Mantente informado sobre los esfuerzos globales y cómo impactan tu vida.",
-      "url_imagen": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+      "titulo": "Nuevos avances en la investigación sobre el VIH/SIDA",
+      "resumen": "La ciencia no se detiene y cada día nos acerca más a soluciones innovadoras. Te compartimos los últimos avances y noticias esperanzadoras en la investigación global sobre el VIH/SIDA, recordándote que el futuro es prometedor y estamos juntos en este camino.",
+      "url_imagen": "https://images.unsplash.com/photo-1532187640940-eb97de779901?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Escucha a Tu Cuerpo y Nutre Tu Alma",
-      "texto": "Tu cuerpo es sabio. Presta atención a las señales que te envía sobre tus niveles de energía, apetito y estado de ánimo. Una nutrición equilibrada, actividad física regular y momentos de calma son fundamentales para tu bienestar integral. Recuerda, cuidarte a ti mismo es un acto de amor propio y fortaleza."
+      "titulo": "Cultivando la Resiliencia: Tu Fuerza Interior",
+      "texto": "Vivir con VIH te ha enseñado una fuerza increíble. Practica la resiliencia reconociendo tus emociones, buscando apoyo en tu comunidad y celebrando tus pequeños y grandes logros. Recuerda que cada día es una oportunidad para aprender, crecer y sentirte bien contigo mismo/a."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada Fresca de Quinoa con Aguacate y Mango",
-      "url_imagen": "https://images.unsplash.com/photo-1546069901-dcd4162e85a6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-      "descripcion": "Una ensalada vibrante y nutritiva, perfecta para un almuerzo ligero o una cena fresca. Rica en proteínas, fibra y vitaminas, esta receta te ayudará a mantener tu energía y defensas altas. ¡Sabor que cuida de ti!",
+      "nombre": "Ensalada Energética de Quinoa y Vegetales",
+      "url_imagen": "https://images.unsplash.com/photo-1590317586524-77f24029ce68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      "descripcion": "Una explosión de sabor y nutrientes que te llenará de vitalidad. Esta ensalada es perfecta para mantener tus niveles de energía estables y apoyar tu sistema inmunológico. Fácil de preparar y deliciosa, ¡ideal para cualquier momento del día!",
       "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
     }
   ],
   "salud_mental": {
     "emocion_del_dia": "Serenidad",
-    "desafio": "¿Qué pequeño gesto de amabilidad puedes hacer por ti hoy? (Ej: 10 minutos de lectura tranquila, escuchar tu música favorita, un té caliente).",
-    "afirmacion_positiva": "Elijo honrar mi fuerza interior y cultivar la paz en mi corazón.",
+    "desafio": "Tómate 5 minutos hoy para practicar la respiración consciente. Inhala profundamente por la nariz, retén un momento y exhala lentamente por la boca, sintiendo cómo tu cuerpo se relaja.",
+    "afirmacion_positiva": "Elijo honrar mi cuerpo y mi mente con amor y compasión. Soy digno/a de bienestar y alegría.",
     "puntos_ganados": 50
   }
 }
