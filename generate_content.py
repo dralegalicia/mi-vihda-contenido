@@ -8,14 +8,14 @@ genai.configure(api_key=api_key)
 
 # 2. Lista de Videos de YouTube Reales
 YOUTUBE_RECETAS = [
-    "https://www.youtube.com/watch?v=DOfV8E7T3yE",
-    "https://www.youtube.com/watch?v=0hYw_zL8U6M",
-    "https://www.youtube.com/watch?v=NnF_6zE5mYo"
+    "https://www.youtube.com/watch?v=EdhZ2MD-dnE",
+    "https://www.youtube.com/watch?v=7taoXVgZ24Q",
+    "https://www.youtube.com/watch?v=DMw2uZ9A2fc"
 ]
 
 YOUTUBE_OBESIDAD = [
-    "https://www.youtube.com/watch?v=Z_a7zNOnf5s",
-    "https://www.youtube.com/watch?v=0vT_Wv72m2I"
+    "https://www.youtube.com/watch?v=ZMv3FjYCKbE",
+    "https://www.youtube.com/watch?v=CndXAtXPfhw"
 ]
 
 def obtener_mejor_modelo():
