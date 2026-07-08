@@ -2,40 +2,40 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Entendiendo la Obesidad: Más Allá del Peso",
-      "descripcion": "La obesidad es compleja y multifactorial. Explora este recurso para comprenderla mejor y encontrar caminos hacia un bienestar integral, sin culpas y con empatía.",
-      "link": "https://www.youtube.com/watch?v=Z_a7zNOnf5s"
+      "titulo": "Manejando el Peso con VIH: Un Reto y Una Oportunidad",
+      "descripcion": "Vivir con VIH a veces puede traer cambios en el metabolismo y el peso. Aprender a manejarlo no solo mejora tu salud física, sino también tu bienestar general. Descubre cómo mantener un peso saludable y sentirte mejor.",
+      "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "La importancia del acceso equitativo a la salud para todos",
-      "resumen": "Las noticias mundiales resaltan continuamente la necesidad de sistemas de salud que garanticen el acceso a servicios esenciales, medicamentos y vacunas para cada persona, sin importar su condición o ubicación. Mantente informado sobre los esfuerzos globales para construir un futuro más saludable y equitativo.",
-      "url_imagen": "https://images.unsplash.com/photo-1505751172876-cd46777cd896?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "titulo": "Avances Globales en la Lucha contra el VIH/SIDA: Un Futuro Más Brillante",
+      "resumen": "Las noticias más recientes de la ONU destacan los progresos significativos en la prevención y tratamiento del VIH, ofreciendo esperanza y nuevas perspectivas para las comunidades afectadas en todo el mundo. Mantente informado sobre los esfuerzos globales y cómo impactan tu vida.",
+      "url_imagen": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Tu Ritmo de Sueño: Un Pilar de Bienestar",
-      "texto": "Un descanso adecuado es fundamental para tu energía, tu sistema inmune y tu estado de ánimo. Intenta establecer una rutina de sueño regular, incluso los fines de semana. Crea un ambiente oscuro y tranquilo, y evita pantallas antes de acostarte. Escuchar a tu cuerpo te ayudará a encontrar el equilibrio perfecto."
+      "titulo": "Escucha a Tu Cuerpo y Nutre Tu Alma",
+      "texto": "Tu cuerpo es sabio. Presta atención a las señales que te envía sobre tus niveles de energía, apetito y estado de ánimo. Una nutrición equilibrada, actividad física regular y momentos de calma son fundamentales para tu bienestar integral. Recuerda, cuidarte a ti mismo es un acto de amor propio y fortaleza."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada Fresca de Nopales con Panela",
-      "url_imagen": "https://images.unsplash.com/photo-1546069901-dcd10b7f6c27?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "descripcion": "Una ensalada vibrante y llena de sabor, perfecta para nutrir tu cuerpo con fibra y proteínas. Los nopales son un superalimento mexicano, y la panela le da un toque suave y delicioso. ¡Ideal para cualquier día!",
-      "link_externo": "https://www.youtube.com/watch?v=DOfV8E7T3yE"
+      "nombre": "Ensalada Fresca de Quinoa con Aguacate y Mango",
+      "url_imagen": "https://images.unsplash.com/photo-1546069901-dcd4162e85a6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+      "descripcion": "Una ensalada vibrante y nutritiva, perfecta para un almuerzo ligero o una cena fresca. Rica en proteínas, fibra y vitaminas, esta receta te ayudará a mantener tu energía y defensas altas. ¡Sabor que cuida de ti!",
+      "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
     }
   ],
   "salud_mental": {
     "emocion_del_dia": "Serenidad",
-    "desafio": "¿Qué pequeña acción puedes hacer hoy para cuidar de ti? Podría ser beber un vaso de agua, dar un breve paseo o escuchar tu canción favorita. ¡Date permiso para disfrutarlo!",
-    "afirmacion_positiva": "Mi bienestar es una prioridad y merezco cuidarme con amor y compasión.",
+    "desafio": "¿Qué pequeño gesto de amabilidad puedes hacer por ti hoy? (Ej: 10 minutos de lectura tranquila, escuchar tu música favorita, un té caliente).",
+    "afirmacion_positiva": "Elijo honrar mi fuerza interior y cultivar la paz en mi corazón.",
     "puntos_ganados": 50
   }
 }
