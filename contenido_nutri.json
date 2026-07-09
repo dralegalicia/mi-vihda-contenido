@@ -2,40 +2,40 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Entendiendo la Obesidad: Más Allá del Peso",
-      "descripcion": "La obesidad es un tema complejo que va más allá de solo lo que comemos o cuánto nos movemos. Acompáñanos en este recurso para comprenderla mejor y cómo podemos abordarla de una manera saludable y compasiva. Recuerda, tu bienestar integral es lo más importante.",
-      "link": "https://www.youtube.com/watch?v=CndXAtXPfhw"
+      "titulo": "Manejando el Peso en VIH: Una Guía Esencial",
+      "descripcion": "Explora cómo mantener un peso saludable es clave para tu bienestar general y el manejo del VIH, con consejos prácticos y basados en evidencia.",
+      "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Nuevos avances en la investigación sobre el VIH/SIDA",
-      "resumen": "La ciencia no se detiene y cada día nos acerca más a soluciones innovadoras. Te compartimos los últimos avances y noticias esperanzadoras en la investigación global sobre el VIH/SIDA, recordándote que el futuro es prometedor y estamos juntos en este camino.",
-      "url_imagen": "https://images.unsplash.com/photo-1532187640940-eb97de779901?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      "titulo": "Avances en la Salud Global: Impacto en las Personas con VIH",
+      "resumen": "Las últimas noticias de salud global destacan innovaciones y políticas que buscan mejorar la calidad de vida de millones, incluyendo la comunidad VIH. Mantente informado sobre los progresos que nos benefician a todos.",
+      "url_imagen": "https://images.unsplash.com/photo-1532187642493-bd6992d52bc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1Nnx8aGVhbHRoJTIwc2NpZW5jZXxlbnwwfHx8fDE3MTc4ODExNTJ8MA&ixlib=rb-4.0.3&q=80&w=1080",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Cultivando la Resiliencia: Tu Fuerza Interior",
-      "texto": "Vivir con VIH te ha enseñado una fuerza increíble. Practica la resiliencia reconociendo tus emociones, buscando apoyo en tu comunidad y celebrando tus pequeños y grandes logros. Recuerda que cada día es una oportunidad para aprender, crecer y sentirte bien contigo mismo/a."
+      "titulo": "La Hidratación: Tu Aliada Diaria",
+      "texto": "Beber suficiente agua es fundamental para el buen funcionamiento de tu cuerpo, especialmente si vives con VIH. Ayuda a tu sistema inmunológico, mejora la energía y facilita la absorción de nutrientes. ¡Lleva contigo una botella de agua y hidrátate constantemente!"
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada Energética de Quinoa y Vegetales",
-      "url_imagen": "https://images.unsplash.com/photo-1590317586524-77f24029ce68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-      "descripcion": "Una explosión de sabor y nutrientes que te llenará de vitalidad. Esta ensalada es perfecta para mantener tus niveles de energía estables y apoyar tu sistema inmunológico. Fácil de preparar y deliciosa, ¡ideal para cualquier momento del día!",
+      "nombre": "Ensalada de Quinoa y Vegetales Frescos",
+      "url_imagen": "https://images.unsplash.com/photo-1546069901-d70377549645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0OXx8cXVpbm9hJTIwc2FsYWR8ZW58MHx8fHwxNzE3ODgwODc4fDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "descripcion": "Una ensalada nutritiva y deliciosa, llena de proteínas vegetales y vitaminas. Perfecta para mantener tu energía y reforzar tu sistema inmunológico. ¡Fácil de preparar y personalizable a tu gusto!",
       "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "Serenidad",
-    "desafio": "Tómate 5 minutos hoy para practicar la respiración consciente. Inhala profundamente por la nariz, retén un momento y exhala lentamente por la boca, sintiendo cómo tu cuerpo se relaja.",
-    "afirmacion_positiva": "Elijo honrar mi cuerpo y mi mente con amor y compasión. Soy digno/a de bienestar y alegría.",
+    "emocion_del_dia": "Gratitud",
+    "desafio": "Hoy, tómate un momento para escribir tres cosas por las que te sientes agradecido. Pueden ser pequeñas o grandes. Reconocer lo positivo fortalece tu bienestar.",
+    "afirmacion_positiva": "Mi bienestar es mi prioridad, y me comprometo a cuidarme con amor y compasión cada día.",
     "puntos_ganados": 50
   }
 }
