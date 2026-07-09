@@ -1,55 +1,41 @@
-import os
-import json
-import google.generativeai as genai
-from datetime import datetime
-
-# Configuración
-api_key = os.environ.get("GEMINI_API_KEY")
-genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-pro')
-
-def get_youtube_thumbnail(url):
-    video_id = url.split("v=")[-1]
-    return f"https://img.youtube.com/vi/{video_id}/maxresdefault.jpg"
-
-# Generación de Contenido con IA
-def generar_bloque(prompt):
-    return model.generate_content(prompt).text
-
-# Links de referencia (puedes cambiarlos cuando quieras)
-link_receta = "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
-link_obesidad = "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
-
-data = {
-    "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d"),
-    "recursos_obesidad": [{
-        "titulo": "Manejando el Peso en VIH",
-        "descripcion": generar_bloque("Escribe una descripción corta y empática sobre la importancia del control de peso en pacientes con VIH."),
-        "link": link_obesidad,
-        "url_imagen": get_youtube_thumbnail(link_obesidad)
-    }],
-    "noticias": [{
-        "titulo": "Avances Médicos Recientes",
-        "resumen": generar_bloque("Escribe un resumen breve y esperanzador sobre avances en salud para personas con VIH."),
-        "link": "https://news.un.org/es/tags/salud"
-    }],
-    "consejos": [{
-        "titulo": "Consejo de Bienestar",
-        "texto": generar_bloque("Escribe un consejo breve y cariñoso de salud o nutrición para alguien que vive con VIH.")
-    }],
-    "recetas": [{
-        "nombre": "Receta Saludable del Día",
-        "descripcion": generar_bloque("Describe brevemente una receta saludable, sencilla y nutritiva."),
-        "link_externo": link_receta,
-        "url_imagen": get_youtube_thumbnail(link_receta)
-    }],
-    "salud_mental": {
-        "emocion_del_dia": "Bienestar",
-        "desafio": generar_bloque("Escribe un pequeño desafío de bienestar emocional para hoy."),
-        "afirmacion_positiva": generar_bloque("Escribe una afirmación positiva para pacientes con VIH."),
-        "puntos_ganados": 50
+{
+  "recursos_obesidad": [
+    {
+      "id": 1,
+      "titulo": "Manejo del Peso: Estrategias para una Vida Activa",
+      "descripcion": "Explora cómo mantener un peso saludable es clave para tu bienestar general y el manejo de tu salud. ¡Un paso a la vez!",
+      "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
     }
+  ],
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Avances en Salud Global: Un Resumen Mensual",
+      "resumen": "Mantente al día con las últimas noticias y descubrimientos en el ámbito de la salud a nivel mundial, siempre buscando el bienestar de todos y enfocados en una vida plena.",
+      "url_imagen": "https://images.unsplash.com/photo-1532187640947-a89a19c507c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "link": "https://news.un.org/es/tags/salud"
+    }
+  ],
+  "consejos": [
+    {
+      "id": 1,
+      "titulo": "Hidratación Consciente: El Agua es Vida",
+      "texto": "Sabemos que a veces se nos olvida, pero beber suficiente agua es fundamental para cada función de tu cuerpo, especialmente para la absorción de medicamentos y para mantener tu energía. ¡Haz de cada vaso un acto de amor propio y vitalidad!"
+    }
+  ],
+  "recetas": [
+    {
+      "id": 1,
+      "nombre": "Ensalada Arcoíris con Aderezo de Cítricos",
+      "url_imagen": "https://images.unsplash.com/photo-1546069901-dcd16b8b05cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80",
+      "descripcion": "Una explosión de color y nutrientes para tu plato. Esta ensalada es ligera, refrescante y perfecta para fortalecer tu sistema inmunológico con vitaminas y antioxidantes. ¡Deliciosa y nutritiva!",
+      "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
+    }
+  ],
+  "salud_mental": {
+    "emocion_del_dia": "Gratitud",
+    "desafio": "Hoy, tómate un momento para escribir tres cosas por las que te sientes agradecido/a. Pequeños o grandes, reconocerlos eleva el espíritu y fortalece tu bienestar emocional.",
+    "afirmacion_positiva": "Soy fuerte, soy valioso/a y merezco todo lo bueno que la vida tiene para ofrecerme. Mi resiliencia me guía.",
+    "puntos_ganados": 50
+  }
 }
-
-with open("contenido_nutri.json", "w", encoding="utf-8") as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
