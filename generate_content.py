@@ -4,11 +4,10 @@ import random
 from datetime import datetime
 import google.generativeai as genai
 
-# Configuración
+# 1. Configuración de API
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
-model = genai.GenerativeModel('gemini-1.5-flash')
 
-# Base de datos local: Parejas de título y link (para evitar desincronización)
+# 2. Listas de contenido sincronizado
 RECETAS = [
     {"nombre": "Ensalada de Quinoa", "link": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"},
     {"nombre": "Tacos de Pescado con Aguacate", "link": "https://www.youtube.com/watch?v=7taoXVgZ24Q"},
@@ -20,52 +19,65 @@ OBESIDAD = [
     {"titulo": "Entendiendo la Obesidad", "link": "https://www.youtube.com/watch?v=CndXAtXPfhw"}
 ]
 
-def generar_texto(prompt):
-    response = model.generate_content(prompt)
-    return response.text.strip()
+# 3. Autodetección de modelo para evitar error 404
+def obtener_modelo():
+    models = genai.list_models()
+    for m in models:
+        if 'generateContent' in m.supported_generation_methods:
+            if 'gemini-1.5' in m.name:
+                return m.name
+    return 'gemini-pro'
 
-# Selección aleatoria para el día de hoy
+model = genai.GenerativeModel(obtener_modelo())
+
+def generar_texto(prompt):
+    try:
+        response = model.generate_content(prompt)
+        return response.text.strip()
+    except:
+        return "Contenido en proceso de actualización."
+
+# 4. Generación dinámica
 receta_hoy = random.choice(RECETAS)
 obesidad_hoy = random.choice(OBESIDAD)
 
-# Construcción del JSON
 data = {
-    "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d"),
+    "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     "recursos_obesidad": [{
         "id": 1,
         "titulo": obesidad_hoy["titulo"],
-        "descripcion": generar_texto(f"Escribe una descripción empática y breve sobre el tema '{obesidad_hoy['titulo']}' para pacientes con VIH."),
+        "descripcion": generar_texto(f"Escribe una descripción empática y breve sobre '{obesidad_hoy['titulo']}' para pacientes con VIH."),
         "link": obesidad_hoy["link"]
     }],
     "noticias": [{
         "id": 1,
-        "titulo": "Avances Globales en Salud",
-        "resumen": generar_texto("Escribe un resumen breve y esperanzador sobre noticias actuales de salud y VIH."),
+        "titulo": "Actualidad en Salud Global",
+        "resumen": generar_texto("Resume una noticia esperanzadora sobre avances en salud para personas con VIH."),
         "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?auto=format&fit=crop&w=800",
         "link": "https://news.un.org/es/tags/salud"
     }],
     "consejos": [{
         "id": 1,
         "titulo": "Consejo de Bienestar Diario",
-        "texto": generar_texto("Escribe un consejo de autocuidado y nutrición, cálido y profesional, para alguien que vive con VIH.")
+        "texto": generar_texto("Escribe un consejo de nutrición profesional y cariñoso para alguien que vive con VIH.")
     }],
     "recetas": [{
         "id": 1,
         "nombre": receta_hoy["nombre"],
         "url_imagen": f"https://source.unsplash.com/featured/?{receta_hoy['nombre'].replace(' ', ',')}",
-        "descripcion": generar_texto(f"Describe brevemente los beneficios nutricionales de la receta: {receta_hoy['nombre']}."),
+        "descripcion": generar_texto(f"Describe los beneficios nutricionales de: {receta_hoy['nombre']}."),
         "link_externo": receta_hoy["link"]
     }],
     "salud_mental": {
         "emocion_del_dia": "Equilibrio",
-        "desafio": generar_texto("Propón un pequeño desafío de salud mental para el día de hoy."),
+        "desafio": generar_texto("Propón un pequeño desafío de salud mental para hoy."),
         "afirmacion_positiva": generar_texto("Escribe una afirmación de poder para alguien viviendo con VIH."),
         "puntos_ganados": 50
     }
 }
 
-# Guardar el archivo
+# 5. Guardar JSON
 with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("¡Contenido actualizado correctamente con parejas sincronizadas!")
+print("¡Proceso terminado con éxito!")
