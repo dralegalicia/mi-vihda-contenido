@@ -1,54 +1,41 @@
-import os
-import json
-import google.generativeai as genai
-from datetime import datetime
-
-# Configuración
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
-model = genai.GenerativeModel('gemini-pro')
-
-def generar_texto(prompt):
-    return model.generate_content(prompt).text
-
-# Definición de enlaces fijos (los que quieres mantener)
-link_receta = "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
-link_obesidad = "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
-
-# Generar contenido dinámico
-data = {
-    "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-    "recursos_obesidad": [{
-        "id": 1,
-        "titulo": "Manejo del Peso y VIH: ¡Tú Tienes el Control!",
-        "descripcion": generar_texto("Escribe una descripción empática y breve sobre el manejo de peso saludable para pacientes con VIH."),
-        "link": link_obesidad
-    }],
-    "noticias": [{
-        "id": 1,
-        "titulo": "Actualidad en Salud Global",
-        "resumen": generar_texto("Resume una noticia esperanzadora sobre avances en salud para personas con VIH."),
-        "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?auto=format&fit=crop&w=1770&q=80",
-        "link": "https://news.un.org/es/tags/salud"
-    }],
-    "consejos": [{
-        "id": 1,
-        "titulo": "Consejo de Bienestar Diario",
-        "texto": generar_texto("Escribe un consejo cariñoso y breve de nutrición para alguien que vive con VIH.")
-    }],
-    "recetas": [{
-        "id": 1,
-        "nombre": "Receta Saludable del Día",
-        "url_imagen": "https://images.unsplash.com/photo-1596796342898-132b4b4b2f2e?auto=format&fit=crop&w=1770&q=80",
-        "descripcion": generar_texto("Describe brevemente una receta saludable, vegetariana y nutritiva."),
-        "link_externo": link_receta
-    }],
-    "salud_mental": {
-        "emocion_del_dia": "Serenidad",
-        "desafio": generar_texto("Escribe un desafío emocional breve y sencillo para hoy."),
-        "afirmacion_positiva": generar_texto("Escribe una afirmación de empoderamiento para personas con VIH."),
-        "puntos_ganados": 50
+{
+  "recursos_obesidad": [
+    {
+      "id": 1,
+      "titulo": "Manejo del Peso: Estrategias para una Vida Saludable",
+      "descripcion": "La obesidad puede ser un desafío, especialmente viviendo con VIH. Descubre recursos clave para entenderla y gestionarla mejor, apoyando tu bienestar integral. ¡Tu salud es nuestra prioridad!",
+      "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
     }
+  ],
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Avances y Desafíos en Salud Global: Un Resumen Mensual",
+      "resumen": "Mantente al día con las últimas noticias y descubrimientos en el ámbito de la salud a nivel mundial, incluyendo novedades importantes para la comunidad de personas viviendo con VIH. Conocer es poder.",
+      "url_imagen": "https://images.unsplash.com/photo-1538334465492-6d120a10c950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+      "link": "https://news.un.org/es/tags/salud"
+    }
+  ],
+  "consejos": [
+    {
+      "id": 1,
+      "titulo": "Nutrición Consciente: Alimenta tu Energía con VIH",
+      "texto": "Vivir con VIH a veces puede afectar tus niveles de energía y apetito. Asegúrate de incluir proteínas magras, frutas, verduras coloridas y granos enteros en cada comida. Esto no solo te dará vitalidad, sino que también fortalecerá tu sistema inmune. ¡Cada bocado cuenta para tu bienestar integral!"
+    }
+  ],
+  "recetas": [
+    {
+      "id": 1,
+      "nombre": "Deliciosas Enchiladas Suizas Ligeras y Nutritivas",
+      "url_imagen": "https://images.unsplash.com/photo-1599824634289-4d6f1b0a8c2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+      "descripcion": "Disfruta de una versión más saludable y nutritiva de este clásico mexicano. Perfectas para una comida reconfortante que aporta energía y nutrientes esenciales, sin sacrificar el sabor que tanto nos gusta. ¡Prepáralas y deleita tu paladar mientras cuidas de ti!",
+      "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
+    }
+  ],
+  "salud_mental": {
+    "emocion_del_dia": "Optimismo",
+    "desafio": "Hoy, tómate un momento para escribir tres cosas por las que te sientes agradecido. Pequeños gestos de gratitud pueden transformar tu perspectiva y fortalecer tu resiliencia. ¡Respira y siente!",
+    "afirmacion_positiva": "Soy fuerte, resiliente y capaz de superar cualquier desafío con una actitud positiva y el apoyo necesario. Mi bienestar es mi prioridad.",
+    "puntos_ganados": 50
+  }
 }
-
-with open("contenido_nutri.json", "w", encoding="utf-8") as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
