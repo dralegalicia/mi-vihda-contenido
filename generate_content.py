@@ -19,31 +19,18 @@ OBESIDAD = [
     {"titulo": "Entendiendo la Obesidad", "link": "https://www.youtube.com/watch?v=CndXAtXPfhw"}
 ]
 
-# 3. Autodetección de modelo
-def obtener_modelo():
-    try:
-        models = genai.list_models()
-        for m in models:
-            if 'generateContent' in m.supported_generation_methods:
-                if 'gemini-1.5' in m.name:
-                    return m.name
-        return 'gemini-pro'
-    except Exception as e:
-        return f"ERROR_LISTA: {str(e)}"
+# 3. Usar el modelo correcto y actual
+# Usamos gemini-1.5-flash directamente, es el estándar actual
+model = genai.GenerativeModel('gemini-1.5-flash')
 
-model_name = obtener_modelo()
-model = genai.GenerativeModel(model_name)
-
-# 4. Generación con reporte de error detallado
 def generar_texto(prompt):
     try:
         response = model.generate_content(prompt)
         return response.text.strip()
     except Exception as e:
-        # AQUÍ ESTÁ EL CAMBIO: El JSON ahora nos dirá el error técnico real
-        return f"ERROR_DETALLADO: {str(e)}"
+        return f"Error al generar: {str(e)}"
 
-# 5. Generación dinámica
+# 4. Generación dinámica
 receta_hoy = random.choice(RECETAS)
 obesidad_hoy = random.choice(OBESIDAD)
 
@@ -82,8 +69,8 @@ data = {
     }
 }
 
-# 6. Guardar JSON
+# 5. Guardar JSON
 with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("¡Proceso terminado!")
+print("¡Proceso terminado con éxito!")
