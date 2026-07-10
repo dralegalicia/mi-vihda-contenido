@@ -2,40 +2,40 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Manejo del Peso: Estrategias para una Vida Saludable",
-      "descripcion": "La obesidad puede ser un desafío, especialmente viviendo con VIH. Descubre recursos clave para entenderla y gestionarla mejor, apoyando tu bienestar integral. ¡Tu salud es nuestra prioridad!",
+      "titulo": "Tu Bienestar es Prioridad: Manejando el Peso de Forma Saludable",
+      "descripcion": "Sabemos que el camino hacia un peso saludable puede tener sus desafíos, especialmente viviendo con VIH. Aquí te compartimos un recurso valioso para entender mejor cómo tu alimentación y estilo de vida impactan tu salud y cómo puedes tomar el control con información basada en evidencia y empatía. Recuerda, no estás solo en este proceso.",
       "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Avances y Desafíos en Salud Global: Un Resumen Mensual",
-      "resumen": "Mantente al día con las últimas noticias y descubrimientos en el ámbito de la salud a nivel mundial, incluyendo novedades importantes para la comunidad de personas viviendo con VIH. Conocer es poder.",
-      "url_imagen": "https://images.unsplash.com/photo-1538334465492-6d120a10c950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+      "titulo": "Avances Globales en Salud: Un Vistazo a lo Más Reciente",
+      "resumen": "Mantenerte informado sobre los avances en salud es un paso importante para tu bienestar. Hoy te traemos las últimas noticias y desarrollos globales que impactan a comunidades como la nuestra, desde nuevas estrategias de prevención hasta la importancia del acceso equitativo a servicios de salud. Porque tu salud es un derecho universal y estar al tanto te empodera.",
+      "url_imagen": "https://images.unsplash.com/photo-1532938914041-3b7c4c9d5d8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDEzfHxoZWFsdGglMjBuZXdzfGVufDB8fHx8MTcwODY5MjQyOXww&ixlib=rb-4.0.3&q=80&w=1080",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Nutrición Consciente: Alimenta tu Energía con VIH",
-      "texto": "Vivir con VIH a veces puede afectar tus niveles de energía y apetito. Asegúrate de incluir proteínas magras, frutas, verduras coloridas y granos enteros en cada comida. Esto no solo te dará vitalidad, sino que también fortalecerá tu sistema inmune. ¡Cada bocado cuenta para tu bienestar integral!"
+      "titulo": "Escucha a Tu Cuerpo: Pequeños Cambios, Grandes Beneficios",
+      "texto": "Tu cuerpo es sabio y te envía señales constantemente. Tómate un momento cada día para escucharlo. ¿Necesitas descansar? ¿Tienes sed? ¿Sientes antojo de algo nutritivo? Responder con atención plena a estas necesidades no solo mejora tu salud física, sino que fortalece tu conexión contigo y tu bienestar emocional. Empieza con algo pequeño: un vaso de agua antes de cada comida, una caminata corta, o simplemente un respiro consciente. Cada pequeño paso cuenta."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Deliciosas Enchiladas Suizas Ligeras y Nutritivas",
-      "url_imagen": "https://images.unsplash.com/photo-1599824634289-4d6f1b0a8c2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-      "descripcion": "Disfruta de una versión más saludable y nutritiva de este clásico mexicano. Perfectas para una comida reconfortante que aporta energía y nutrientes esenciales, sin sacrificar el sabor que tanto nos gusta. ¡Prepáralas y deleita tu paladar mientras cuidas de ti!",
+      "nombre": "Tacos de Pescado Fresco con Pico de Gallo y Aderezo Cremoso de Aguacate",
+      "url_imagen": "https://images.unsplash.com/photo-1594241680516-e52264560447?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDEyfHxoZWFsdGh5JTIwZmlzaCUyMHRhY29zfGVufDB8fHx8MTcwODY5Mjg5NHww&ixlib=rb-4.0.3&q=80&w=1080",
+      "descripcion": "¡Transforma tu cocina en una taquería saludable y llena de sabor! Estos tacos de pescado son ligeros, nutritivos y perfectos para una comida completa. El pescado es una excelente fuente de proteína magra y ácidos grasos Omega-3, esenciales para tu salud cardiovascular y sistema inmune. Acompañados de un fresco pico de gallo y un aderezo de aguacate, son una explosión de color y bienestar. ¡Anímate a prepararlos y disfruta de una comida deliciosa y que te nutre de verdad!",
       "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "Optimismo",
-    "desafio": "Hoy, tómate un momento para escribir tres cosas por las que te sientes agradecido. Pequeños gestos de gratitud pueden transformar tu perspectiva y fortalecer tu resiliencia. ¡Respira y siente!",
-    "afirmacion_positiva": "Soy fuerte, resiliente y capaz de superar cualquier desafío con una actitud positiva y el apoyo necesario. Mi bienestar es mi prioridad.",
+    "emocion_del_dia": "Esperanza",
+    "desafio": "Reflexiona sobre un momento reciente en el que sentiste esperanza o lograste algo pequeño pero significativo. ¿Qué te hizo sentir así? Reconoce tu capacidad para cultivar la esperanza, incluso en los días difíciles y agradece esos pequeños triunfos.",
+    "afirmacion_positiva": "Soy resiliente, fuerte y merezco paz y bienestar en cada paso de mi camino. Mi fortaleza interior me guía.",
     "puntos_ganados": 50
   }
 }
