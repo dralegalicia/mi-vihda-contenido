@@ -1,41 +1,54 @@
-{
-  "recursos_obesidad": [
-    {
-      "id": 1,
-      "titulo": "Manejo del Peso y VIH: ¡Tú Tienes el Control!",
-      "descripcion": "Vivir con VIH puede influir en tu peso. Te ofrecemos estrategias prácticas y un recurso valioso para entender mejor cómo mantener un peso saludable, reducir riesgos y sentirte con más energía cada día. ¡Invierte en tu bienestar!",
-      "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
+import os
+import json
+import google.generativeai as genai
+from datetime import datetime
+
+# Configuración
+genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
+model = genai.GenerativeModel('gemini-pro')
+
+def generar_texto(prompt):
+    return model.generate_content(prompt).text
+
+# Definición de enlaces fijos (los que quieres mantener)
+link_receta = "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
+link_obesidad = "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
+
+# Generar contenido dinámico
+data = {
+    "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    "recursos_obesidad": [{
+        "id": 1,
+        "titulo": "Manejo del Peso y VIH: ¡Tú Tienes el Control!",
+        "descripcion": generar_texto("Escribe una descripción empática y breve sobre el manejo de peso saludable para pacientes con VIH."),
+        "link": link_obesidad
+    }],
+    "noticias": [{
+        "id": 1,
+        "titulo": "Actualidad en Salud Global",
+        "resumen": generar_texto("Resume una noticia esperanzadora sobre avances en salud para personas con VIH."),
+        "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?auto=format&fit=crop&w=1770&q=80",
+        "link": "https://news.un.org/es/tags/salud"
+    }],
+    "consejos": [{
+        "id": 1,
+        "titulo": "Consejo de Bienestar Diario",
+        "texto": generar_texto("Escribe un consejo cariñoso y breve de nutrición para alguien que vive con VIH.")
+    }],
+    "recetas": [{
+        "id": 1,
+        "nombre": "Receta Saludable del Día",
+        "url_imagen": "https://images.unsplash.com/photo-1596796342898-132b4b4b2f2e?auto=format&fit=crop&w=1770&q=80",
+        "descripcion": generar_texto("Describe brevemente una receta saludable, vegetariana y nutritiva."),
+        "link_externo": link_receta
+    }],
+    "salud_mental": {
+        "emocion_del_dia": "Serenidad",
+        "desafio": generar_texto("Escribe un desafío emocional breve y sencillo para hoy."),
+        "afirmacion_positiva": generar_texto("Escribe una afirmación de empoderamiento para personas con VIH."),
+        "puntos_ganados": 50
     }
-  ],
-  "noticias": [
-    {
-      "id": 1,
-      "titulo": "Avances en Salud: Un Paso Adelante Hacia un Futuro Más Saludable para Todos",
-      "resumen": "Mantenernos informados sobre los últimos descubrimientos y tendencias en salud es clave para tomar decisiones conscientes. Explora las novedades que están transformando la atención médica y promoviendo el bienestar global. ¡Tu salud es nuestra prioridad!",
-      "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-      "link": "https://news.un.org/es/tags/salud"
-    }
-  ],
-  "consejos": [
-    {
-      "id": 1,
-      "titulo": "La Hidratación: Tu Aliada para el Bienestar Diario",
-      "texto": "Beber suficiente agua es fundamental para cada función de tu cuerpo, especialmente si vives con VIH. Ayuda a tu sistema inmune, mejora la absorción de nutrientes y te mantiene con energía. ¡Lleva contigo una botella de agua y haz de la hidratación un hábito delicioso!"
-    }
-  ],
-  "recetas": [
-    {
-      "id": 1,
-      "nombre": "Tacos de Coliflor con un Toque Mexicano",
-      "url_imagen": "https://images.unsplash.com/photo-1596796342898-132b4b4b2f2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-      "descripcion": "¡Explora el sabor y la nutrición con estos deliciosos tacos de coliflor! Una opción vegetariana llena de fibra, vitaminas y minerales esenciales para fortalecer tu sistema inmune y mantenerte lleno de energía. Una alternativa ligera y sabrosa para cualquier comida. ¡Tu cuerpo te lo agradecerá!",
-      "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
-    }
-  ],
-  "salud_mental": {
-    "emocion_del_dia": "Gratitud",
-    "desafio": "Toma un momento para anotar 3 cosas por las que te sientes agradecido hoy. ¡Pequeños gestos, grandes impactos!",
-    "afirmacion_positiva": "Soy fuerte, resiliente y capaz de superar cualquier desafío con una actitud positiva.",
-    "puntos_ganados": 50
-  }
 }
+
+with open("contenido_nutri.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
