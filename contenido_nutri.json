@@ -1,41 +1,42 @@
 {
+  "fecha_actualizacion": "2026-07-10 21:17:11",
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Tu Bienestar es Prioridad: Manejando el Peso de Forma Saludable",
-      "descripcion": "Sabemos que el camino hacia un peso saludable puede tener sus desafíos, especialmente viviendo con VIH. Aquí te compartimos un recurso valioso para entender mejor cómo tu alimentación y estilo de vida impactan tu salud y cómo puedes tomar el control con información basada en evidencia y empatía. Recuerda, no estás solo en este proceso.",
+      "titulo": "Manejo del Peso y VIH",
+      "descripcion": "Contenido en proceso de actualización.",
       "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Avances Globales en Salud: Un Vistazo a lo Más Reciente",
-      "resumen": "Mantenerte informado sobre los avances en salud es un paso importante para tu bienestar. Hoy te traemos las últimas noticias y desarrollos globales que impactan a comunidades como la nuestra, desde nuevas estrategias de prevención hasta la importancia del acceso equitativo a servicios de salud. Porque tu salud es un derecho universal y estar al tanto te empodera.",
-      "url_imagen": "https://images.unsplash.com/photo-1532938914041-3b7c4c9d5d8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDEzfHxoZWFsdGglMjBuZXdzfGVufDB8fHx8MTcwODY5MjQyOXww&ixlib=rb-4.0.3&q=80&w=1080",
+      "titulo": "Actualidad en Salud Global",
+      "resumen": "Contenido en proceso de actualización.",
+      "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?auto=format&fit=crop&w=800",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Escucha a Tu Cuerpo: Pequeños Cambios, Grandes Beneficios",
-      "texto": "Tu cuerpo es sabio y te envía señales constantemente. Tómate un momento cada día para escucharlo. ¿Necesitas descansar? ¿Tienes sed? ¿Sientes antojo de algo nutritivo? Responder con atención plena a estas necesidades no solo mejora tu salud física, sino que fortalece tu conexión contigo y tu bienestar emocional. Empieza con algo pequeño: un vaso de agua antes de cada comida, una caminata corta, o simplemente un respiro consciente. Cada pequeño paso cuenta."
+      "titulo": "Consejo de Bienestar Diario",
+      "texto": "Contenido en proceso de actualización."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Tacos de Pescado Fresco con Pico de Gallo y Aderezo Cremoso de Aguacate",
-      "url_imagen": "https://images.unsplash.com/photo-1594241680516-e52264560447?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDEyfHxoZWFsdGh5JTIwZmlzaCUyMHRhY29zfGVufDB8fHx8MTcwODY5Mjg5NHww&ixlib=rb-4.0.3&q=80&w=1080",
-      "descripcion": "¡Transforma tu cocina en una taquería saludable y llena de sabor! Estos tacos de pescado son ligeros, nutritivos y perfectos para una comida completa. El pescado es una excelente fuente de proteína magra y ácidos grasos Omega-3, esenciales para tu salud cardiovascular y sistema inmune. Acompañados de un fresco pico de gallo y un aderezo de aguacate, son una explosión de color y bienestar. ¡Anímate a prepararlos y disfruta de una comida deliciosa y que te nutre de verdad!",
+      "nombre": "Ensalada de Quinoa",
+      "url_imagen": "https://source.unsplash.com/featured/?Ensalada,de,Quinoa",
+      "descripcion": "Contenido en proceso de actualización.",
       "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "Esperanza",
-    "desafio": "Reflexiona sobre un momento reciente en el que sentiste esperanza o lograste algo pequeño pero significativo. ¿Qué te hizo sentir así? Reconoce tu capacidad para cultivar la esperanza, incluso en los días difíciles y agradece esos pequeños triunfos.",
-    "afirmacion_positiva": "Soy resiliente, fuerte y merezco paz y bienestar en cada paso de mi camino. Mi fortaleza interior me guía.",
+    "emocion_del_dia": "Equilibrio",
+    "desafio": "Contenido en proceso de actualización.",
+    "afirmacion_positiva": "Contenido en proceso de actualización.",
     "puntos_ganados": 50
   }
 }
