@@ -2,40 +2,40 @@
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "¿Cómo manejar el peso corporal y sentirte mejor?",
-      "descripcion": "La salud integral incluye cuidar nuestro peso. Te compartimos consejos prácticos para mantener un equilibrio, especialmente importante cuando vives con VIH. Pequeños cambios pueden generar grandes beneficios.",
+      "titulo": "Manejo del Peso y VIH: ¡Tú Tienes el Control!",
+      "descripcion": "Vivir con VIH puede influir en tu peso. Te ofrecemos estrategias prácticas y un recurso valioso para entender mejor cómo mantener un peso saludable, reducir riesgos y sentirte con más energía cada día. ¡Invierte en tu bienestar!",
       "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
     }
   ],
   "noticias": [
     {
       "id": 1,
-      "titulo": "Avances en la investigación sobre salud global y bienestar",
-      "resumen": "Descubre las últimas novedades y estudios que están transformando la manera en que entendemos y abordamos los desafíos de salud a nivel mundial, incluyendo importantes progresos en el manejo de enfermedades crónicas y el VIH. Mantente informado y optimista sobre el futuro.",
-      "url_imagen": "https://images.unsplash.com/photo-1530210080340-0255c276532d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+      "titulo": "Avances en Salud: Un Paso Adelante Hacia un Futuro Más Saludable para Todos",
+      "resumen": "Mantenernos informados sobre los últimos descubrimientos y tendencias en salud es clave para tomar decisiones conscientes. Explora las novedades que están transformando la atención médica y promoviendo el bienestar global. ¡Tu salud es nuestra prioridad!",
+      "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "La importancia de la adherencia al tratamiento",
-      "texto": "Recordemos que tomar nuestros medicamentos antirretrovirales a tiempo y de forma constante es un acto de amor propio y una pieza clave para mantener una buena calidad de vida. Si tienes dudas o dificultades, no dudes en acercarte a tu equipo de salud, ¡estamos aquí para apoyarte!"
+      "titulo": "La Hidratación: Tu Aliada para el Bienestar Diario",
+      "texto": "Beber suficiente agua es fundamental para cada función de tu cuerpo, especialmente si vives con VIH. Ayuda a tu sistema inmune, mejora la absorción de nutrientes y te mantiene con energía. ¡Lleva contigo una botella de agua y haz de la hidratación un hábito delicioso!"
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada Energética de Quinoa y Vegetales Frescos",
-      "url_imagen": "https://images.unsplash.com/photo-1550942859-001099e2f605?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-      "descripcion": "Una opción deliciosa y nutritiva, perfecta para llenarte de energía. La quinoa es una excelente fuente de proteína y fibra, y combinada con vegetales frescos, te ayuda a mantener un sistema inmune fuerte y un bienestar general. ¡Fácil de preparar y llena de sabor!",
+      "nombre": "Tacos de Coliflor con un Toque Mexicano",
+      "url_imagen": "https://images.unsplash.com/photo-1596796342898-132b4b4b2f2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+      "descripcion": "¡Explora el sabor y la nutrición con estos deliciosos tacos de coliflor! Una opción vegetariana llena de fibra, vitaminas y minerales esenciales para fortalecer tu sistema inmune y mantenerte lleno de energía. Una alternativa ligera y sabrosa para cualquier comida. ¡Tu cuerpo te lo agradecerá!",
       "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "Serenidad",
-    "desafio": "Tómate 5 minutos hoy para respirar profundamente y reconocer tres cosas por las que te sientas agradecido.",
-    "afirmacion_positiva": "Hoy elijo la paz y la confianza en mi camino. Soy fuerte y capaz de superar cualquier desafío.",
+    "emocion_del_dia": "Gratitud",
+    "desafio": "Toma un momento para anotar 3 cosas por las que te sientes agradecido hoy. ¡Pequeños gestos, grandes impactos!",
+    "afirmacion_positiva": "Soy fuerte, resiliente y capaz de superar cualquier desafío con una actitud positiva.",
     "puntos_ganados": 50
   }
 }
