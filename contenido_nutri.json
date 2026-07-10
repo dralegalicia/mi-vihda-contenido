@@ -1,18 +1,18 @@
 {
-  "fecha_actualizacion": "2026-07-10 22:09:53",
+  "fecha_actualizacion": "2026-07-10 22:18:50",
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Manejo del Peso y VIH",
-      "descripcion": "ERROR_DETALLADO: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
-      "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
+      "titulo": "Entendiendo la Obesidad",
+      "descripcion": "Error al generar: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+      "link": "https://www.youtube.com/watch?v=CndXAtXPfhw"
     }
   ],
   "noticias": [
     {
       "id": 1,
       "titulo": "Actualidad en Salud Global",
-      "resumen": "ERROR_DETALLADO: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+      "resumen": "Error al generar: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
       "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?auto=format&fit=crop&w=800",
       "link": "https://news.un.org/es/tags/salud"
     }
@@ -21,22 +21,22 @@
     {
       "id": 1,
       "titulo": "Consejo de Bienestar Diario",
-      "texto": "ERROR_DETALLADO: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods."
+      "texto": "Error al generar: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Batido Energético Natural",
-      "url_imagen": "https://source.unsplash.com/featured/?Batido,Energético,Natural",
-      "descripcion": "ERROR_DETALLADO: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
-      "link_externo": "https://www.youtube.com/watch?v=DMw2uZ9A2fc"
+      "nombre": "Ensalada de Quinoa",
+      "url_imagen": "https://source.unsplash.com/featured/?Ensalada,de,Quinoa",
+      "descripcion": "Error al generar: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+      "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
     }
   ],
   "salud_mental": {
     "emocion_del_dia": "Equilibrio",
-    "desafio": "ERROR_DETALLADO: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
-    "afirmacion_positiva": "ERROR_DETALLADO: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+    "desafio": "Error al generar: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+    "afirmacion_positiva": "Error al generar: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
     "puntos_ganados": 50
   }
 }
