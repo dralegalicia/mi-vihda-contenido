@@ -1,80 +1,71 @@
 import os
-import google.generativeai as genai
 import json
+import random
+from datetime import datetime
+import google.generativeai as genai
 
-# 1. Configuración de la llave
-api_key = os.environ.get("GEMINI_API_KEY")
-genai.configure(api_key=api_key)
+# Configuración
+genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
+model = genai.GenerativeModel('gemini-1.5-flash')
 
-# 2. Lista de Videos de YouTube Reales
-YOUTUBE_RECETAS = [
-    "https://www.youtube.com/watch?v=EdhZ2MD-dnE",
-    "https://www.youtube.com/watch?v=7taoXVgZ24Q",
-    "https://www.youtube.com/watch?v=DMw2uZ9A2fc"
+# Base de datos local: Parejas de título y link (para evitar desincronización)
+RECETAS = [
+    {"nombre": "Ensalada de Quinoa", "link": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"},
+    {"nombre": "Tacos de Pescado con Aguacate", "link": "https://www.youtube.com/watch?v=7taoXVgZ24Q"},
+    {"nombre": "Batido Energético Natural", "link": "https://www.youtube.com/watch?v=DMw2uZ9A2fc"}
 ]
 
-YOUTUBE_OBESIDAD = [
-    "https://www.youtube.com/watch?v=ZMv3FjYCKbE",
-    "https://www.youtube.com/watch?v=CndXAtXPfhw"
+OBESIDAD = [
+    {"titulo": "Manejo del Peso y VIH", "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"},
+    {"titulo": "Entendiendo la Obesidad", "link": "https://www.youtube.com/watch?v=CndXAtXPfhw"}
 ]
 
-def obtener_mejor_modelo():
-    """Busca qué modelo tienes permitido usar en tu cuenta"""
-    try:
-        for m in genai.list_models():
-            if 'generateContent' in m.supported_generation_methods:
-                if 'gemini-1.5-flash' in m.name:
-                    return m.name
-        for m in genai.list_models():
-            if 'generateContent' in m.supported_generation_methods:
-                return m.name
-    except:
-        pass
-    return 'gemini-pro'
-
-prompt = f"""
-Actúa como un psicólogo y nutriólogo experto en VIH. 
-Genera contenido dinámico para una app de salud en México con tono empático.
-
-REGLA DE ORO PARA LINKS DE VIDEO:
-- Para 'link_externo' de recetas, usa SOLO uno de estos: {YOUTUBE_RECETAS}
-- Para 'link' de recursos de obesidad, usa SOLO uno de estos: {YOUTUBE_OBESIDAD}
-- Para 'link' de noticias, usa siempre: 'https://news.un.org/es/tags/salud'
-
-Genera exactamente: 1 noticia, 1 consejo, 1 receta, 1 recurso de obesidad y el bloque salud_mental.
-Usa fotos de stock de Unsplash (fotos de comida real).
-
-IMPORTANTE: Devuelve ÚNICAMENTE el objeto JSON puro sin marcas de código:
-{{
-  "recursos_obesidad": [{{ "id": 1, "titulo": "...", "descripcion": "...", "link": "..." }}],
-  "noticias": [{{ "id": 1, "titulo": "...", "resumen": "...", "url_imagen": "...", "link": "..." }}],
-  "consejos": [{{ "id": 1, "titulo": "...", "texto": "..." }}],
-  "recetas": [{{ "id": 1, "nombre": "...", "url_imagen": "...", "descripcion": "...", "link_externo": "..." }}],
-  "salud_mental": {{ "emocion_del_dia": "...", "desafio": "...", "afirmacion_positiva": "...", "puntos_ganados": 50 }}
-}}
-"""
-
-try:
-    # Autodetección de modelo
-    nombre_modelo = obtener_mejor_modelo()
-    print(f"Usando modelo detectado: {nombre_modelo}")
-    
-    model = genai.GenerativeModel(nombre_modelo)
+def generar_texto(prompt):
     response = model.generate_content(prompt)
-    
-    texto = response.text.strip()
-    # Limpieza para extraer el JSON
-    inicio = texto.find("{")
-    fin = texto.rfind("}") + 1
-    json_final = texto[inicio:fin]
-    
-    datos = json.loads(json_final)
-    
-    with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
-        json.dump(datos, f, ensure_ascii=False, indent=2)
-    
-    print("¡TODO LISTO! Contenido actualizado con éxito.")
+    return response.text.strip()
 
-except Exception as e:
-    print(f"Falla: {e}")
-    exit(1)
+# Selección aleatoria para el día de hoy
+receta_hoy = random.choice(RECETAS)
+obesidad_hoy = random.choice(OBESIDAD)
+
+# Construcción del JSON
+data = {
+    "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d"),
+    "recursos_obesidad": [{
+        "id": 1,
+        "titulo": obesidad_hoy["titulo"],
+        "descripcion": generar_texto(f"Escribe una descripción empática y breve sobre el tema '{obesidad_hoy['titulo']}' para pacientes con VIH."),
+        "link": obesidad_hoy["link"]
+    }],
+    "noticias": [{
+        "id": 1,
+        "titulo": "Avances Globales en Salud",
+        "resumen": generar_texto("Escribe un resumen breve y esperanzador sobre noticias actuales de salud y VIH."),
+        "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?auto=format&fit=crop&w=800",
+        "link": "https://news.un.org/es/tags/salud"
+    }],
+    "consejos": [{
+        "id": 1,
+        "titulo": "Consejo de Bienestar Diario",
+        "texto": generar_texto("Escribe un consejo de autocuidado y nutrición, cálido y profesional, para alguien que vive con VIH.")
+    }],
+    "recetas": [{
+        "id": 1,
+        "nombre": receta_hoy["nombre"],
+        "url_imagen": f"https://source.unsplash.com/featured/?{receta_hoy['nombre'].replace(' ', ',')}",
+        "descripcion": generar_texto(f"Describe brevemente los beneficios nutricionales de la receta: {receta_hoy['nombre']}."),
+        "link_externo": receta_hoy["link"]
+    }],
+    "salud_mental": {
+        "emocion_del_dia": "Equilibrio",
+        "desafio": generar_texto("Propón un pequeño desafío de salud mental para el día de hoy."),
+        "afirmacion_positiva": generar_texto("Escribe una afirmación de poder para alguien viviendo con VIH."),
+        "puntos_ganados": 50
+    }
+}
+
+# Guardar el archivo
+with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print("¡Contenido actualizado correctamente con parejas sincronizadas!")
