@@ -1,11 +1,11 @@
 {
-  "fecha_actualizacion": "2026-07-10 22:18:50",
+  "fecha_actualizacion": "2026-07-11 00:59:28",
   "recursos_obesidad": [
     {
       "id": 1,
-      "titulo": "Entendiendo la Obesidad",
+      "titulo": "Manejo del Peso y VIH",
       "descripcion": "Error al generar: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
-      "link": "https://www.youtube.com/watch?v=CndXAtXPfhw"
+      "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
     }
   ],
   "noticias": [
@@ -27,10 +27,10 @@
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada de Quinoa",
-      "url_imagen": "https://source.unsplash.com/featured/?Ensalada,de,Quinoa",
+      "nombre": "Batido Energético Natural",
+      "url_imagen": "https://source.unsplash.com/featured/?Batido,Energético,Natural",
       "descripcion": "Error al generar: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
-      "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
+      "link_externo": "https://www.youtube.com/watch?v=DMw2uZ9A2fc"
     }
   ],
   "salud_mental": {
