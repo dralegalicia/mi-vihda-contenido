@@ -1,42 +1,32 @@
 {
-  "fecha_actualizacion": "2026-07-11 16:38:36",
-  "recursos_obesidad": [
-    {
-      "id": 1,
-      "titulo": "Manejo del Peso y VIH",
-      "descripcion": "Error al generar: 401 Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. [reason: \"ACCESS_TOKEN_TYPE_UNSUPPORTED\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"method\"\n  value: \"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent\"\n}\n]",
-      "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
-    }
-  ],
+  "aviso_urgente": {
+    "titulo": "¡Bienvenido a Nutri-VIHTAL!",
+    "mensaje": "Usa la calculadora de IMC y Grasa para que el robot pueda darte mejores consejos de salud.",
+    "activo": true
+  },
   "noticias": [
     {
       "id": 1,
-      "titulo": "Actualidad en Salud Global",
-      "resumen": "Error al generar: 401 Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. [reason: \"ACCESS_TOKEN_TYPE_UNSUPPORTED\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"method\"\n  value: \"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent\"\n}\n]",
-      "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?auto=format&fit=crop&w=800",
-      "link": "https://news.un.org/es/tags/salud"
+      "titulo": "Importancia de la Vitamina D",
+      "resumen": "Nuevos estudios muestran que mantener niveles óptimos de Vitamina D ayuda al sistema inmune.",
+      "url_imagen": "https://raw.githubusercontent.com/dralegalicia/mi-vihda-contenido/refs/heads/main/noticia1.jpg",
+      "link": "https://medlineplus.gov/spanish/vitamind.html"
     }
   ],
-  "consejos": [
-    {
-      "id": 1,
-      "titulo": "Consejo de Bienestar Diario",
-      "texto": "Error al generar: 401 Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. [reason: \"ACCESS_TOKEN_TYPE_UNSUPPORTED\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"method\"\n  value: \"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent\"\n}\n]"
-    }
-  ],
+  "consejos": [], 
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada de Quinoa",
-      "url_imagen": "https://source.unsplash.com/featured/?Ensalada,de,Quinoa",
-      "descripcion": "Error al generar: 401 Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. [reason: \"ACCESS_TOKEN_TYPE_UNSUPPORTED\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"method\"\n  value: \"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent\"\n}\n]",
-      "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
+      "nombre": "Ensalada de Quinoa Inmune",
+      "descripcion": "Rica en proteínas y antioxidantes. Ideal para mantener la energía todo el día.",
+      "url_imagen": "https://raw.githubusercontent.com/dralegalicia/mi-vihda-contenido/refs/heads/main/receta1.jpg",
+      "link_externo": "https://www.kiwilimon.com/receta/ensaladas/ensalada-de-quinoa-con-verduras"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "Equilibrio",
-    "desafio": "Error al generar: 401 Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. [reason: \"ACCESS_TOKEN_TYPE_UNSUPPORTED\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"method\"\n  value: \"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent\"\n}\n]",
-    "afirmacion_positiva": "Error al generar: 401 Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. [reason: \"ACCESS_TOKEN_TYPE_UNSUPPORTED\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"method\"\n  value: \"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent\"\n}\n]",
+    "emocion_del_dia": "Cada paso que das hoy es un acto de amor hacia tu futuro.",
+    "desafio": "Escribe una nota en tu diario emocional para que el robot te dé un consejo personalizado.",
+    "afirmacion_positiva": "Soy fuerte, soy valiente y mi salud es mi prioridad.",
     "puntos_ganados": 50
   }
 }
