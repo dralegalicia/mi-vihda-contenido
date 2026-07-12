@@ -1,5 +1,5 @@
 {
-  "fecha_actualizacion": "2026-07-12 02:48:32",
+  "fecha_actualizacion": "2026-07-12 02:58:08",
   "aviso_urgente": {
     "titulo": "¡Bienvenido a Nutri-VIHTAL!",
     "mensaje": "Tu asistente inteligente está listo para acompañarte hoy.",
@@ -24,10 +24,10 @@
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada de Quinoa",
+      "nombre": "Tacos de Pescado",
       "url_imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
       "descripcion": "Platillo equilibrado rico en nutrientes esenciales.",
-      "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
+      "link_externo": "https://www.youtube.com/watch?v=7taoXVgZ24Q"
     }
   ],
   "salud_mental": {
