@@ -19,7 +19,7 @@ jobs:
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.9'
           
       - name: Instalar dependencias
         run: pip install -U google-generativeai
@@ -27,8 +27,7 @@ jobs:
       - name: Generar Contenido con IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          MODEL_NAME: "gemini-1.5-flash"
-        run: python generate_content.py
+        run: python generate_content.py # <--- ASEGÚRATE QUE TU ARCHIVO SE LLAME ASÍ
           
       - name: Guardar cambios
         run: |
@@ -36,7 +35,7 @@ jobs:
           git config --global user.email 'ia@editor.com'
           git add contenido_nutri.json
           if ! git diff --cached --quiet; then
-            git commit -m "Actualización diaria de Línea de Vida con IA"
+            git commit -m "Actualización diaria con IA"
             git push
           else
             echo "No hay cambios para actualizar."
