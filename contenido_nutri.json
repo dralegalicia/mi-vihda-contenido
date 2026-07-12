@@ -1,16 +1,16 @@
 {
-  "fecha_actualizacion": "2026-07-12 03:10:12",
+  "fecha_actualizacion": "2026-07-12 03:17:08",
   "aviso_urgente": {
-    "titulo": "¡Bienvenido a Nutri-VIHTAL!",
-    "mensaje": "Tu asistente inteligente ha preparado contenido nuevo para ti.",
+    "titulo": "¡Nuevo Contenido!",
+    "mensaje": "El robot ha actualizado tus noticias y el reto del día.",
     "activo": true
   },
   "mito_del_dia": null,
   "noticias": [
     {
       "id": 1,
-      "titulo": "Avances en Salud 2024",
-      "resumen": "Mantener una buena alimentación fortalece tu sistema inmune cada día.",
+      "titulo": "Bienestar Integral 2024",
+      "resumen": "Cuidar tu cuerpo es la mejor inversión para tu futuro.",
       "url_imagen": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800",
       "link": "https://news.un.org/es/tags/salud"
     }
@@ -18,23 +18,23 @@
   "consejos": [
     {
       "id": 1,
-      "titulo": "Consejo del Día",
-      "texto": "Recuerda incluir siempre vegetales verdes en tus comidas."
+      "titulo": "Sabías que...",
+      "texto": "La hidratación mejora la absorción de tus medicamentos."
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Tacos de Pescado con Aguacate",
-      "url_imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
-      "descripcion": "Platillo equilibrado rico en nutrientes esenciales.",
-      "link_externo": "https://www.youtube.com/watch?v=7taoXVgZ24Q"
+      "nombre": "Tacos de Pescado Saludables",
+      "url_imagen": "https://images.unsplash.com/photo-1512132411229-c30391241dd8?w=800",
+      "descripcion": "Aprende a preparar Tacos de Pescado Saludables, un platillo equilibrado y delicioso.",
+      "link_externo": "https://www.youtube.com/watch?v=84u0C-m9O80"
     }
   ],
   "salud_mental": {
     "emocion_del_dia": "Motivación",
-    "desafio": "Dedica 5 minutos a respirar profundamente.",
-    "afirmacion_positiva": "Mi salud es mi mayor tesoro.",
+    "desafio": "Haz 10 minutos de estiramientos ligeros.",
+    "afirmacion_positiva": "Mi salud está en mis manos y hoy decido cuidarla.",
     "puntos_ganados": 50
   }
 }
