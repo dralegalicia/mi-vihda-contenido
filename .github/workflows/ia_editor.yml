@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
       
       - name: Configurar Python
         uses: actions/setup-python@v5
@@ -33,13 +34,14 @@ jobs:
         run: |
           git config --global user.name 'IA Editor'
           git config --global user.email 'ia@editor.com'
-          # Agregamos ambos archivos al commit
+          
+          # Agregamos ambos archivos al área de preparación
           git add contenido_nutri.json salud.json
           
-          # Solo hace commit si hay cambios en alguno de los archivos
+          # Solo realiza el commit si detecta cambios reales en los archivos
           if ! git diff --cached --quiet; then
             git commit -m "Actualización diaria de contenido IA: contenido_nutri.json y salud.json"
             git push
           else
-            echo "No hay cambios para actualizar."
+            echo "No se detectaron cambios en el contenido generado."
           fi
