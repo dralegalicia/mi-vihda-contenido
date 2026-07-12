@@ -1,10 +1,10 @@
 {
-  "fecha_actualizacion": "2026-07-12 00:18:51",
+  "fecha_actualizacion": "2026-07-12 02:39:21",
   "recursos_obesidad": [
     {
       "id": 1,
       "titulo": "Entendiendo la Obesidad",
-      "descripcion": "Error al generar: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+      "descripcion": "Error en generación: 403 Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked. [reason: \"API_KEY_SERVICE_BLOCKED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"methodName\"\n  value: \"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"apiName\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\"\n]",
       "link": "https://www.youtube.com/watch?v=CndXAtXPfhw"
     }
   ],
@@ -12,7 +12,7 @@
     {
       "id": 1,
       "titulo": "Actualidad en Salud Global",
-      "resumen": "Error al generar: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+      "resumen": "Error en generación: 403 Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked. [reason: \"API_KEY_SERVICE_BLOCKED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"methodName\"\n  value: \"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"apiName\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\"\n]",
       "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?auto=format&fit=crop&w=800",
       "link": "https://news.un.org/es/tags/salud"
     }
@@ -21,22 +21,22 @@
     {
       "id": 1,
       "titulo": "Consejo de Bienestar Diario",
-      "texto": "Error al generar: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information."
+      "texto": "Error en generación: 403 Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: \"SERVICE_DISABLED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"serviceTitle\"\n  value: \"Gemini API\"\n}\nmetadata {\n  key: \"containerInfo\"\n  value: \"446825288514\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"activationUrl\"\n  value: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n, locale: \"en-US\"\nmessage: \"Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\"\n, links {\n  description: \"Google developers console API activation\"\n  url: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n]"
     }
   ],
   "recetas": [
     {
       "id": 1,
-      "nombre": "Ensalada de Quinoa",
-      "url_imagen": "https://source.unsplash.com/featured/?Ensalada,de,Quinoa",
-      "descripcion": "Error al generar: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
-      "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
+      "nombre": "Batido Energético Natural",
+      "url_imagen": "https://source.unsplash.com/featured/?Batido,Energético,Natural",
+      "descripcion": "Error en generación: 403 Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: \"SERVICE_DISABLED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"serviceTitle\"\n  value: \"Gemini API\"\n}\nmetadata {\n  key: \"containerInfo\"\n  value: \"446825288514\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"activationUrl\"\n  value: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n, locale: \"en-US\"\nmessage: \"Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\"\n, links {\n  description: \"Google developers console API activation\"\n  url: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n]",
+      "link_externo": "https://www.youtube.com/watch?v=DMw2uZ9A2fc"
     }
   ],
   "salud_mental": {
     "emocion_del_dia": "Equilibrio",
-    "desafio": "Error al generar: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
-    "afirmacion_positiva": "Error al generar: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+    "desafio": "Error en generación: 403 Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked. [reason: \"API_KEY_SERVICE_BLOCKED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"methodName\"\n  value: \"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"apiName\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\"\n]",
+    "afirmacion_positiva": "Error en generación: 403 Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: \"SERVICE_DISABLED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"serviceTitle\"\n  value: \"Gemini API\"\n}\nmetadata {\n  key: \"containerInfo\"\n  value: \"446825288514\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"activationUrl\"\n  value: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n, locale: \"en-US\"\nmessage: \"Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\"\n, links {\n  description: \"Google developers console API activation\"\n  url: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n]",
     "puntos_ganados": 50
   }
 }
