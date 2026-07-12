@@ -15,95 +15,51 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 
 def generar_texto(prompt, fallback):
     try:
-        full_prompt = f"{prompt}. Responde directamente en español, máximo 200 caracteres."
-        response = model.generate_content(full_prompt)
+        response = model.generate_content(prompt + ". Responde directamente en español, breve.")
         return response.text.strip() if response.text else fallback
     except:
         return fallback
 
 def generar_mito_trivia():
-    temas = ["VIH", "Riesgo Cardiovascular", "Salud Mental", "PrEP", "DoxiPrEP", "Hipertensión", "Diabetes"]
+    temas = ["VIH", "Riesgo Cardiovascular", "Psicología", "PrEP", "DoxiPrEP", "Hipertensión", "Diabetes"]
     tema = random.choice(temas)
-    
-    prompt = f"""
-    Genera un mito de salud sobre {tema} para una aplicación.
-    Responde ÚNICAMENTE con el objeto JSON puro, sin ```json ni nada extra.
-    {{
-      "tema": "{tema}",
-      "mito": "escribe un mito corto",
-      "realidad": "escribe la realidad breve",
-      "pregunta": "haz una pregunta de trivia",
-      "opciones": ["opcion1", "opcion2", "opcion3"],
-      "respuesta_correcta": 0,
-      "explicacion_ia": "mensaje de aliento del robot"
-    }}
-    """
+    prompt = f"Genera un mito de salud sobre {tema}. Responde SOLO un JSON: {{\"tema\":\"{tema}\", \"mito\":\"...\", \"realidad\":\"...\", \"pregunta\":\"...\", \"opciones\":[\"A\",\"B\",\"C\"], \"respuesta_correcta\":0, \"explicacion_ia\":\"...\"}}"
     try:
         response = model.generate_content(prompt)
-        # Limpiador de seguridad para el JSON
-        texto = response.text.strip()
-        if "{" in texto:
-            texto = texto[texto.find("{"):texto.rfind("}")+1]
-        return json.loads(texto)
-    except Exception as e:
-        print(f"Error en mito: {e}")
-        return None
+        text = response.text.strip()
+        if "{" in text: text = text[text.find("{"):text.rfind("}")+1]
+        return json.loads(text)
+    except: return None
 
-# 2. Base de datos de Recetas y Videos (Corregidos)
-BIBLIOTECA_RECETAS = [
-    {
-        "nombre": "Ensalada de Quinoa con Pollo",
-        "video": "https://www.youtube.com/watch?v=SAn8v-qS1Zk",
-        "imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800"
-    },
-    {
-        "nombre": "Sopa de Lentejas Casera",
-        "video": "https://www.youtube.com/watch?v=mZ-vM76rGnk",
-        "imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800"
-    },
-    {
-        "nombre": "Tacos de Pescado Saludables",
-        "video": "https://www.youtube.com/watch?v=84u0C-m9O80",
-        "imagen": "https://images.unsplash.com/photo-1512132411229-c30391241dd8?w=800"
-    }
+# 2. Biblioteca de Videos (Canales solicitados)
+VIDEOS = [
+    {"n": "Ensalada de Lentejas - Kiwilimón", "v": "https://www.youtube.com/watch?v=L_TfW0q_o0o"},
+    {"n": "Pollo a la Jardinera - Cocina de Addy", "v": "https://www.youtube.com/watch?v=7Mh1Bih_m2o"},
+    {"n": "Pescado al Vapor - Chef Oropeza", "v": "https://www.youtube.com/watch?v=F_YF-9H0b90"},
+    {"n": "Sopa de Verduras - Kiwilimón", "v": "https://www.youtube.com/watch?v=7M5_V0I9m68"}
 ]
+vid = random.choice(VIDEOS)
 
-# 3. Generación integrada
-receta_hoy = random.choice(BIBLIOTECA_RECETAS)
-mito_hoy = generar_mito_trivia()
-
-data = {
-    "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+# 3. Generar CONTENIDO NUTRI (Con bienvenida original)
+nutri_data = {
     "aviso_urgente": {
-        "titulo": "¡Nuevo Contenido!",
-        "mensaje": "El robot ha actualizado tus noticias y el reto del día.",
+        "titulo": "¡Bienvenido a Nutri-VIHTAL!",
+        "mensaje": "Usa la calculadora de IMC y Grasa para que el robot pueda darte mejores consejos de salud.",
         "activo": True
     },
-    "mito_del_dia": mito_hoy,
-    "noticias": [{
-        "id": 1,
-        "titulo": "Bienestar Integral 2024",
-        "resumen": generar_texto("Resume una noticia positiva de salud breve", "Cuidar tu cuerpo es la mejor inversión para tu futuro."),
-        "url_imagen": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800",
-        "link": "https://news.un.org/es/tags/salud"
-    }],
-    "consejos": [{"id": 1, "titulo": "Sabías que...", "texto": generar_texto("Da un consejo breve de nutrición para VIH", "La hidratación mejora la absorción de tus medicamentos.")}],
-    "recetas": [{
-        "id": 1,
-        "nombre": receta_hoy["nombre"],
-        "url_imagen": receta_hoy["imagen"],
-        "descripcion": f"Aprende a preparar {receta_hoy['nombre']}, un platillo equilibrado y delicioso.",
-        "link_externo": receta_hoy["video"]
-    }],
-    "salud_mental": {
-        "emocion_del_dia": "Motivación",
-        "desafio": "Haz 10 minutos de estiramientos ligeros.",
-        "afirmacion_positiva": "Mi salud está en mis manos y hoy decido cuidarla.",
-        "puntos_ganados": 50
-    }
+    "noticias": [{"id":1, "titulo":"Salud Hoy", "resumen": generar_texto("Noticia salud VIH positiva", "Cuidar tu salud es vivir mejor."), "url_imagen":"https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800", "link":"https://news.un.org/es/tags/salud"}],
+    "consejos": [{"id":1, "titulo":"Tip Nutri", "texto": generar_texto("Consejo nutrición VIH", "Hidrátate bien todos los días.")}],
+    "recetas": [{"id":1, "nombre": vid["n"], "url_imagen":"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800", "descripcion": "Receta saludable recomendada.", "link_externo": vid["v"]}],
+    "salud_mental": {"emocion_del_dia":"Paz", "desafio":"Respira hondo.", "afirmacion_positiva":"Soy salud.", "puntos_ganados":50}
 }
 
-# 4. Guardar archivo
+# 4. Generar SALUD (Mitos)
+salud_data = { "mito_del_dia": generar_mito_trivia() }
+
+# 5. Guardar archivos
 with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
-print("¡Contenido actualizado correctamente!")
+    json.dump(nutri_data, f, ensure_ascii=False, indent=2)
+with open('salud.json', 'w', encoding='utf-8') as f:
+    json.dump(salud_data, f, ensure_ascii=False, indent=2)
+
+print("¡Archivos generados: contenido_nutri.json y salud.json!")
