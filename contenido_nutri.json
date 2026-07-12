@@ -1,42 +1,39 @@
 {
-  "fecha_actualizacion": "2026-07-12 02:40:28",
-  "recursos_obesidad": [
-    {
-      "id": 1,
-      "titulo": "Manejo del Peso y VIH",
-      "descripcion": "Error en generación: 403 Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: \"SERVICE_DISABLED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"serviceTitle\"\n  value: \"Gemini API\"\n}\nmetadata {\n  key: \"containerInfo\"\n  value: \"446825288514\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"activationUrl\"\n  value: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n, locale: \"en-US\"\nmessage: \"Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\"\n, links {\n  description: \"Google developers console API activation\"\n  url: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n]",
-      "link": "https://www.youtube.com/watch?v=ZMv3FjYCKbE"
-    }
-  ],
+  "fecha_actualizacion": "2026-07-12 02:48:32",
+  "aviso_urgente": {
+    "titulo": "¡Bienvenido a Nutri-VIHTAL!",
+    "mensaje": "Tu asistente inteligente está listo para acompañarte hoy.",
+    "activo": true
+  },
   "noticias": [
     {
       "id": 1,
-      "titulo": "Actualidad en Salud Global",
-      "resumen": "Error en generación: 403 Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked. [reason: \"API_KEY_SERVICE_BLOCKED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"methodName\"\n  value: \"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"apiName\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\"\n]",
-      "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?auto=format&fit=crop&w=800",
+      "titulo": "Avances en Salud 2024",
+      "resumen": "Mantener una buena alimentación fortalece tu sistema inmune cada día.",
+      "url_imagen": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Consejo de Bienestar Diario",
-      "texto": "Error en generación: 403 Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: \"SERVICE_DISABLED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"serviceTitle\"\n  value: \"Gemini API\"\n}\nmetadata {\n  key: \"containerInfo\"\n  value: \"446825288514\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"activationUrl\"\n  value: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n, locale: \"en-US\"\nmessage: \"Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\"\n, links {\n  description: \"Google developers console API activation\"\n  url: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n]"
+      "titulo": "Consejo del Día",
+      "texto": "Recuerda incluir siempre vegetales verdes en tus comidas."
     }
   ],
   "recetas": [
     {
       "id": 1,
       "nombre": "Ensalada de Quinoa",
-      "url_imagen": "https://source.unsplash.com/featured/?Ensalada,de,Quinoa",
-      "descripcion": "Error en generación: 403 Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: \"SERVICE_DISABLED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"serviceTitle\"\n  value: \"Gemini API\"\n}\nmetadata {\n  key: \"containerInfo\"\n  value: \"446825288514\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"activationUrl\"\n  value: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n, locale: \"en-US\"\nmessage: \"Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\"\n, links {\n  description: \"Google developers console API activation\"\n  url: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n]",
+      "url_imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
+      "descripcion": "Platillo equilibrado rico en nutrientes esenciales.",
       "link_externo": "https://www.youtube.com/watch?v=EdhZ2MD-dnE"
     }
   ],
   "salud_mental": {
-    "emocion_del_dia": "Equilibrio",
-    "desafio": "Error en generación: 403 Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: \"SERVICE_DISABLED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"serviceTitle\"\n  value: \"Gemini API\"\n}\nmetadata {\n  key: \"containerInfo\"\n  value: \"446825288514\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"activationUrl\"\n  value: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n, locale: \"en-US\"\nmessage: \"Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\"\n, links {\n  description: \"Google developers console API activation\"\n  url: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n]",
-    "afirmacion_positiva": "Error en generación: 403 Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: \"SERVICE_DISABLED\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\nmetadata {\n  key: \"serviceTitle\"\n  value: \"Gemini API\"\n}\nmetadata {\n  key: \"containerInfo\"\n  value: \"446825288514\"\n}\nmetadata {\n  key: \"consumer\"\n  value: \"projects/446825288514\"\n}\nmetadata {\n  key: \"activationUrl\"\n  value: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n, locale: \"en-US\"\nmessage: \"Gemini API has not been used in project 446825288514 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\"\n, links {\n  description: \"Google developers console API activation\"\n  url: \"https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=446825288514\"\n}\n]",
+    "emocion_del_dia": "Motivación",
+    "desafio": "Dedica 5 minutos a respirar profundamente.",
+    "afirmacion_positiva": "Mi salud es mi mayor tesoro.",
     "puntos_ganados": 50
   }
 }
