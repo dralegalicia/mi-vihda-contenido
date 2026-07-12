@@ -2,10 +2,9 @@ name: Actualizador con IA
 
 on:
   schedule:
-    # Esto se ejecuta todos los días a las 8:00 AM hora de México (UTC-6)
-    # 8:00 + 6 horas de diferencia = 14:00 UTC
+    # Ejecuta a las 8:00 AM hora de México (14:00 UTC)
     - cron: '0 14 * * *'
-  workflow_dispatch: # Esto permite que también lo actives tú manualmente
+  workflow_dispatch: # Permite activarlo manualmente
 
 permissions:
   contents: write
@@ -14,25 +13,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       
       - name: Configurar Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
           
       - name: Instalar dependencias
         run: pip install -U google-generativeai
-        
+          
       - name: Generar Contenido con IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python generate_content.py
-        
+          
       - name: Guardar cambios
         run: |
           git config --global user.name 'IA Editor'
           git config --global user.email 'ia@editor.com'
           git add contenido_nutri.json
-          git commit -m "Actualización diaria de Línea de Vida con IA" || echo "Sin cambios"
-          git push
+          # Solo hace commit si hay cambios reales en el archivo
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualización diaria de Línea de Vida con IA"
+            git push
+          else
+            echo "No hay cambios para actualizar."
+          fi
