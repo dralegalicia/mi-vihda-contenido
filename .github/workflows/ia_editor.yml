@@ -2,6 +2,7 @@ name: Actualizador con IA
 
 on:
   schedule:
+    # Ejecuta a las 8:00 AM hora de México (14:00 UTC)
     - cron: '0 14 * * *'
   workflow_dispatch: 
 
@@ -11,10 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Definimos el secreto aquí para que esté disponible en todo el job
-    env:
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      
+    
     steps:
       - uses: actions/checkout@v4
       
@@ -27,7 +25,9 @@ jobs:
         run: pip install -U google-generativeai
           
       - name: Generar Contenido con IA
-        # Al definir env al nivel del job (arriba), este paso lo hereda automáticamente
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MODEL_NAME: "gemini-1.5-flash"
         run: python generate_content.py
           
       - name: Guardar cambios
