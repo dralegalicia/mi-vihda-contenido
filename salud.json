@@ -1,3 +1,15 @@
 {
-  "mito_del_dia": null
+  "mito_del_dia": {
+    "tema": "VIH",
+    "mito": "El VIH se transmite por compartir cubiertos o besos.",
+    "realidad": "Falso. El VIH no se transmite por saliva, sudor o contacto casual.",
+    "pregunta": "¿Cuál es una vía real de transmisión del VIH?",
+    "opciones": [
+      "Contacto con sangre infectada",
+      "Picadura de mosquito",
+      "Abrazos"
+    ],
+    "respuesta_correcta": 0,
+    "explicacion_ia": "¡Excelente! Conocer las vías reales de transmisión elimina el estigma y nos protege a todos."
+  }
 }
