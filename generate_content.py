@@ -4,12 +4,13 @@ import random
 from datetime import datetime
 import google.generativeai as genai
 
-# 1. Configuración de API con validación estricta
+# 1. Configuración de API con validación diagnóstica
+# Imprimimos si la clave existe (sin mostrarla por seguridad)
 api_key = os.environ.get("GEMINI_API_KEY")
 
 if not api_key:
-    # Esto es vital: si esto falla, sabremos exactamente qué pasa
-    print("ERROR CRÍTICO: La variable GEMINI_API_KEY no está definida en el entorno.")
+    print("ERROR: La variable GEMINI_API_KEY está vacía.")
+    print("Variables detectadas en el entorno:", list(os.environ.keys()))
     exit(1)
 
 genai.configure(api_key=api_key)
@@ -26,11 +27,12 @@ OBESIDAD = [
     {"titulo": "Entendiendo la Obesidad", "link": "https://www.youtube.com/watch?v=CndXAtXPfhw"}
 ]
 
+# Usar el modelo recomendado
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 def generar_texto(prompt):
     try:
-        # Se añade un pequeño delay o manejo de errores de red si es necesario
+        # Añadimos un pequeño preámbulo para asegurar formato JSON si fuera necesario
         response = model.generate_content(prompt)
         return response.text.strip()
     except Exception as e:
@@ -51,7 +53,7 @@ data = {
     "noticias": [{
         "id": 1,
         "titulo": "Actualidad en Salud Global",
-        "resumen": generar_texto("Resume una noticia positiva sobre VIH."),
+        "resumen": generar_texto("Resume una noticia positiva sobre avances en salud para personas con VIH."),
         "url_imagen": "https://images.unsplash.com/photo-1532938890184-2a6c8e318991?auto=format&fit=crop&w=800",
         "link": "https://news.un.org/es/tags/salud"
     }],
@@ -76,7 +78,9 @@ data = {
 }
 
 # 4. Guardar JSON
-with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
-
-print("¡Proceso terminado con éxito!")
+try:
+    with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print("¡Archivo JSON guardado con éxito!")
+except Exception as e:
+    print(f"Error guardando archivo: {e}")
