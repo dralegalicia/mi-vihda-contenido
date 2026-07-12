@@ -27,15 +27,18 @@ jobs:
       - name: Generar Contenido con IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python generate_content.py # <--- ASEGÚRATE QUE TU ARCHIVO SE LLAME ASÍ
+        run: python generate_content.py
           
       - name: Guardar cambios
         run: |
           git config --global user.name 'IA Editor'
           git config --global user.email 'ia@editor.com'
-          git add contenido_nutri.json
+          # Agregamos ambos archivos al commit
+          git add contenido_nutri.json salud.json
+          
+          # Solo hace commit si hay cambios en alguno de los archivos
           if ! git diff --cached --quiet; then
-            git commit -m "Actualización diaria con IA"
+            git commit -m "Actualización diaria de contenido IA: contenido_nutri.json y salud.json"
             git push
           else
             echo "No hay cambios para actualizar."
