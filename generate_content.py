@@ -20,43 +20,49 @@ def generar_texto(prompt, fallback):
     except:
         return fallback
 
-# 2. BIBLIOTECA DE VIDEOS VERIFICADA
-# Cada enlace coincide estrictamente con el platillo y canal indicados.
-BIBLIOTECA_VIDEOS = [
+# 2. NUEVA BIBLIOTECA DE RECETAS CON IMÁGENES Y ENLACES WEB / PLATAFORMAS
+# Se eliminó la dependencia directa del reproductor de YouTube.
+BIBLIOTECA_RECETAS = [
     {
-        "n": "Tacos de Lechuga con Cochinita", 
-        "v": "https://youtube.com", 
-        "c": "Kiwilimón"
+        "n": "Tacos de Lechuga con Cochinita Pibil", 
+        "img": "https://unsplash.com", 
+        "link": "https://www.kiwilimon.com/receta/recetas-de-botanas-faciles/botanitas-mexicanas/tacos-de-lechuga-con-cochinita-pibil",
+        "fuente": "Kiwilimón"
     },
     {
         "n": "Sopa de Lentejas Tradicional", 
-        "v": "https://youtube.com", 
-        "c": "Jauja Cocina Mexicana"
+        "img": "https://unsplash.com", 
+        "link": "https://www.mexicoenmicocina.com/receta-sopa-de-lentejas/",
+        "fuente": "México en mi Cocina"
     },
     {
         "n": "Pescado al Horno con Verduras", 
-        "v": "https://youtube.com", 
-        "c": "Chef Oropeza"
+        "img": "https://unsplash.com", 
+        "link": "https://cheforopeza.com.mx",
+        "fuente": "Chef Oropeza"
     },
     {
         "n": "Ensalada de Quinoa con Verduras", 
-        "v": "https://youtube.com", 
-        "c": "Kiwilimón"
+        "img": "https://unsplash.com", 
+        "link": "https://kiwilimon.com",
+        "fuente": "Kiwilimón"
     },
     {
         "n": "Caldo de Pollo con Verduras", 
-        "v": "https://youtube.com", 
-        "c": "Jauja Cocina Mexicana"
+        "img": "https://unsplash.com", 
+        "link": "https://jaujacinamexicana.com",
+        "fuente": "Jauja Cocina"
     },
     {
         "n": "Ceviche de Pescado Tradicional", 
-        "v": "https://youtube.com", 
-        "c": "Chef Oropeza"
+        "img": "https://unsplash.com", 
+        "link": "https://cheforopeza.com.mx",
+        "fuente": "Chef Oropeza"
     }
 ]
 
-# Seleccionamos 2 videos al azar de la biblioteca
-recetas_hoy = random.sample(BIBLIOTECA_VIDEOS, 2)
+# Seleccionamos 2 recetas al azar de la biblioteca para el contenido diario
+recetas_hoy = random.sample(BIBLIOTECA_RECETAS, 2)
 
 # 3. CONSTRUCCIÓN DEL CONTENIDO INTEGRAL
 data = {
@@ -82,9 +88,9 @@ data = {
         {
             "id": i,
             "nombre": r["n"],
-            "url_imagen": "https://unsplash.com",
-            "descripcion": f"Receta saludable de {r['c']}. Haz clic para ver el video paso a paso.",
-            "link_externo": r["v"]
+            "url_imagen": r["img"],
+            "descripcion": f"Prepara un delicioso platillo de la mano de {r['fuente']}. Haz clic para ver los ingredientes y pasos completos en su sitio oficial.",
+            "link_externo": r["link"]
         } for i, r in enumerate(recetas_hoy)
     ],
     "salud_mental": {
@@ -99,4 +105,4 @@ data = {
 with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("¡Contenido generado exitosamente!")
+print("¡Contenido generado exitosamente sin dependencias de video!")
