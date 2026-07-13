@@ -1,60 +1,73 @@
 import os
 import json
 import random
+from datetime import datetime
 import google.generativeai as genai
 
-# Configuración
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
+# 1. Configuración de API
+api_key = os.environ.get("GEMINI_API_KEY")
+if not api_key:
+    print("ERROR: GEMINI_API_KEY no configurada.")
+    exit(1)
+
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
-def obtener_info_ia(prompt, fallback):
+def generar_texto(prompt, fallback):
     try:
-        response = model.generate_content(f"{prompt}. Responde en español, máximo 200 caracteres, tono profesional.")
-        return response.text.strip().replace('"', "'") if response.text else fallback
+        response = model.generate_content(prompt + ". Responde directamente en español, máximo 200 caracteres.")
+        return response.text.strip() if response.text else fallback
     except:
         return fallback
 
-# --- BIBLIOTECA DE VIDEOS (SOLO IDs) ---
-# Usamos el ID de 11 caracteres requerido por Android-YouTube-Player
+# 2. Biblioteca de Videos Reales (Canales de Cocina Saludable)
 RECETAS_MASTER = [
-    {"nombre": "5 Cenas Saludables", "youtube_id": "IHwiRKGz_zU", "canal": "Mónica Acha"},
-    {"nombre": "Snacks Saludables Rápido", "youtube_id": "_v_qY9Xb-t0", "canal": "Clean & Delicious"},
-    {"nombre": "Desayunos con Avena", "youtube_id": "3bX8F83w_nc", "canal": "Cocina al Natural"},
-    {"nombre": "Almuerzos nutritivos", "youtube_id": "t_D_uEw2k54", "canal": "Nutrición Global"}
+    {"n": "Tacos de Lechuga Saludables", "v": "https://www.youtube.com/watch?v=kYI_t9M3q6s", "c": "Kiwilimón"},
+    {"n": "Sopa de Verduras y Lentejas", "v": "https://www.youtube.com/watch?v=7M5_V0I9m68", "c": "Kiwilimón"},
+    {"n": "Pescado a la Veracruzana", "v": "https://www.youtube.com/watch?v=F_YF-9H0b90", "c": "Chef Oropeza"},
+    {"n": "Guiso de Lentejas Casero", "v": "https://www.youtube.com/watch?v=84u0C-m9O80", "c": "Cocina con Addy"}
 ]
-
-def generar_url_imagen(tema):
-    return f"https://source.unsplash.com/800x600/?{tema},healthy-food&sig={random.randint(1000, 9999)}"
-
-# --- ESTRUCTURA DE CONTENIDO ---
-# Seleccionamos 2 recetas al azar de nuestra base de datos verificada
 recetas_hoy = random.sample(RECETAS_MASTER, 2)
 
+# 3. Construcción del JSON que la App espera
 data = {
+    "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     "aviso_urgente": {
         "titulo": "¡Bienvenido a Nutri-VIHTAL!",
-        "mensaje": "Tu bienestar es nuestra meta. Consulta a tu médico regularmente."
+        "mensaje": "Tu bienestar es nuestra prioridad. Usa la calculadora para consejos personalizados.",
+        "activo": True
     },
-    "salud": {
-        "mito": obtener_info_ia("Dame un mito común sobre el VIH", "Mito: El VIH se transmite por compartir cubiertos."),
-        "realidad": obtener_info_ia("Dame la realidad científica que desmiente ese mito", "Realidad: El VIH no sobrevive fuera del cuerpo y no se transmite al compartir platos o cubiertos.")
-    },
+    "noticias": [
+        {
+            "id": 1,
+            "titulo": "Avances en Salud Preventiva",
+            "resumen": generar_texto("Resume una noticia breve de salud positiva", "La prevención es la base de una vida plena y saludable."),
+            "url_imagen": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800",
+            "link": "https://news.un.org/es/tags/salud"
+        }
+    ],
+    "consejos": [
+        {"id": 1, "titulo": "Tip del Día", "texto": generar_texto("Da un consejo de nutrición para VIH", "Consume suficientes proteínas para fortalecer tus músculos.")}
+    ],
     "recetas": [
         {
             "id": i,
-            "nombre": r["nombre"],
-            "youtube_id": r["youtube_id"],  # Solo los 11 caracteres para el Player
-            "canal": r["canal"],
-            "url_imagen": generar_url_imagen("cooking")
+            "nombre": r["n"],
+            "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
+            "descripcion": f"Video saludable de {r['c']}.",
+            "link_externo": r["v"] # Enviamos el link completo para que funcione el clic
         } for i, r in enumerate(recetas_hoy)
-    ]
+    ],
+    "salud_mental": {
+        "emocion_del_dia": generar_texto("Dime una emoción positiva", "Gratitud"),
+        "desafio": generar_texto("Crea un mini reto de psicología positiva", "Escribe tres cosas buenas que te pasaron hoy."),
+        "afirmacion_positiva": generar_texto("Crea una afirmación de poder", "Soy fuerte y tengo el control de mi salud."),
+        "puntos_ganados": 50
+    }
 }
 
-# --- GUARDADO ---
-# Este archivo es el que consumirás en tu App
-try:
-    with open('data_app.json', 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-    print("Archivo 'data_app.json' generado con IDs verificados.")
-except Exception as e:
-    print(f"Error: {e}")
+# 4. Guardar como contenido_nutri.json (Nombre exacto que busca la App)
+with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print("¡Archivos generados correctamente!")
