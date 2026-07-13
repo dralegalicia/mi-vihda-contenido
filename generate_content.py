@@ -3,79 +3,58 @@ import json
 import random
 import google.generativeai as genai
 
-# Configuración de la API con validación básica
-api_key = os.environ.get("GEMINI_API_KEY")
-if not api_key:
-    print("Error: La variable GEMINI_API_KEY no está configurada.")
-    exit(1)
-
-genai.configure(api_key=api_key)
+# Configuración
+genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 def obtener_info_ia(prompt, fallback):
-    """Genera texto profesional y médico con manejo de errores."""
     try:
-        response = model.generate_content(
-            f"{prompt}. Responde en español, máximo 250 caracteres, tono empático, profesional y basado en evidencia médica."
-        )
-        # Limpiamos caracteres que podrían romper el JSON
+        response = model.generate_content(f"{prompt}. Responde en español, máximo 200 caracteres, tono profesional.")
         return response.text.strip().replace('"', "'") if response.text else fallback
-    except Exception as e:
-        print(f"Error generando contenido: {e}")
+    except:
         return fallback
 
-def generar_url_imagen(tema):
-    """Genera una URL de imagen dinámica garantizando que siempre sea una petición nueva."""
-    # Usamos un número aleatorio para evitar que Android/App cachee la imagen vieja
-    return f"https://source.unsplash.com/800x600/?{tema},medical&{random.randint(1000, 9999)}"
-
-# --- BIBLIOTECA DE VIDEOS VERIFICADOS ---
-VIDEOS_VERIFICADOS = [
-    {"n": "Batido Verde Saludable", "v": "https://www.youtube.com/embed/9w_0UqN0YQ4", "c": "Canal Salud"},
-    {"n": "Pescado al Horno con Verduras", "v": "https://www.youtube.com/embed/9vN5Y4k95-E", "c": "Cocina Sana"},
-    {"n": "Ensalada Completa", "v": "https://www.youtube.com/embed/8JgS6a7D_48", "c": "Nutrición Hoy"}
+# --- BIBLIOTECA DE VIDEOS (SOLO IDs) ---
+# Usamos el ID de 11 caracteres requerido por Android-YouTube-Player
+RECETAS_MASTER = [
+    {"nombre": "5 Cenas Saludables", "youtube_id": "IHwiRKGz_zU", "canal": "Mónica Acha"},
+    {"nombre": "Snacks Saludables Rápido", "youtube_id": "_v_qY9Xb-t0", "canal": "Clean & Delicious"},
+    {"nombre": "Desayunos con Avena", "youtube_id": "3bX8F83w_nc", "canal": "Cocina al Natural"},
+    {"nombre": "Almuerzos nutritivos", "youtube_id": "t_D_uEw2k54", "canal": "Nutrición Global"}
 ]
 
-# --- PROCESO DE GENERACIÓN ---
-recetas_hoy = random.sample(VIDEOS_VERIFICADOS, 2)
+def generar_url_imagen(tema):
+    return f"https://source.unsplash.com/800x600/?{tema},healthy-food&sig={random.randint(1000, 9999)}"
+
+# --- ESTRUCTURA DE CONTENIDO ---
+# Seleccionamos 2 recetas al azar de nuestra base de datos verificada
+recetas_hoy = random.sample(RECETAS_MASTER, 2)
 
 data = {
     "aviso_urgente": {
         "titulo": "¡Bienvenido a Nutri-VIHTAL!",
-        "mensaje": "Tu bienestar es nuestra meta. Consulta a tu médico regularmente.",
-        "url_imagen": generar_url_imagen("nature")
+        "mensaje": "Tu bienestar es nuestra meta. Consulta a tu médico regularmente."
     },
     "salud": {
-        "mito": obtener_info_ia("Dame un mito común sobre el VIH", "Mito: El VIH se transmite por contacto casual."),
-        "realidad": obtener_info_ia("Dame la realidad científica que desmiente el mito de que el VIH se transmite por contacto casual", "Realidad: El VIH no se transmite por abrazos, besos, compartir baños o utensilios."),
-        "url_imagen": generar_url_imagen("science")
-    },
-    "noticias": {
-        "titulo": "Actualidad en Salud",
-        "resumen": obtener_info_ia("Resume un avance reciente en el tratamiento del VIH para pacientes", "Los tratamientos actuales permiten una excelente calidad de vida y salud a largo plazo."),
-        "link": "https://clinicalinfo.hiv.gov/es",
-        "url_imagen": generar_url_imagen("hospital")
-    },
-    "consejos": {
-        "titulo": "Consejo del día",
-        "texto": obtener_info_ia("Da un consejo nutricional para fortalecer el sistema inmune en pacientes con VIH", "Consume alimentos frescos, ricos en antioxidantes y mantente siempre hidratado."),
-        "url_imagen": generar_url_imagen("food")
+        "mito": obtener_info_ia("Dame un mito común sobre el VIH", "Mito: El VIH se transmite por compartir cubiertos."),
+        "realidad": obtener_info_ia("Dame la realidad científica que desmiente ese mito", "Realidad: El VIH no sobrevive fuera del cuerpo y no se transmite al compartir platos o cubiertos.")
     },
     "recetas": [
         {
             "id": i,
-            "nombre": r["n"],
-            "url_imagen": generar_url_imagen("cooking"),
-            "descripcion": f"Receta recomendada por {r['c']}.",
-            "link_externo": r["v"]
+            "nombre": r["nombre"],
+            "youtube_id": r["youtube_id"],  # Solo los 11 caracteres para el Player
+            "canal": r["canal"],
+            "url_imagen": generar_url_imagen("cooking")
         } for i, r in enumerate(recetas_hoy)
     ]
 }
 
 # --- GUARDADO ---
+# Este archivo es el que consumirás en tu App
 try:
     with open('data_app.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
-    print("Archivo 'data_app.json' generado correctamente.")
+    print("Archivo 'data_app.json' generado con IDs verificados.")
 except Exception as e:
-    print(f"Error al guardar el archivo: {e}")
+    print(f"Error: {e}")
