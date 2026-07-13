@@ -41,7 +41,12 @@ jobs:
           # Solo realiza el commit si detecta cambios reales en los archivos
           if ! git diff --cached --quiet; then
             git commit -m "Actualización diaria de contenido IA: contenido_nutri.json y salud.json"
-            git push
+            
+            # Descarga cambios externos y reorganiza el historial para evitar el error [rejected]
+            git pull origin main --rebase
+            
+            # Sube los cambios de forma segura
+            git push origin main
           else
             echo "No se detectaron cambios en el contenido generado."
           fi
