@@ -1,31 +1,36 @@
 {
+  "aviso_urgente": {
+    "titulo": "¡Bienvenido a Nutri-VIHTAL!",
+    "mensaje": "Tu salud es nuestra prioridad. Sigue estas recomendaciones diarias.",
+    "activo": true
+  },
   "noticias": [
     {
-      "titulo": "Salud y Bienestar Preventivo",
-      "resumen": "Información en actualización.",
-      "link": "https://www.gob.mx/salud"
+      "titulo": "Avances en Tratamiento",
+      "resumen": "La prevención y el control médico son esenciales para una vida plena.",
+      "link": "https://www.google.com/search?q=noticias+salud+VIH+mexico"
     }
   ],
   "consejos": [
     {
-      "titulo": "Tip Diario",
-      "texto": "Información en actualización."
+      "titulo": "Consejo del día",
+      "texto": "Mantén una dieta equilibrada y rica en nutrientes."
     }
   ],
   "recetas": [
     {
       "id": 0,
-      "nombre": "Pescado a la Veracruzana",
+      "nombre": "Sopa de Verduras",
       "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400",
-      "descripcion": "Receta nutritiva recomendada por Chef Oropeza",
-      "link_externo": "https://www.youtube.com/watch?v=F_YF-9H0b90"
+      "descripcion": "Receta saludable por Kiwilimón",
+      "link_externo": "https://www.youtube.com/embed/7M5_V0I9m68"
     },
     {
       "id": 1,
       "nombre": "Tacos de Lechuga con Pollo",
       "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400",
-      "descripcion": "Receta nutritiva recomendada por Kiwilimón",
-      "link_externo": "https://www.youtube.com/watch?v=kYI_t9M3q6s"
+      "descripcion": "Receta saludable por Kiwilimón",
+      "link_externo": "https://www.youtube.com/embed/kYI_t9M3q6s"
     }
   ]
 }
