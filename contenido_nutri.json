@@ -1,5 +1,5 @@
 {
-  "fecha_actualizacion": "2026-07-13 15:22:23",
+  "fecha_actualizacion": "2026-07-13 15:35:51",
   "aviso_urgente": {
     "titulo": "¡Bienvenido a Nutri-VIHTAL!",
     "mensaje": "Aliméntate sanamente y cuida tu bienestar emocional hoy.",
@@ -24,17 +24,17 @@
   "recetas": [
     {
       "id": 0,
-      "nombre": "Caldo de Pollo con Verduras",
+      "nombre": "Ensalada de Quinoa con Verduras",
       "url_imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
-      "descripcion": "Receta saludable de Cocina de Addy. Haz clic para ver el video paso a paso.",
-      "link_externo": "https://www.youtube.com/watch?v=Z_U6u7N6O6k"
+      "descripcion": "Receta saludable de Kiwilimón. Haz clic para ver el video paso a paso.",
+      "link_externo": "https://youtube.com"
     },
     {
       "id": 1,
-      "nombre": "Pescado al Horno con Verduras",
+      "nombre": "Tacos de Lechuga con Pollo",
       "url_imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
-      "descripcion": "Receta saludable de Chef Oropeza. Haz clic para ver el video paso a paso.",
-      "link_externo": "https://www.youtube.com/watch?v=F_YF-9H0b90"
+      "descripcion": "Receta saludable de Kiwilimón. Haz clic para ver el video paso a paso.",
+      "link_externo": "https://youtube.com"
     }
   ],
   "salud_mental": {
