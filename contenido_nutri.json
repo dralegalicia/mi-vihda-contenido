@@ -1,5 +1,5 @@
 {
-  "fecha_actualizacion": "2026-07-13 15:35:51",
+  "fecha_actualizacion": "2026-07-13 15:45:11",
   "aviso_urgente": {
     "titulo": "¡Bienvenido a Nutri-VIHTAL!",
     "mensaje": "Aliméntate sanamente y cuida tu bienestar emocional hoy.",
@@ -10,8 +10,8 @@
       "id": 1,
       "titulo": "Salud y Nutrición 2024",
       "resumen": "Una dieta rica en frutas, verduras y granos es ideal para tu salud.",
-      "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
-      "link": "https://news.un.org/es/tags/salud"
+      "url_imagen": "https://unsplash.com",
+      "link": "https://un.org"
     }
   ],
   "consejos": [
@@ -24,16 +24,16 @@
   "recetas": [
     {
       "id": 0,
-      "nombre": "Ensalada de Quinoa con Verduras",
-      "url_imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
+      "nombre": "Tacos de Lechuga con Cochinita",
+      "url_imagen": "https://unsplash.com",
       "descripcion": "Receta saludable de Kiwilimón. Haz clic para ver el video paso a paso.",
       "link_externo": "https://youtube.com"
     },
     {
       "id": 1,
-      "nombre": "Tacos de Lechuga con Pollo",
-      "url_imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
-      "descripcion": "Receta saludable de Kiwilimón. Haz clic para ver el video paso a paso.",
+      "nombre": "Ceviche de Pescado Tradicional",
+      "url_imagen": "https://unsplash.com",
+      "descripcion": "Receta saludable de Chef Oropeza. Haz clic para ver el video paso a paso.",
       "link_externo": "https://youtube.com"
     }
   ],
