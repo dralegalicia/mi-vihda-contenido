@@ -20,8 +20,8 @@ def generar_texto(prompt, fallback):
     except:
         return fallback
 
-# 2. NUEVA BIBLIOTECA DE RECETAS CON IMÁGENES Y ENLACES WEB / PLATAFORMAS
-# Se eliminó la dependencia directa del reproductor de YouTube.
+# 2. BIBLIOTECA DE RECETAS CON ENLACES WEB E IMÁGENES REALES DE PLATILLOS
+# Se eliminó por completo cualquier referencia o link hacia YouTube.
 BIBLIOTECA_RECETAS = [
     {
         "n": "Tacos de Lechuga con Cochinita Pibil", 
@@ -50,14 +50,14 @@ BIBLIOTECA_RECETAS = [
     {
         "n": "Caldo de Pollo con Verduras", 
         "img": "https://unsplash.com", 
-        "link": "https://jaujacinamexicana.com",
-        "fuente": "Jauja Cocina"
+        "link": "https://mexicoenmicocina.com",
+        "fuente": "México en mi Cocina"
     },
     {
         "n": "Ceviche de Pescado Tradicional", 
         "img": "https://unsplash.com", 
-        "link": "https://cheforopeza.com.mx",
-        "fuente": "Chef Oropeza"
+        "link": "https://mexicoenmicocina.com",
+        "fuente": "México en mi Cocina"
     }
 ]
 
@@ -68,8 +68,8 @@ recetas_hoy = random.sample(BIBLIOTECA_RECETAS, 2)
 data = {
     "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     "aviso_urgente": {
-        "titulo": "¡Bienvenido a Nutri-VIHTAL!",
-        "mensaje": "Aliméntate sanamente y cuida tu bienestar emocional hoy.",
+        "titulo": "AVISO IMPORTANTE",
+        "mensaje": "Se suspende carga viral del 12 de julio llama a recepcion para reagendar",
         "activo": True
     },
     "noticias": [
@@ -105,4 +105,4 @@ data = {
 with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("¡Contenido generado exitosamente sin dependencias de video!")
+print("¡Contenido generado exitosamente sin dependencias de video y con aviso actualizado!")
