@@ -1,45 +1,31 @@
 {
-  "aviso_urgente": {
-    "titulo": "¡Bienvenido a Nutri-VIHTAL!",
-    "mensaje": "Usa la calculadora de IMC y Grasa para que el robot pueda darte mejores consejos de salud.",
-    "activo": true
-  },
   "noticias": [
     {
-      "id": 1,
-      "titulo": "Nuevos avances en nutrición",
-      "resumen": "Una dieta balanceada es la clave para mantener tus defensas altas.",
-      "url_imagen": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800",
-      "link": "https://news.un.org/es/tags/salud"
+      "titulo": "Salud y Bienestar Preventivo",
+      "resumen": "Información en actualización.",
+      "link": "https://www.gob.mx/salud"
     }
   ],
   "consejos": [
     {
-      "id": 1,
-      "titulo": "Tip del Robot",
-      "texto": "Recuerda hidratarte y consumir suficiente proteína."
+      "titulo": "Tip Diario",
+      "texto": "Información en actualización."
     }
   ],
   "recetas": [
     {
       "id": 0,
-      "nombre": "Ceviche de Pescado",
-      "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
-      "descripcion": "Video de Chef Oropeza. Platillo saludable y equilibrado.",
-      "link_externo": "https://www.youtube.com/watch?v=vVj_pY4x6S4"
+      "nombre": "Pescado a la Veracruzana",
+      "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400",
+      "descripcion": "Receta nutritiva recomendada por Chef Oropeza",
+      "link_externo": "https://www.youtube.com/watch?v=F_YF-9H0b90"
     },
     {
       "id": 1,
-      "nombre": "Sopa de Verduras con Lentejas",
-      "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
-      "descripcion": "Video de Kiwilimón. Platillo saludable y equilibrado.",
-      "link_externo": "https://www.youtube.com/watch?v=7M5_V0I9m68"
+      "nombre": "Tacos de Lechuga con Pollo",
+      "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400",
+      "descripcion": "Receta nutritiva recomendada por Kiwilimón",
+      "link_externo": "https://www.youtube.com/watch?v=kYI_t9M3q6s"
     }
-  ],
-  "salud_mental": {
-    "emocion_del_dia": "Paz interior",
-    "desafio": "Escribe 3 cosas por las que agradeces hoy.",
-    "afirmacion_positiva": "Soy valiente y cuido de mi salud.",
-    "puntos_ganados": 50
-  }
+  ]
 }
