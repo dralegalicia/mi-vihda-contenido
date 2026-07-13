@@ -1,46 +1,46 @@
 {
-  "fecha_actualizacion": "2026-07-13 15:17:21",
+  "fecha_actualizacion": "2026-07-13 15:22:23",
   "aviso_urgente": {
     "titulo": "¡Bienvenido a Nutri-VIHTAL!",
-    "mensaje": "Tu bienestar es nuestra prioridad. Usa la calculadora para consejos personalizados.",
+    "mensaje": "Aliméntate sanamente y cuida tu bienestar emocional hoy.",
     "activo": true
   },
   "noticias": [
     {
       "id": 1,
-      "titulo": "Avances en Salud Preventiva",
-      "resumen": "La prevención es la base de una vida plena y saludable.",
-      "url_imagen": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800",
+      "titulo": "Salud y Nutrición 2024",
+      "resumen": "Una dieta rica en frutas, verduras y granos es ideal para tu salud.",
+      "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
       "link": "https://news.un.org/es/tags/salud"
     }
   ],
   "consejos": [
     {
       "id": 1,
-      "titulo": "Tip del Día",
-      "texto": "Consume suficientes proteínas para fortalecer tus músculos."
+      "titulo": "Tip de Nutrición",
+      "texto": "Bebe suficiente agua y consume fibra diariamente."
     }
   ],
   "recetas": [
     {
       "id": 0,
-      "nombre": "Pescado a la Veracruzana",
-      "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
-      "descripcion": "Video saludable de Chef Oropeza.",
-      "link_externo": "https://www.youtube.com/watch?v=F_YF-9H0b90"
+      "nombre": "Caldo de Pollo con Verduras",
+      "url_imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
+      "descripcion": "Receta saludable de Cocina de Addy. Haz clic para ver el video paso a paso.",
+      "link_externo": "https://www.youtube.com/watch?v=Z_U6u7N6O6k"
     },
     {
       "id": 1,
-      "nombre": "Guiso de Lentejas Casero",
-      "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
-      "descripcion": "Video saludable de Cocina con Addy.",
-      "link_externo": "https://www.youtube.com/watch?v=84u0C-m9O80"
+      "nombre": "Pescado al Horno con Verduras",
+      "url_imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
+      "descripcion": "Receta saludable de Chef Oropeza. Haz clic para ver el video paso a paso.",
+      "link_externo": "https://www.youtube.com/watch?v=F_YF-9H0b90"
     }
   ],
   "salud_mental": {
     "emocion_del_dia": "Gratitud",
-    "desafio": "Escribe tres cosas buenas que te pasaron hoy.",
-    "afirmacion_positiva": "Soy fuerte y tengo el control de mi salud.",
+    "desafio": "Escribe 3 cosas que agradeces de tu cuerpo hoy.",
+    "afirmacion_positiva": "Soy valiente, soy fuerte y mi salud es mi prioridad.",
     "puntos_ganados": 50
   }
 }
