@@ -1,8 +1,8 @@
 {
-  "fecha_actualizacion": "2026-07-13 15:53:46",
+  "fecha_actualizacion": "2026-07-13 16:00:05",
   "aviso_urgente": {
-    "titulo": "¡Bienvenido a Nutri-VIHTAL!",
-    "mensaje": "Aliméntate sanamente y cuida tu bienestar emocional hoy.",
+    "titulo": "AVISO IMPORTANTE",
+    "mensaje": "Se suspende carga viral del 12 de julio llama a recepcion para reagendar",
     "activo": true
   },
   "noticias": [
@@ -24,17 +24,17 @@
   "recetas": [
     {
       "id": 0,
-      "nombre": "Caldo de Pollo con Verduras",
+      "nombre": "Ceviche de Pescado Tradicional",
       "url_imagen": "https://unsplash.com",
-      "descripcion": "Prepara un delicioso platillo de la mano de Jauja Cocina. Haz clic para ver los ingredientes y pasos completos en su sitio oficial.",
-      "link_externo": "https://jaujacinamexicana.com"
+      "descripcion": "Prepara un delicioso platillo de la mano de México en mi Cocina. Haz clic para ver los ingredientes y pasos completos en su sitio oficial.",
+      "link_externo": "https://mexicoenmicocina.com"
     },
     {
       "id": 1,
-      "nombre": "Pescado al Horno con Verduras",
+      "nombre": "Caldo de Pollo con Verduras",
       "url_imagen": "https://unsplash.com",
-      "descripcion": "Prepara un delicioso platillo de la mano de Chef Oropeza. Haz clic para ver los ingredientes y pasos completos en su sitio oficial.",
-      "link_externo": "https://cheforopeza.com.mx"
+      "descripcion": "Prepara un delicioso platillo de la mano de México en mi Cocina. Haz clic para ver los ingredientes y pasos completos en su sitio oficial.",
+      "link_externo": "https://mexicoenmicocina.com"
     }
   ],
   "salud_mental": {
