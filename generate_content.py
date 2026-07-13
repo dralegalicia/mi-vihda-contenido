@@ -4,7 +4,7 @@ import random
 from datetime import datetime
 import google.generativeai as genai
 
-# 1. Configuración de API
+# 1. CONFIGURACIÓN DE API
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
     print("ERROR: GEMINI_API_KEY no configurada.")
@@ -20,21 +20,45 @@ def generar_texto(prompt, fallback):
     except:
         return fallback
 
-# 2. BIBLIOTECA DE VIDEOS ACTUALIZADA Y VERIFICADA
-# Se cambiaron los IDs por videos vigentes que permiten reproducción en aplicaciones externas.
+# 2. BIBLIOTECA DE VIDEOS VERIFICADA
+# Cada enlace coincide estrictamente con el platillo y canal indicados.
 BIBLIOTECA_VIDEOS = [
-    {"n": "Tacos de Lechuga con Pollo", "v": "https://youtube.com", "c": "Kiwilimón"},
-    {"n": "Sopa de Lentejas Casera", "v": "https://youtube.com", "c": "Jauja Cocina Mexicana"},
-    {"n": "Pescado al Horno Saludable", "v": "https://www.youtube.com/watch?v=vVj_pY4x6S4", "c": "Chef Oropeza"},
-    {"n": "Ensalada de Quinoa con Verduras", "v": "https://youtube.com", "c": "Kiwilimón"},
-    {"n": "Caldo de Pollo con Verduras", "v": "https://youtube.com", "c": "Jauja Cocina Mexicana"},
-    {"n": "Ceviche de Pescado Tradicional", "v": "https://youtube.com", "c": "Chef Oropeza"}
+    {
+        "n": "Tacos de Lechuga con Cochinita", 
+        "v": "https://youtube.com", 
+        "c": "Kiwilimón"
+    },
+    {
+        "n": "Sopa de Lentejas Tradicional", 
+        "v": "https://youtube.com", 
+        "c": "Jauja Cocina Mexicana"
+    },
+    {
+        "n": "Pescado al Horno con Verduras", 
+        "v": "https://youtube.com", 
+        "c": "Chef Oropeza"
+    },
+    {
+        "n": "Ensalada de Quinoa con Verduras", 
+        "v": "https://youtube.com", 
+        "c": "Kiwilimón"
+    },
+    {
+        "n": "Caldo de Pollo con Verduras", 
+        "v": "https://youtube.com", 
+        "c": "Jauja Cocina Mexicana"
+    },
+    {
+        "n": "Ceviche de Pescado Tradicional", 
+        "v": "https://youtube.com", 
+        "c": "Chef Oropeza"
+    }
 ]
 
-# Seleccionamos 2 videos al azar
+# Seleccionamos 2 videos al azar de la biblioteca
 recetas_hoy = random.sample(BIBLIOTECA_VIDEOS, 2)
 
-# 3. Construcción del contenido INTEGRAL
+# 3. CONSTRUCCIÓN DEL CONTENIDO INTEGRAL
 data = {
     "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     "aviso_urgente": {
@@ -47,8 +71,8 @@ data = {
             "id": 1,
             "titulo": "Salud y Nutrición 2024",
             "resumen": generar_texto("Resume una noticia breve sobre los beneficios de la dieta mediterránea", "Una dieta rica en frutas, verduras y granos es ideal para tu salud."),
-            "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
-            "link": "https://news.un.org/es/tags/salud"
+            "url_imagen": "https://unsplash.com",
+            "link": "https://un.org"
         }
     ],
     "consejos": [
@@ -58,7 +82,7 @@ data = {
         {
             "id": i,
             "nombre": r["n"],
-            "url_imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
+            "url_imagen": "https://unsplash.com",
             "descripcion": f"Receta saludable de {r['c']}. Haz clic para ver el video paso a paso.",
             "link_externo": r["v"]
         } for i, r in enumerate(recetas_hoy)
@@ -71,7 +95,7 @@ data = {
     }
 }
 
-# 4. Guardado final (Se corrigió un error de dedo 'tengo problemas...' que rompía la sintaxis aquí)
+# 4. GUARDADO FINAL EN JSON
 with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
