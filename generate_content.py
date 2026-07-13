@@ -15,64 +15,29 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 
 def generar_texto(prompt, fallback):
     try:
-        response = model.generate_content(prompt + ". Responde directamente en español, máximo 180 caracteres.")
+        response = model.generate_content(prompt + ". Responde directamente en español, breve.")
         return response.text.strip() if response.text else fallback
     except:
         return fallback
 
-# 2. BIBLIOTECA DE VIDEOS VERIFICADOS (Canales oficiales - Alta disponibilidad)
-# He probado estos enlaces y están activos y permiten reproducción externa.
-BIBLIOTECA_VIDEOS = [
-    {"n": "Tacos de Lechuga Saludables", "v": "https://www.youtube.com/watch?v=6YhS12hPz0I", "c": "Kiwilimón"},
-    {"n": "Sopa de Lentejas Tradicional", "v": "https://www.youtube.com/watch?v=mZ-vM76rGnk", "c": "Cocina con Addy"},
-    {"n": "Pescado al Horno con Verduras", "v": "https://www.youtube.com/watch?v=F_YF-9H0b90", "c": "Chef Oropeza"},
-    {"n": "Ensalada de Quinoa y Pollo", "v": "https://www.youtube.com/watch?v=SAn8v-qS1Zk", "c": "Kiwilimón"},
-    {"n": "Caldo de Pollo con Verduras", "v": "https://www.youtube.com/watch?v=Z_U6u7N6O6k", "c": "Cocina de Addy"},
-    {"n": "Ceviche de Pescado Refrescante", "v": "https://www.youtube.com/watch?v=vVj_pY4x6S4", "c": "Chef Oropeza"}
+# 2. BIBLIOTECA DE RECETAS WEB Y TIKTOK (Mucho más estables que YouTube)
+RECURSOS_HOY = [
+    {"n": "Recetario para Diabéticos", "u": "https://www.cocinafacil.com.mx/recetas-para-diabeticos/", "f": "Cocina Fácil", "img": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800"},
+    {"n": "Ensalada de Quinoa (Paso a paso)", "u": "https://www.kiwilimon.com/receta/ensaladas/ensalada-de-quinoa-con-verduras", "f": "Kiwilimón", "img": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800"},
+    {"n": "Consejos del Chef Oropeza", "u": "https://www.tiktok.com/@cheforopeza", "f": "TikTok Oficial", "img": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800"},
+    {"n": "Cocina Saludable en TikTok", "u": "https://www.tiktok.com/discover/cocina-saludable-mexico", "f": "TikTok Salud", "img": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800"},
+    {"n": "Guía de Alimentación OPS/OMS", "u": "https://www.paho.org/es/temas/alimentacion-sana", "f": "Organización Mundial de la Salud", "img": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800"}
 ]
 
-# Seleccionamos 2 videos al azar
-recetas_hoy = random.sample(BIBLIOTECA_VIDEOS, 2)
+# Seleccionamos 2 recursos al azar
+seleccion = random.sample(RECURSOS_HOY, 2)
 
-# 3. Construcción del contenido INTEGRAL
+# 3. Construcción del JSON
 data = {
     "fecha_actualizacion": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     "aviso_urgente": {
         "titulo": "¡Bienvenido a Nutri-VIHTAL!",
-        "mensaje": "Aliméntate sanamente y cuida tu bienestar emocional hoy.",
+        "mensaje": "Hoy el robot ha seleccionado recursos de TikTok y guías web para tu salud.",
         "activo": True
     },
-    "noticias": [
-        {
-            "id": 1,
-            "titulo": "Salud y Nutrición 2024",
-            "resumen": generar_texto("Resume una noticia breve sobre los beneficios de la dieta mediterránea", "Una dieta rica en frutas, verduras y granos es ideal para tu salud."),
-            "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
-            "link": "https://news.un.org/es/tags/salud"
-        }
-    ],
-    "consejos": [
-        {"id": 1, "titulo": "Tip de Nutrición", "texto": generar_texto("Da un consejo breve para mejorar la digestión", "Bebe suficiente agua y consume fibra diariamente.")}
-    ],
-    "recetas": [
-        {
-            "id": i,
-            "nombre": r["n"],
-            "url_imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
-            "descripcion": f"Receta saludable de {r['c']}. Haz clic para ver el video paso a paso.",
-            "link_externo": r["v"]
-        } for i, r in enumerate(recetas_hoy)
-    ],
-    "salud_mental": {
-        "emocion_del_dia": generar_texto("Propón una emoción positiva", "Gratitud"),
-        "desafio": generar_texto("Propón un desafío breve de psicología para el bienestar", "Escribe 3 cosas que agradeces de tu cuerpo hoy."),
-        "afirmacion_positiva": generar_texto("Crea una afirmación positiva corta", "Soy valiente, soy fuerte y mi salud es mi prioridad."),
-        "puntos_ganados": 50
-    }
-}
-
-# 4. Guardado final (Asegúrate de que el nombre sea contenido_nutri.json)
-with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
-
-print("¡Contenido generado exitosamente!")
+    "noticias":
