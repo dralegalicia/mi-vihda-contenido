@@ -3,34 +3,42 @@ import json
 import random
 import google.generativeai as genai
 
-# Configuración de tu API Key de Gemini
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
+# Configuración de la API con validación básica
+api_key = os.environ.get("GEMINI_API_KEY")
+if not api_key:
+    print("Error: La variable GEMINI_API_KEY no está configurada.")
+    exit(1)
+
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 def obtener_info_ia(prompt, fallback):
-    """Genera texto profesional y médico."""
+    """Genera texto profesional y médico con manejo de errores."""
     try:
-        response = model.generate_content(f"{prompt}. Responde en español, máximo 250 caracteres, tono empático y profesional.")
+        response = model.generate_content(
+            f"{prompt}. Responde en español, máximo 250 caracteres, tono empático, profesional y basado en evidencia médica."
+        )
+        # Limpiamos caracteres que podrían romper el JSON
         return response.text.strip().replace('"', "'") if response.text else fallback
-    except:
+    except Exception as e:
+        print(f"Error generando contenido: {e}")
         return fallback
 
 def generar_url_imagen(tema):
-    """Genera una imagen aleatoria de alta calidad desde Unsplash."""
-    return f"https://source.unsplash.com/featured/?{tema},medical,wellness&sig={random.randint(1, 1000)}"
+    """Genera una URL de imagen dinámica garantizando que siempre sea una petición nueva."""
+    # Usamos un número aleatorio para evitar que Android/App cachee la imagen vieja
+    return f"https://source.unsplash.com/800x600/?{tema},medical&{random.randint(1000, 9999)}"
 
 # --- BIBLIOTECA DE VIDEOS VERIFICADOS ---
-# Links en formato embed para que se reproduzcan dentro de tu app
 VIDEOS_VERIFICADOS = [
     {"n": "Batido Verde Saludable", "v": "https://www.youtube.com/embed/9w_0UqN0YQ4", "c": "Canal Salud"},
-    {"n": "Receta de Pescado al Horno", "v": "https://www.youtube.com/embed/9vN5Y4k95-E", "c": "Cocina Sana"},
+    {"n": "Pescado al Horno con Verduras", "v": "https://www.youtube.com/embed/9vN5Y4k95-E", "c": "Cocina Sana"},
     {"n": "Ensalada Completa", "v": "https://www.youtube.com/embed/8JgS6a7D_48", "c": "Nutrición Hoy"}
 ]
 
-# --- ESTRUCTURA DE CONTENIDO ---
+# --- PROCESO DE GENERACIÓN ---
 recetas_hoy = random.sample(VIDEOS_VERIFICADOS, 2)
 
-# Este es el archivo final que tu app descargará cada día
 data = {
     "aviso_urgente": {
         "titulo": "¡Bienvenido a Nutri-VIHTAL!",
@@ -38,19 +46,19 @@ data = {
         "url_imagen": generar_url_imagen("nature")
     },
     "salud": {
-        "mito": obtener_info_ia("Dame un mito común sobre el VIH", "Mito: El VIH se transmite por compartir utensilios."),
-        "realidad": obtener_info_ia("Dame la realidad científica que desmiente ese mito sobre el VIH", "Realidad: El VIH no sobrevive fuera del cuerpo y no se transmite por compartir objetos."),
+        "mito": obtener_info_ia("Dame un mito común sobre el VIH", "Mito: El VIH se transmite por contacto casual."),
+        "realidad": obtener_info_ia("Dame la realidad científica que desmiente el mito de que el VIH se transmite por contacto casual", "Realidad: El VIH no se transmite por abrazos, besos, compartir baños o utensilios."),
         "url_imagen": generar_url_imagen("science")
     },
     "noticias": {
-        "titulo": "Avance Médico",
-        "resumen": obtener_info_ia("Resume un avance reciente en el tratamiento del VIH", "Los tratamientos actuales son muy efectivos y permiten una excelente calidad de vida."),
+        "titulo": "Actualidad en Salud",
+        "resumen": obtener_info_ia("Resume un avance reciente en el tratamiento del VIH para pacientes", "Los tratamientos actuales permiten una excelente calidad de vida y salud a largo plazo."),
         "link": "https://clinicalinfo.hiv.gov/es",
         "url_imagen": generar_url_imagen("hospital")
     },
     "consejos": {
         "titulo": "Consejo del día",
-        "texto": obtener_info_ia("Da un consejo nutricional para fortalecer el sistema inmune en pacientes con VIH", "Consume alimentos ricos en antioxidantes y mantente hidratado."),
+        "texto": obtener_info_ia("Da un consejo nutricional para fortalecer el sistema inmune en pacientes con VIH", "Consume alimentos frescos, ricos en antioxidantes y mantente siempre hidratado."),
         "url_imagen": generar_url_imagen("food")
     },
     "recetas": [
@@ -64,8 +72,10 @@ data = {
     ]
 }
 
-# Guardar todo en un archivo JSON único
-with open('data_app.json', 'w', encoding='utf-8') as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
-
-print("Contenido actualizado exitosamente en data_app.json")
+# --- GUARDADO ---
+try:
+    with open('data_app.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+    print("Archivo 'data_app.json' generado correctamente.")
+except Exception as e:
+    print(f"Error al guardar el archivo: {e}")
