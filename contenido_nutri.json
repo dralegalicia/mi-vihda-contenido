@@ -1,35 +1,38 @@
 {
   "aviso_urgente": {
     "titulo": "¡Bienvenido a Nutri-VIHTAL!",
-    "mensaje": "Tu salud es nuestra prioridad. Sigue estas recomendaciones diarias.",
-    "activo": true
+    "mensaje": "Tu bienestar es nuestra meta. Consulta siempre a tu médico.",
+    "activo": true,
+    "url_imagen": "https://source.unsplash.com/featured/?nature,peaceful,medical,wellness,healthy-food&sig=460"
   },
   "noticias": [
     {
-      "titulo": "Avances en Tratamiento",
-      "resumen": "La prevención y el control médico son esenciales para una vida plena.",
-      "link": "https://www.google.com/search?q=noticias+salud+VIH+mexico"
+      "titulo": "Actualidad Científica en VIH",
+      "resumen": "La ciencia avanza diariamente en terapias que mejoran significativamente la calidad de vida.",
+      "link": "https://clinicalinfo.hiv.gov/es",
+      "url_imagen": "https://source.unsplash.com/featured/?science,laboratory,medical,wellness,healthy-food&sig=815"
     }
   ],
   "consejos": [
     {
-      "titulo": "Consejo del día",
-      "texto": "Mantén una dieta equilibrada y rica en nutrientes."
+      "titulo": "Nutrición y Salud",
+      "texto": "Una alimentación equilibrada es el mejor aliado de tu cuerpo.",
+      "url_imagen": "https://source.unsplash.com/featured/?fresh-vegetables,healthy-meal,medical,wellness,healthy-food&sig=356"
     }
   ],
   "recetas": [
     {
       "id": 0,
-      "nombre": "Sopa de Verduras",
-      "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400",
-      "descripcion": "Receta saludable por Kiwilimón",
-      "link_externo": "https://www.youtube.com/embed/7M5_V0I9m68"
+      "nombre": "Pescado a la Veracruzana",
+      "url_imagen": "https://source.unsplash.com/featured/?cooking,gourmet,medical,wellness,healthy-food&sig=500",
+      "descripcion": "Receta recomendada por Chef Oropeza.",
+      "link_externo": "https://www.youtube.com/embed/F_YF-9H0b90"
     },
     {
       "id": 1,
       "nombre": "Tacos de Lechuga con Pollo",
-      "url_imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400",
-      "descripcion": "Receta saludable por Kiwilimón",
+      "url_imagen": "https://source.unsplash.com/featured/?cooking,gourmet,medical,wellness,healthy-food&sig=557",
+      "descripcion": "Receta recomendada por Kiwilimón.",
       "link_externo": "https://www.youtube.com/embed/kYI_t9M3q6s"
     }
   ]
