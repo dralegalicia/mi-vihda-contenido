@@ -20,8 +20,7 @@ def generar_texto(prompt, fallback):
     except:
         return fallback
 
-# 2. BIBLIOTECA DE RECETAS CON ENLACES WEB E IMÁGENES REALES DE PLATILLOS
-# Se eliminó por completo cualquier referencia o link hacia YouTube.
+# 2. BIBLIOTECA DE RECETAS
 BIBLIOTECA_RECETAS = [
     {
         "n": "Tacos de Lechuga con Cochinita Pibil", 
@@ -61,7 +60,6 @@ BIBLIOTECA_RECETAS = [
     }
 ]
 
-# Seleccionamos 2 recetas al azar de la biblioteca para el contenido diario
 recetas_hoy = random.sample(BIBLIOTECA_RECETAS, 2)
 
 # 3. CONSTRUCCIÓN DEL CONTENIDO INTEGRAL
@@ -70,7 +68,7 @@ data = {
     "aviso_urgente": {
         "titulo": "AVISO IMPORTANTE",
         "mensaje": "Se suspende carga viral del 12 de julio llama a recepcion para reagendar",
-        "activo": True
+        "activo": False  # <--- INTERRUPTOR APAGADO
     },
     "noticias": [
         {
@@ -105,4 +103,4 @@ data = {
 with open('contenido_nutri.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("¡Contenido generado exitosamente sin dependencias de video y con aviso actualizado!")
+print("¡Contenido generado exitosamente con el aviso desactivado!")
