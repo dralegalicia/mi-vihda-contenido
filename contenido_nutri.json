@@ -1,5 +1,5 @@
 {
-  "fecha_actualizacion": "2026-07-14 17:49:33",
+  "fecha_actualizacion": "2026-07-15 18:00:34",
   "aviso_urgente": {
     "titulo": "AVISO IMPORTANTE",
     "mensaje": "Se suspende carga viral del 12 de julio llama a recepcion para reagendar",
@@ -24,17 +24,17 @@
   "recetas": [
     {
       "id": 0,
-      "nombre": "Ceviche de Pescado Tradicional",
+      "nombre": "Pescado al Horno con Verduras",
       "url_imagen": "https://unsplash.com",
-      "descripcion": "Prepara un delicioso platillo de la mano de México en mi Cocina. Haz clic para ver los ingredientes y pasos completos en su sitio oficial.",
-      "link_externo": "https://mexicoenmicocina.com"
+      "descripcion": "Prepara un delicioso platillo de la mano de Chef Oropeza. Haz clic para ver los ingredientes y pasos completos en su sitio oficial.",
+      "link_externo": "https://cheforopeza.com.mx"
     },
     {
       "id": 1,
-      "nombre": "Ensalada de Quinoa con Verduras",
+      "nombre": "Sopa de Lentejas Tradicional",
       "url_imagen": "https://unsplash.com",
-      "descripcion": "Prepara un delicioso platillo de la mano de Kiwilimón. Haz clic para ver los ingredientes y pasos completos en su sitio oficial.",
-      "link_externo": "https://kiwilimon.com"
+      "descripcion": "Prepara un delicioso platillo de la mano de México en mi Cocina. Haz clic para ver los ingredientes y pasos completos en su sitio oficial.",
+      "link_externo": "https://www.mexicoenmicocina.com/receta-sopa-de-lentejas/"
     }
   ],
   "salud_mental": {
